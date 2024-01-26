@@ -23,11 +23,11 @@ const NavBar = () => {
             About
             </Nav.Link>
             <Nav.Link>
-            <i class="fas fa-sign-in-alt"></i>
+            <i class="far fa-arrow-alt-circle-right"></i>
             Sign In
             </Nav.Link>
             <Nav.Link>
-            <i class="fas fa-user-plus"></i>
+            <i class="fas fa-plus-circle"></i>
             Sign Up
             </Nav.Link>
           </Nav>
