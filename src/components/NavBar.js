@@ -15,13 +15,20 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
             <Nav.Link>
-              <i className="fas fa-home"></i>Home
+            <i class="fas fa-house-user"></i>
+            Home
             </Nav.Link>
             <Nav.Link>
-              <i className="fas fa-sign-in-alt"></i>Sign in
+            <i class="far fa-question-circle"></i>
+            About
             </Nav.Link>
             <Nav.Link>
-              <i className="fas fa-user-plus"></i>Sign up
+            <i class="fas fa-sign-in-alt"></i>
+            Sign In
+            </Nav.Link>
+            <Nav.Link>
+            <i class="fas fa-user-plus"></i>
+            Sign Up
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
