@@ -4,3 +4,27 @@
     text-align: center;
     opacity: 0.97;
   }
+
+
+  .NavLink:hover {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    transform: scale(1.1);
+    transition: all 550ms;
+  }
+  
+  .NavLink {
+    padding: 7px;
+    font-weight: 550;
+    line-height: 40px;
+  }
+  
+  .NavLink.Active {
+    color: #F962A9;
+    transform: scale(1.1);
+  }
+  
+  .Active i {
+    color: #F962A9;
+  }
