@@ -1,0 +1,38 @@
+.App {
+    font-family: 'Comfortaa', sans-serif; 
+    background-color: rgb(249, 251, 251);
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: #E48CB4;
+    transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #E48CB4;
+}
+
+a:hover i {
+    color: #E48CB4;
+    transition: color ease-in-out 0.4s;
+}
+
+i {
+    color: #474444;
+    font-size: 1.4rem;
+    padding: 5px;
+    vertical-align: middle;
+    font-weight: 400;
+}
+
+i:hover {
+    color: #E48CB4;
+    cursor: pointer;
+    transition: color ease-in-out 0.4s;
+}
