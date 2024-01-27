@@ -10,9 +10,20 @@ import { Form, Button, Image, Col, Row, Container } from "react-bootstrap";
 const SignUpForm = () => {
   return (
     <Row className={styles.Row}>
-      <Col className="my-auto py-2 p-md-2" md={6}>
-        <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>sign up</h1>
+        <Col
+                md={7}
+                className={`my-auto d-none d-md-block p-6 ${styles.SignUpCol}`}>
+                <Image
+                    className={`${styles.FillerImage}`}
+                    src={"https://res.cloudinary.com/ilabura/image/upload/v1706358551/pexels-pixabay-248280_ohputd.jpg"}
+                    height={315}
+                    width={560}
+                    alt="sign-up image"
+                />
+            </Col>
+      <Col className="my-auto py-2 p-md-2" md={4}>
+        <Container className={`${styles.Content} p-4 `}>
+          <h1 className={styles.Header}>Sign up</h1>
 
           <Form>
             <Form.Group controlId="username">
@@ -34,7 +45,7 @@ const SignUpForm = () => {
             </Form.Group>
 
             <Form.Group controlId="password2">
-                <Form.Label className="d-none">Confirm password</Form.Label>
+                <Form.Label className="d-none">Confirm Password</Form.Label>
                 <Form.Control 
                     className = {styles.Input}
                     type="password" 
@@ -51,17 +62,6 @@ const SignUpForm = () => {
             Already have an account? <span>Sign in</span>
           </Link>
         </Container>
-      </Col>
-      <Col
-        md={6}
-        className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
-      >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={
-            "https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg"
-          }
-        />
       </Col>
     </Row>
   );
