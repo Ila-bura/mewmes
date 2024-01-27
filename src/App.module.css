@@ -8,6 +8,21 @@
     padding-top: 180px;
   }
 
+
+.Content {
+    background-color: rgb(246, 239, 245);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(121, 118, 118);
+    opacity: 0.9;
+}
+
+.Image {
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -38,4 +53,27 @@ i {
 i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.4s;
+}
+
+figure {
+    text-align: center;
+    display: inline-block;
+}
+
+/* scrollbar */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(233, 218, 255);
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgb(233, 218, 255);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgb(233, 218, 255);
 }
