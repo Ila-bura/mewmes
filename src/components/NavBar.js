@@ -6,11 +6,64 @@ import styles from "../styles/NavBar.module.css";
 import logo from '../assets/logo.png';
 import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from './Avatar';
+import axios from 'axios';
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
 
-    const loggedInIcons = <>{currentUser?.username}</>;
+    const handleSignOut = async () => {
+        try {
+            await axios.post("dj-rest-auth/logout/");
+            setCurrentUser(null);
+            removeTokenTimestamp();
+        } catch (err) {
+            // console.log(err);
+        }
+    };
+
+
+    const newPostIcon = (
+        <NavLink
+          className={styles.NavLink}
+          activeClassName={styles.Active}
+          to="/posts/create"
+        >
+          <i className="far fa-plus-square"></i>Add meme
+        </NavLink>
+      );
+
+    const loggedInIcons = <>
+     <NavLink
+            to="/feed"
+            activeClassName={styles.Active}
+            className={styles.NavLink}>
+            <i className="fas fa-list"></i>
+            Feed
+
+        </NavLink>
+        <NavLink
+            to="/saved"
+            className={styles.NavLink}
+            activeClassName={styles.Active}>
+            <i className="fa-bookmark"></i>
+            Saved
+
+        </NavLink>
+        <NavLink className={styles.NavLink}
+            to="/"
+            onClick={handleSignOut}>
+            <i className="fas fa-sign-out-alt"></i>
+            Log out
+        </NavLink>
+
+        <NavLink
+            to={`/profiles/${currentUser?.profile_id}`}
+            className={`${styles.NavLink}`}>
+            <Avatar text={currentUser?.username} src={currentUser?.profile_image} height={40} alt="avatar"/>
+        </NavLink>
+
+   </>;
     const loggedOutIcons = (
     <> 
         <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/signin">
@@ -21,6 +74,12 @@ const NavBar = () => {
     <i className="fas fa-plus-circle"></i>
     Sign Up
         </NavLink>
+
+        <NavLink
+            to={`/profiles/${currentUser?.profile_id}`}>
+            <Avatar text={currentUser?.username} src={currentUser?.profile_image} height={40} alt="avatar"/>
+        </NavLink>
+
     </>
     );
 
@@ -44,6 +103,7 @@ const NavBar = () => {
             <i className="far fa-question-circle"></i>
             About
             </NavLink>
+            {currentUser && newPostIcon}
 
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
