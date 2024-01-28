@@ -45,7 +45,8 @@ const SignInForm = () => {
 
     return (
         <Row className={styles.Row}>
-        <Col md={7} className={'my-auto d-none d-md-block p-6 ${styles.SignUpCol}'}>
+        <Col md={7}
+        className={`my-auto d-none d-md-block p-6 ${styles.SignUpCol}`}>
         <Image
             className={`${appStyles.FillerImage}`}
             src={"https://res.cloudinary.com/ilabura/image/upload/v1706459613/pexels-joa%CC%83o-jesus-4929241_tgwiwn.jpg"}
