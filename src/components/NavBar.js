@@ -5,20 +5,20 @@ import Nav from "react-bootstrap/Nav";
 import styles from "../styles/NavBar.module.css";
 import logo from '../assets/logo.png';
 import { NavLink } from "react-router-dom";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import Avatar from './Avatar';
 import axios from 'axios';
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
 
     const handleSignOut = async () => {
         try {
             await axios.post("dj-rest-auth/logout/");
             setCurrentUser(null);
-            removeTokenTimestamp();
         } catch (err) {
-            // console.log(err);
+            console.log(err);
         }
     };
 
@@ -76,7 +76,8 @@ const NavBar = () => {
         </NavLink>
 
         <NavLink
-            to={`/profiles/${currentUser?.profile_id}`}>
+            to={`/profiles/${currentUser?.profile_id}`}
+            className={`${styles.NavLink} ${styles.Profile}`}>
             <Avatar text={currentUser?.username} src={currentUser?.profile_image} height={40} alt="avatar"/>
         </NavLink>
 

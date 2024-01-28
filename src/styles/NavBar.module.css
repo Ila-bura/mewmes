@@ -28,3 +28,9 @@
   .Active i {
     color: #F962A9;
   }
+
+  .Profile {
+    position: relative;
+    left: 20%;
+  }
+  
