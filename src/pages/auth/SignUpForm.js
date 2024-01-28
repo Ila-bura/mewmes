@@ -44,9 +44,9 @@ const SignUpForm = () => {
                 <Image
                     className={`${styles.FillerImage}`}
                     src={"https://res.cloudinary.com/ilabura/image/upload/v1706358551/pexels-pixabay-248280_ohputd.jpg"}
-                    height={315}
+                    height={350}
                     width={560}
-                    alt="sign-up image"
+                    alt="signup picture"
                 />
             </Col>
             <Col className="my-auto py-2 p-md-2" md={4}>

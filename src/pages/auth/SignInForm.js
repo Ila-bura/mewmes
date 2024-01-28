@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 
 import Form from "react-bootstrap/Form";
@@ -14,8 +14,10 @@ import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import { SetCurrentUserContext } from "../../App";
 
 const SignInForm = () => {
+    const setCurrentUser = useContext(SetCurrentUserContext);
 
     const [signInData, setSignInData] = useState({
         username: "",
@@ -36,9 +38,10 @@ const SignInForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-          await axios.post("/dj-rest-auth/login/", signInData);
-          history.push("/");
-        } catch (err) {
+            const { data } = await axios.post("/dj-rest-auth/login/", signInData);
+            setCurrentUser(data.user);
+            history.push("/");
+        }   catch (err) {
             setErrors(err.response?.data);
         }
       };
@@ -46,12 +49,13 @@ const SignInForm = () => {
     return (
         <Row className={styles.Row}>
         <Col md={7}
-        className={`my-auto d-none d-md-block p-6 ${styles.SignUpCol}`}>
+        className={`my-auto d-none d-md-block p-6 ${styles.SignInCol}`}>
         <Image
-            className={`${appStyles.FillerImage}`}
+            className={`${styles.FillerImage}`}
             src={"https://res.cloudinary.com/ilabura/image/upload/v1706459613/pexels-joa%CC%83o-jesus-4929241_tgwiwn.jpg"}
-            height={315}
+            height={350}
             width={560}
+            alt="signin picture"
             />
             </Col>
             <Col className="my-auto py-2 p-md-3" md={4}>
