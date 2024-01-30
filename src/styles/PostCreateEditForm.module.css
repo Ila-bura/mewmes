@@ -1,3 +1,9 @@
 .Container {
     min-height: 350px;
   }
+
+
+.smaller-image {
+    max-height: 40vh;
+    max-width: 50%;
+  }
