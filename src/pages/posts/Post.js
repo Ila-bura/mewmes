@@ -7,18 +7,22 @@ import Avatar from "../../components/Avatar";
 
 const Post = (props) => {
     const {
-      id,
-      owner,
-      profile_id,
-      profile_image,
-      comments_count,
-      likes_count,
-      like_id,
-      title,
-      content,
-      image,
-      updated_at,
-      postFeed,
+        id,
+        owner,
+        profile_id,
+        profile_image,
+        reply_count,
+        votes_count,
+        downvotes_count,
+        vote_id,
+        saved_id,
+        downvote_id,
+        title,
+        content,
+        image,
+        updated_at,
+        postFeed,
+        setPosts,
     } = props;
   
     const currentUser = useCurrentUser();
@@ -29,7 +33,7 @@ const Post = (props) => {
           <Card.Body>
             <Media className="align-items-center justify-content-between">
               <Link to={`/profiles/${profile_id}`}>
-                <Avatar src={profile_image} height={55} />
+                <Avatar src={profile_image} height={52} />
                 {owner}
               </Link>
               <div className="d-flex align-items-center">
@@ -48,31 +52,85 @@ const Post = (props) => {
               {is_owner ? (
                 <OverlayTrigger
                   placement="top"
-                  overlay={<Tooltip>You can't like your own post!</Tooltip>}
+                  overlay={<Tooltip>You cannot save your own meme!</Tooltip>}
                 >
-                  <i className="far fa-heart" />
+                  <i className="fa-regular fa-bookmark" />
                 </OverlayTrigger>
-              ) : like_id ? (
+              ) : saved_id ? (
                 <span onClick={() => {}}>
-                  <i className={`fas fa-heart ${styles.Heart}`} />
+                  <i className={`fa-solid fa-bookmark ${styles.Bookmark}`} />
                 </span>
               ) : currentUser ? (
                 <span onClick={() => {}}>
-                  <i className={`far fa-heart ${styles.HeartOutline}`} />
+                  <i className={`fa-regular fa-bookmark ${styles.BookmarkOutline}`} />
                 </span>
               ) : (
                 <OverlayTrigger
                   placement="top"
-                  overlay={<Tooltip>Log in to like posts!</Tooltip>}
+                  overlay={<Tooltip>Log in to save memes!</Tooltip>}
                 >
-                  <i className="far fa-heart" />
+                  <i className="fa-regular fa-bookmark" />
                 </OverlayTrigger>
               )}
-              {likes_count}
+    
+              {is_owner ? (
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>You cannot vote for your own meme!</Tooltip>}
+                >
+                  <i className="far fa-thumbs-up" />
+                </OverlayTrigger>
+              ) : vote_id ? (
+                <span>
+                  <i className={`fas fa-thumbs-up ${styles.Upvote}`} />
+                </span>
+              ) : currentUser ? (
+                <span>
+                  <i className={`far fa-thumbs-up ${styles.UpvoteOutline}`} />
+                </span>
+              ) : (
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>Sign in to vote for memes!</Tooltip>}
+                >
+                  <Link to="/signin">
+                    <i className="far fa-thumbs-up" />
+                  </Link>
+                </OverlayTrigger>
+              )}
+    
+              {votes_count}
+              {is_owner ? (
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>You cannot vote for your own meme!</Tooltip>}
+                >
+                  <i className="far fa-thumbs-down" />
+                </OverlayTrigger>
+              ) : downvote_id ? (
+                <span>
+                  <i className={`fas fa-thumbs-down ${styles.Downvote}`} />
+                </span>
+              ) : currentUser ? (
+                <span>
+                  <i className={`far fa-thumbs-down ${styles.DownvoteOutline}`} />
+                </span>
+              ) : (
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={<Tooltip>Sign in to vote for memes!</Tooltip>}
+                >
+                  <Link to="/signin">
+                    <i className="far fa-thumbs-down" />
+                  </Link>
+                </OverlayTrigger>
+              )}
+              {downvotes_count}
+    
               <Link to={`/posts/${id}`}>
-                <i className="far fa-comments" />
-              </Link>
-              {comments_count}
+            <i className="far fa-comments" />
+          </Link>
+              {reply_count}
             </div>
           </Card.Body>
         </Card>
