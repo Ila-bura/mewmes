@@ -30,6 +30,7 @@ const Post = (props) => {
     // Check if current user is the owner of the meme
     const is_owner = currentUser?.username === owner;
 
+    // Adding thumbs up reaction to posts; keeping count of thumbs ups
     const handleLike = async () => {
         try {
             const { data } = await axiosRes.post("/votes/", { post: id });
@@ -47,6 +48,7 @@ const Post = (props) => {
         }
     };
 
+    // Removing thumbs up reaction to posts; updating count of thumbs ups
     const handleUnlike = async () => {
         try {
             await axiosRes.delete(`/votes/${vote_id}/`);
