@@ -4,6 +4,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
     const {
@@ -28,6 +29,23 @@ const Post = (props) => {
     const currentUser = useCurrentUser();
     // Check if current user is the owner of the meme
     const is_owner = currentUser?.username === owner;
+
+    const handleLike = async () => {
+        try {
+            const { data } = await axiosRes.post("/votes/", { post: id });
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    // Check if ids match
+                    return post.id === id
+                        ? { ...post, votes_count: post.votes_count + 1, vote_id: data.id }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            // console.log(err);
+        }
+    };
   
     return (
         // Render a card component for the meme post
@@ -92,7 +110,7 @@ const Post = (props) => {
                   <i className={`far fa-thumbs-up ${styles.Upvote}`} />
                 </span>
               ) : currentUser ? (
-                <span>
+                <span onClick={handleLike}>
                   <i className={`far fa-thumbs-up ${styles.UpvoteOutline}`} />
                 </span>
               ) : (
