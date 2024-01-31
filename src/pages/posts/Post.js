@@ -54,22 +54,22 @@ const Post = (props) => {
                   placement="top"
                   overlay={<Tooltip>You cannot save your own meme!</Tooltip>}
                 >
-                  <i className="fa-regular fa-bookmark" />
+                  <i className="fas fa-thumbtack" />
                 </OverlayTrigger>
               ) : saved_id ? (
                 <span onClick={() => {}}>
-                  <i className={`fa-solid fa-bookmark ${styles.Bookmark}`} />
+                  <i className={`fas fa-thumbtack ${styles.Bookmark}`} />
                 </span>
               ) : currentUser ? (
                 <span onClick={() => {}}>
-                  <i className={`fa-regular fa-bookmark ${styles.BookmarkOutline}`} />
+                  <i className={`fas fa-thumbtack ${styles.BookmarkOutline}`} />
                 </span>
               ) : (
                 <OverlayTrigger
                   placement="top"
                   overlay={<Tooltip>Log in to save memes!</Tooltip>}
                 >
-                  <i className="fa-regular fa-bookmark" />
+                  <i className="fas fa-thumbtack" />
                 </OverlayTrigger>
               )}
     
@@ -82,7 +82,7 @@ const Post = (props) => {
                 </OverlayTrigger>
               ) : vote_id ? (
                 <span>
-                  <i className={`fas fa-thumbs-up ${styles.Upvote}`} />
+                  <i className={`far fa-thumbs-up ${styles.Upvote}`} />
                 </span>
               ) : currentUser ? (
                 <span>
@@ -105,7 +105,7 @@ const Post = (props) => {
                   placement="bottom"
                   overlay={<Tooltip>You cannot vote for your own meme!</Tooltip>}
                 >
-                  <i className="far fa-thumbs-down" />
+                  <i className="fas fa-thumbs-down" />
                 </OverlayTrigger>
               ) : downvote_id ? (
                 <span>
@@ -113,7 +113,7 @@ const Post = (props) => {
                 </span>
               ) : currentUser ? (
                 <span>
-                  <i className={`far fa-thumbs-down ${styles.DownvoteOutline}`} />
+                  <i className={`fas fa-thumbs-down ${styles.DownvoteOutline}`} />
                 </span>
               ) : (
                 <OverlayTrigger
@@ -121,7 +121,7 @@ const Post = (props) => {
                   overlay={<Tooltip>Sign in to vote for memes!</Tooltip>}
                 >
                   <Link to="/signin">
-                    <i className="far fa-thumbs-down" />
+                    <i className="fas fa-thumbs-down" />
                   </Link>
                 </OverlayTrigger>
               )}

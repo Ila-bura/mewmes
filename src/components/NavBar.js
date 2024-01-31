@@ -49,7 +49,7 @@ const NavBar = () => {
             to="/saved"
             className={styles.NavLink}
             activeClassName={styles.Active}>
-            <i className="fa-bookmark"></i>
+            <i className="fas fa-thumbtack"></i>
             Saved
 
         </NavLink>
