@@ -26,9 +26,11 @@ const Post = (props) => {
     } = props;
   
     const currentUser = useCurrentUser();
+    // Check if current user is the owner of the meme
     const is_owner = currentUser?.username === owner;
   
     return (
+        // Render a card component for the meme post
         <Card className={styles.Post}>
           <Card.Body>
             <Media className="align-items-center justify-content-between">
@@ -43,29 +45,32 @@ const Post = (props) => {
             </Media>
           </Card.Body>
           <Link to={`/posts/${id}`}>
-            <Card.Img src={image} alt={title} />
+            <Card.Img src={image} height={650} width={350} alt={title} className={styles.PostPic}/>
           </Link>
           <Card.Body>
             {title && <Card.Title className="text-center">{title}</Card.Title>}
             {content && <Card.Text>{content}</Card.Text>}
             <div className={styles.PostBar}>
-
               {is_owner ? (
+                // Check if user is the owner of the meme 
                 <OverlayTrigger
                   placement="top"
-                  overlay={<Tooltip>C'mon, you cannot save your own meme!</Tooltip>}
+                  overlay={<Tooltip>You cannot save your own meme!</Tooltip>}
                 >
                   <i className="fas fa-thumbtack" />
                 </OverlayTrigger>
               ) : saved_id ? (
+                // Saved meme
                 <span onClick={() => {}}>
                   <i className={`fas fa-thumbtack ${styles.Bookmark}`} />
                 </span>
               ) : currentUser ? (
+                // Save meme
                 <span onClick={() => {}}>
                   <i className={`fas fa-thumbtack ${styles.BookmarkOutline}`} />
                 </span>
               ) : (
+                // Prompt user to log in to save memes
                 <OverlayTrigger
                   placement="top"
                   overlay={<Tooltip>Log in to save memes!</Tooltip>}
@@ -75,6 +80,7 @@ const Post = (props) => {
               )}
     
               {is_owner ? (
+                // Check if user is the owner of the meme 
                 <OverlayTrigger
                   placement="bottom"
                   overlay={<Tooltip>C'mon, you cannot vote for your own meme!</Tooltip>}
@@ -90,6 +96,7 @@ const Post = (props) => {
                   <i className={`far fa-thumbs-up ${styles.UpvoteOutline}`} />
                 </span>
               ) : (
+                // Prompt users to log in to vote for memes
                 <OverlayTrigger
                   placement="bottom"
                   overlay={<Tooltip>Sign in to vote for memes!</Tooltip>}
@@ -99,11 +106,9 @@ const Post = (props) => {
                   </Link>
                 </OverlayTrigger>
               )}
-              
-              # Display the number of thumbs up
-    
               {votes_count}
               {is_owner ? (
+                // Check if user is the owner of the meme 
                 <OverlayTrigger
                   placement="bottom"
                   overlay={<Tooltip>C'mon, you cannot vote for your own meme!</Tooltip>}
@@ -119,6 +124,7 @@ const Post = (props) => {
                   <i className={`fas fa-thumbs-down ${styles.DownvoteOutline}`} />
                 </span>
               ) : (
+                // Prompt users to log in to vote for memes
                 <OverlayTrigger
                   placement="bottom"
                   overlay={<Tooltip>Sign in to vote for memes!</Tooltip>}
@@ -128,9 +134,6 @@ const Post = (props) => {
                   </Link>
                 </OverlayTrigger>
               )}
-              
-              # Display the number of thumbs down
-        
               {downvotes_count}
     
               <Link to={`/posts/${id}`}>

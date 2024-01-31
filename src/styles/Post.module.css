@@ -1,24 +1,31 @@
 .Post {
-    background-color: #ffffff;
-    border: 1px solid #dadadf;
-    border-radius: 2px;
+    background-color: #CDECFB;
+    border-radius: 4px;
     margin-bottom: 16px;
     text-align: center;
+    border: 1px solid rgb(121, 118, 118);
   }
   
-  .Post figure,
-  h5 {
-    margin: 0 0;
+.PostPic {
+    border-radius: 12px;
+    padding: 5px;
+    width: 90%;
+    max-height: 70vh;
+    object-fit: cover;
+    margin-bottom: 2px;
   }
-  
-  .Heart {
-    color: #f85032;
-  }
-  
-  .Heart:hover {
-    color: #2142b2;
-  }
-  
-  .HeartOutline:hover {
-    color: #f85032;
-  }
+
+
+  /* Bookmark and thumbs icons style */
+
+.Post .Upvote {
+    color: #E8A7CE;
+}
+
+.Post .Upvote:hover {
+    color: #CDECFB;
+}
+
+.Post .Downvote {
+    color: rgb(7, 108, 108);
+}
