@@ -49,10 +49,11 @@ const Post = (props) => {
             {title && <Card.Title className="text-center">{title}</Card.Title>}
             {content && <Card.Text>{content}</Card.Text>}
             <div className={styles.PostBar}>
+
               {is_owner ? (
                 <OverlayTrigger
                   placement="top"
-                  overlay={<Tooltip>You cannot save your own meme!</Tooltip>}
+                  overlay={<Tooltip>C'mon, you cannot save your own meme!</Tooltip>}
                 >
                   <i className="fas fa-thumbtack" />
                 </OverlayTrigger>
@@ -76,7 +77,7 @@ const Post = (props) => {
               {is_owner ? (
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip>You cannot vote for your own meme!</Tooltip>}
+                  overlay={<Tooltip>C'mon, you cannot vote for your own meme!</Tooltip>}
                 >
                   <i className="far fa-thumbs-up" />
                 </OverlayTrigger>
@@ -98,12 +99,14 @@ const Post = (props) => {
                   </Link>
                 </OverlayTrigger>
               )}
+              
+              # Display the number of thumbs up
     
               {votes_count}
               {is_owner ? (
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip>You cannot vote for your own meme!</Tooltip>}
+                  overlay={<Tooltip>C'mon, you cannot vote for your own meme!</Tooltip>}
                 >
                   <i className="fas fa-thumbs-down" />
                 </OverlayTrigger>
@@ -125,6 +128,9 @@ const Post = (props) => {
                   </Link>
                 </OverlayTrigger>
               )}
+              
+              # Display the number of thumbs down
+        
               {downvotes_count}
     
               <Link to={`/posts/${id}`}>
