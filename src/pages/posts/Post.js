@@ -46,6 +46,23 @@ const Post = (props) => {
             // console.log(err);
         }
     };
+
+    const handleUnlike = async () => {
+        try {
+            await axiosRes.delete(`/votes/${vote_id}/`);
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    // Check if ids match
+                    return post.id === id
+                        ? { ...post, votes_count: post.votes_count - 1, vote_id: null }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            // console.log(err);
+        }
+    };
   
     return (
         // Render a card component for the meme post
@@ -106,7 +123,7 @@ const Post = (props) => {
                   <i className="far fa-thumbs-up" />
                 </OverlayTrigger>
               ) : vote_id ? (
-                <span>
+                <span onClick={handleUnlike}>
                   <i className={`far fa-thumbs-up ${styles.Upvote}`} />
                 </span>
               ) : currentUser ? (

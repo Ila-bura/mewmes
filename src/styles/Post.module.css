@@ -19,11 +19,11 @@
   /* Bookmark and thumbs icons style */
 
 .Post .Upvote {
-    color: #E8A7CE;
+    color: #F962A9;
 }
 
 .Post .Upvote:hover {
-    color: #CDECFB;
+    color: #E8A7CE;
 }
 
 .Post .Downvote {
