@@ -8,7 +8,10 @@ import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsFeed.module.css";
 
-function PostsFeed() {
+function PostsFeed({ message, filter = "" }) {
+    const [posts, setPosts] = useState({ results: [] });
+    const [hasLoaded, setHasLoaded] = useState(false);
+    const { pathname } = useLocation();
   
   return (
     <Row className="h-100">
