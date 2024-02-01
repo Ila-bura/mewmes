@@ -27,7 +27,7 @@ function PostsFeed({ message, filter = "" }) {
         // Function to fetch memes data
         const fetchPosts = async () => {
             try {
-                const { data } = await axiosReq.get(`/posts/?${filter}`);
+                const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
                 setPosts(data);
                 setHasLoaded(true);
             } catch (err) {
@@ -36,8 +36,14 @@ function PostsFeed({ message, filter = "" }) {
         };
 
         setHasLoaded(false);
-        fetchPosts();
-    }, [filter, pathname]);
+        const timer = setTimeout(() => {
+            fetchPosts();
+        }, 1000);
+        return () => {
+            clearTimeout(timer);
+        };
+
+    }, [filter, query, pathname]);
 
   
   return (
