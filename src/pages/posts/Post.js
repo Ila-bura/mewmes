@@ -65,6 +65,23 @@ const Post = (props) => {
             // console.log(err);
         }
     };
+
+// Adding thumbs down reaction to posts; keeping count of thumbs down
+    const handleDownvote = async () => {
+        try {
+            const { data } = await axiosRes.post("/downvotes/", { post: id });
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? { ...post, downvotes_count: post.downvotes_count + 1, downvote_id: data.id }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            // console.log(err);
+        }
+    };
   
     return (
         // Render a card component for the meme post
@@ -148,7 +165,7 @@ const Post = (props) => {
                 // Check if user is the owner of the meme 
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip>C'mon, you cannot vote for your own meme!</Tooltip>}
+                  overlay={<Tooltip>C'mon, you cannot dislike your own meme!</Tooltip>}
                 >
                   <i className="fas fa-thumbs-down" />
                 </OverlayTrigger>
@@ -157,7 +174,7 @@ const Post = (props) => {
                   <i className={`fas fa-thumbs-down ${styles.Downvote}`} />
                 </span>
               ) : currentUser ? (
-                <span>
+                <span onClick={handleDownvote}>
                   <i className={`fas fa-thumbs-down ${styles.DownvoteOutline}`} />
                 </span>
               ) : (
