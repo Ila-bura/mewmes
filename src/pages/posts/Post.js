@@ -67,7 +67,7 @@ const Post = (props) => {
     };
 
 // Adding thumbs down reaction to posts; keeping count of thumbs down
-    const handleDownvote = async () => {
+    const handleDislike = async () => {
         try {
             const { data } = await axiosRes.post("/downvotes/", { post: id });
             setPosts((prevPosts) => ({
@@ -82,7 +82,27 @@ const Post = (props) => {
             // console.log(err);
         }
     };
-  
+
+    // Removing thumbs down reaction to posts; updating count of thumbs down
+
+    const handleUndislike = async () => {
+        try {
+            await axiosRes.delete(`/downvotes/${downvote_id}/`);
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? { ...post, downvotes_count: post.downvotes_count - 1, downvote_id: null }
+                        : post;
+                    }),
+                }));
+            } catch (err) {
+                // console.log(err);
+            }
+        };
+
+
+
     return (
         // Render a card component for the meme post
         <Card className={styles.Post}>
@@ -170,11 +190,11 @@ const Post = (props) => {
                   <i className="fas fa-thumbs-down" />
                 </OverlayTrigger>
               ) : downvote_id ? (
-                <span>
+                <span onClick={handleUndislike}>
                   <i className={`fas fa-thumbs-down ${styles.Downvote}`} />
                 </span>
               ) : currentUser ? (
-                <span onClick={handleDownvote}>
+                <span onClick={handleDislike}>
                   <i className={`fas fa-thumbs-down ${styles.DownvoteOutline}`} />
                 </span>
               ) : (
