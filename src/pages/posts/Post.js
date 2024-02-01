@@ -30,6 +30,41 @@ const Post = (props) => {
     // Check if current user is the owner of the meme
     const is_owner = currentUser?.username === owner;
 
+    // Bookmark memes 
+    const handleBookmark = async () => {
+        try {
+            const { data } = await axiosRes.post("/saved/", { post: id });
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? { ...post, saved_id: data.id }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            // console.log(err);
+        }
+    };
+
+    // Remove bookmark from memes 
+    const handleUnbookmark = async () => {
+        try {
+            await axiosRes.delete(`/saved/${saved_id}/`);
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? { ...post, saved_count: post.saved_count - 1, saved_id: null }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            // console.log(err);
+        }
+    };
+
+
     // Adding thumbs up reaction to posts; keeping count of thumbs ups
     const handleLike = async () => {
         try {
@@ -84,7 +119,6 @@ const Post = (props) => {
     };
 
     // Removing thumbs down reaction to posts; updating count of thumbs down
-
     const handleUndislike = async () => {
         try {
             await axiosRes.delete(`/downvotes/${downvote_id}/`);
@@ -135,12 +169,12 @@ const Post = (props) => {
                 </OverlayTrigger>
               ) : saved_id ? (
                 // Saved meme
-                <span onClick={() => {}}>
+                <span onClick={handleUnbookmark}>
                   <i className={`fas fa-thumbtack ${styles.Bookmark}`} />
                 </span>
               ) : currentUser ? (
                 // Save meme
-                <span onClick={() => {}}>
+                <span onClick={handleBookmark}>
                   <i className={`fas fa-thumbtack ${styles.BookmarkOutline}`} />
                 </span>
               ) : (

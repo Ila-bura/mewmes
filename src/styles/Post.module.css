@@ -27,5 +27,21 @@
 }
 
 .Post .Downvote {
-    color: rgb(7, 108, 108);
+    color: #F962A9;
+}
+
+.Post .Downvote:hover {
+    color: #E8A7CE;
+}
+
+.Post .Bookmark {
+    color: #F962A9;
+}
+
+.Post .Bookmark:hover {
+    color: #E8A7CE;
+}
+
+.Post .BookmarkOutline:hover {
+    color: rgb(20, 111, 111);
 }
