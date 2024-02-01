@@ -9,6 +9,8 @@ import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsFeed.module.css";
 import NoResults from "../../assets/noresults.png";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -34,11 +36,12 @@ function PostsFeed({ message, filter = "" }) {
                 // console.log(err);
             }
         };
-
+        // Set a timeout before fetching memes 
         setHasLoaded(false);
         const timer = setTimeout(() => {
             fetchPosts();
         }, 1000);
+         // Clear the timeout
         return () => {
             clearTimeout(timer);
         };
@@ -64,9 +67,15 @@ function PostsFeed({ message, filter = "" }) {
         {hasLoaded ? (
           <>
             {posts.results.length ? (
-              posts.results.map((post) => (
-                <Post key={post.id} {...post} setPosts={setPosts} />
-              ))
+              <InfiniteScroll
+                children={posts.results.map((post) => (
+                  <Post key={post.id} {...post} setPosts={setPosts} />
+                ))}
+                dataLength={posts.results.length}
+                loader={<BeatLoader color="#36d7b7" />}
+                hasMore={!!posts.next}
+                next={() => fetchMoreData(posts, setPosts)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
