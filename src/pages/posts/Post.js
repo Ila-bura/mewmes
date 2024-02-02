@@ -5,6 +5,8 @@ import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { MoreDropdown } from "../../components/MoreDropdown";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Post = (props) => {
     const {
@@ -29,6 +31,7 @@ const Post = (props) => {
     const currentUser = useCurrentUser();
     // Check if current user is the owner of the meme
     const is_owner = currentUser?.username === owner;
+    const history = useHistory();
 
     // Bookmark memes 
     const handleBookmark = async () => {
@@ -135,6 +138,19 @@ const Post = (props) => {
             }
         };
 
+    // Meme owner can edit their posts 
+    const handleEdit = () => {
+        history.push(`/posts/${id}/edit/`)
+    }
+    // Meme owner can delete their posts 
+    const handleDelete = async () => {
+        try {
+            await axiosRes.delete(`/posts/${id}/`);
+            history.goBack();
+        } catch (err) {
+            // console.log(err);
+        }
+    };
 
 
     return (
@@ -148,13 +164,19 @@ const Post = (props) => {
               </Link>
               <div className="d-flex align-items-center">
                 <span>{updated_at}</span>
-                {is_owner && postFeed && "..."}
+                {is_owner && postFeed && (
+                    <MoreDropdown
+                    handleEdit={handleEdit}
+                    handleDelete={handleDelete}
+                  />
+                )}
               </div>
             </Media>
           </Card.Body>
           <Link to={`/posts/${id}`}>
             <Card.Img src={image} height={450} width={350} alt={title} className={styles.PostPic}/>
           </Link>
+
           <Card.Body>
             {title && <Card.Title className="text-center">{title}</Card.Title>}
             {content && <Card.Text>{content}</Card.Text>}
