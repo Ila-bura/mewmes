@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -8,16 +8,13 @@ import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
 
-import Asset from "../../components/Asset";
-
-import Upload from "../../assets/upload.jpg";
-
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 
 function EditPostForm() {
@@ -32,8 +29,31 @@ function EditPostForm() {
     const { title, content, image, imageFilter } = postData;
 
     const imageInput = useRef(null);
+
+    // History hook for navigation
     const history = useHistory();
 
+    // Get the 'id' parameter from URL
+    const { id } = useParams();
+
+    // Fetch post data when component mounts
+    useEffect(() => {
+        const handleMount = async () => {
+            try {
+                const { data } = await axiosReq.get(`/posts/${id}/`);
+                const { title, content, image, is_owner } = data;
+
+                // If user is not the owner of the meme, redirect to home
+                is_owner ? setPostData({ title, content, image }) : history.push("/");
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        handleMount();
+    }, [history, id]);
+
+
+    // Handler for input changes
     const handleChange = (event) => {
         setPostData({
         ...postData,
@@ -41,6 +61,7 @@ function EditPostForm() {
         });
     };
 
+    // Handler for image file change
     const handleChangeImage = (event) => {
         if (event.target.files.length) {
         URL.revokeObjectURL(image);
@@ -51,18 +72,22 @@ function EditPostForm() {
         }
     };
 
+    // Handler for form submission
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
 
         formData.append("title", title);
         formData.append("content", content);
-        formData.append("image", imageInput.current.files[0]);
-        formData.append('image_filter', imageFilter);
+
+
+        if (imageInput?.current?.files[0]) {
+            formData.append("image", imageInput.current.files[0]);
+        }
 
         try {
-            const { data } = await axiosReq.post("/posts/", formData);
-            history.push(`/posts/${data.id}`);
+            await axiosReq.put(`/posts/${id}/`, formData);
+            history.push(`/posts/${id}`);
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {
@@ -96,7 +121,7 @@ function EditPostForm() {
             ))}
 
             <Button className={`${btnStyles.Button}`} type="submit">
-                Create
+                Save
             </Button>
             <Button
                 className={`${btnStyles.Button}`}
@@ -114,8 +139,8 @@ function EditPostForm() {
                 className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
             >
                 <Form.Group className="text-center">
-                {image ? (
-                    <>
+
+            
                     <figure>
                         <Image className={appStyles.Image} src={image} rounded />
                     </figure>
@@ -127,27 +152,15 @@ function EditPostForm() {
                         Change the image
                         </Form.Label>
                     </div>
-                    </>
-                ) : (
-                    <Form.Label
-                    className="d-flex justify-content-center"
-                    htmlFor="image-upload"
-                    >
-                    <Asset
-                        src={Upload}
-                        message="Click or tap to upload your meme"
-                    />
-                    </Form.Label>
-                )}
 
-                <Form.Control       
-                    className="d-none"
-                    type="file"
-                    id="image-upload"
-                    accept="image/*"
-                    onChange={handleChangeImage}
-                    ref={imageInput}
-                />
+                    <Form.Control       
+                        className="d-none"
+                        type="file"
+                        id="image-upload"
+                        accept="image/*"
+                        onChange={handleChangeImage}
+                        ref={imageInput}
+                    />
                 </Form.Group>
                 {errors?.image?.map((message, idx) => (
             <Alert variant="warning" key={idx}>
