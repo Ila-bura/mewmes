@@ -164,18 +164,20 @@ const Post = (props) => {
               </Link>
               <div className="d-flex align-items-center">
                 <span>{updated_at}</span>
-                {is_owner && postFeed && (
-                    <MoreDropdown
-                    handleEdit={handleEdit}
-                    handleDelete={handleDelete}
-                  />
-                )}
+
               </div>
             </Media>
           </Card.Body>
           <Link to={`/posts/${id}`}>
             <Card.Img src={image} height={450} width={350} alt={title} className={styles.PostPic}/>
           </Link>
+
+          {is_owner && postFeed &&
+                <MoreDropdown handleEdit={handleEdit}
+                    handleDelete={handleDelete}
+                />
+
+            }
 
           <Card.Body>
             {title && <Card.Title className="text-center">{title}</Card.Title>}

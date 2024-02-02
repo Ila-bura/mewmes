@@ -27,16 +27,16 @@ const ThreeDrops = React.forwardRef(({ onClick }, ref) => (
           <Dropdown.Item
             className={styles.DropdownItem}
             onClick={handleEdit}
-            aria-label="edit"
+            aria-label="Edit meme"
           >
-            <i className="fas fa-edit" />
+            <i className="far fa-edit" />
           </Dropdown.Item>
           <Dropdown.Item
             className={styles.DropdownItem}
             onClick={handleDelete}
-            aria-label="delete"
+            aria-label="Delete meme"
           >
-            <i className="fas fa-trash-alt" />
+            <i className="far fa-trash-alt" />
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
