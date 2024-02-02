@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
-import styles from "../../styles/CommentForm.module.css";
+import styles from "../../styles/ReplyForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
@@ -72,7 +72,7 @@ function ReplyCreateForm(props) {
                 disabled={!content.trim()}
                 type="submit"
             >
-                post
+                Publish
             </button>
         </Form>
     );
