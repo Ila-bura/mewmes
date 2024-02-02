@@ -21,6 +21,7 @@ const SignUpForm = () => {
 
     const history = useHistory();
 
+    // Function to handle input change
     const handleChange = (event) => {
         setSignUpData({
             ...signUpData,
@@ -28,10 +29,13 @@ const SignUpForm = () => {
         });
     };
 
+    // Function to handle form submission
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
+            // Send sign up request
             await axios.post("/dj-rest-auth/registration/", signUpData);
+            // Redirect to sign in page after successful sign up
             history.push("/signin");
         } catch (err) {
             setErrors(err.response?.data);
@@ -64,6 +68,7 @@ const SignUpForm = () => {
                                 onChange={handleChange}/>
 
                         </Form.Group>
+                         {/* Displaying username errors */}
                         {errors.username?.map((message, idx) => (
                             <Alert variant="secondary" key={idx}>
                                 {message}
@@ -82,6 +87,7 @@ const SignUpForm = () => {
                             />
                             
                         </Form.Group>
+                          {/* Displaying password1 errors */}
                         {errors.password1?.map((message, idx) => (
                             <Alert variant="secondary" key={idx}>
                                 {message}
@@ -98,6 +104,7 @@ const SignUpForm = () => {
                                 onChange={handleChange}
                             />
                         </Form.Group>
+                        {/* Displaying password2 errors */}
                         {errors.password2?.map((message, idx) => (
                             <Alert variant="secondary" key={idx}>
                                 {message}
@@ -106,6 +113,7 @@ const SignUpForm = () => {
                         <Button className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Light}`} type="submit">
                             Sign Up
                         </Button>
+                        {/* Displaying non-field errors */}
                         {errors.non_field_errors?.map((message, idx) => (
                             <Alert key={idx} variant="secondary" className="mt-3">
                                 {message}
@@ -114,6 +122,7 @@ const SignUpForm = () => {
                     </Form>
                 </Container>
                 <Container className={`mt-3 ${appStyles.Content}`}>
+                    {/* Link to sign in page */}
                     <Link className={styles.Link} to="/signin">
                         Already have an account? <span>Sign in!</span>
                     </Link>

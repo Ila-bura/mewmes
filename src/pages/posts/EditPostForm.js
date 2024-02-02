@@ -28,6 +28,7 @@ function EditPostForm() {
     });
     const { title, content, image, imageFilter } = postData;
 
+    // Ref for image input
     const imageInput = useRef(null);
 
     // History hook for navigation

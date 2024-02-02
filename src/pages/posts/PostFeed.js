@@ -10,9 +10,13 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 
 function PostFeed() {
+  // Get the 'id' parameter from URL  
   const { id } = useParams();
+
+  // State variable to store meme data
   const [post, setPost] = useState({ results: [] });
 
+  // Fetch meme data when component mounts
   useEffect(() => {
     const handleMount = async () => {
       try {

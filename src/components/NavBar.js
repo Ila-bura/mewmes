@@ -11,11 +11,14 @@ import axios from 'axios';
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 
 const NavBar = () => {
+    // Access current user and setCurrentUser functions from context
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
+    // Custom hook to handle click outside toggle
     const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
+    // Function to handle sign out
     const handleSignOut = async () => {
         try {
             await axios.post("dj-rest-auth/logout/");
@@ -26,6 +29,7 @@ const NavBar = () => {
     };
 
 
+    // Icons for adding a new meme
     const newPostIcon = (
         <NavLink
           className={styles.NavLink}
@@ -36,6 +40,7 @@ const NavBar = () => {
         </NavLink>
       );
 
+    // Icons displayed when user is logged in
     const loggedInIcons = <>
      <NavLink
             to="/feed"
@@ -67,6 +72,7 @@ const NavBar = () => {
         </NavLink>
 
    </>;
+    // Icons displayed when user is logged out
     const loggedOutIcons = (
     <> 
         <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/signin">
@@ -116,8 +122,10 @@ const NavBar = () => {
             <i className="far fa-question-circle"></i>
             About
             </NavLink>
+            {/* Display new meme icon if user is logged in */}
             {currentUser && newPostIcon}
 
+            {/* Display appropriate icons based on user login status */}
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>

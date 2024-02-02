@@ -31,7 +31,10 @@ function PostCreateForm() {
     });
     const { title, content, image, imageFilter } = postData;
 
+    // Ref for image input
     const imageInput = useRef(null);
+
+    // History hook for navigation
     const history = useHistory();
 
     const handleChange = (event) => {
@@ -41,6 +44,7 @@ function PostCreateForm() {
         });
     };
 
+     // Handler for image change
     const handleChangeImage = (event) => {
         if (event.target.files.length) {
         URL.revokeObjectURL(image);
@@ -51,6 +55,7 @@ function PostCreateForm() {
         }
     };
 
+    // Handler for form submission
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();

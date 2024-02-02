@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
 
+// Custom hooks to access current user and set current user
 export const useCurrentUser = () => useContext(CurrentUserContext);
 export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 
@@ -13,6 +14,7 @@ export const CurrentUserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory()
 
+  // Fetch current user data when component mounts
   const handleMount = async () => {
     try {
       const { data } = await axiosRes.get("dj-rest-auth/user/");
@@ -26,13 +28,16 @@ export const CurrentUserProvider = ({ children }) => {
     handleMount();
   }, []);
 
+  // Handle token refresh and unauthorized requests
   useMemo(() => {
+    // Intercept request to refresh token
     axiosReq.interceptors.request.use(
       async (config) => {
         try {
           await axios.post("/dj-rest-auth/token/refresh/");
         } catch (err) {
           setCurrentUser((prevCurrentUser) => {
+            // Redirect to sign in page if user is authenticated
             if (prevCurrentUser) {
               history.push("/signin");
             }
@@ -47,6 +52,7 @@ export const CurrentUserProvider = ({ children }) => {
       }
     );
 
+    // Intercept response to handle unauthorized status
     axiosRes.interceptors.response.use(
         (response) => response,
         async (err) => {
@@ -55,6 +61,7 @@ export const CurrentUserProvider = ({ children }) => {
                     await axios.post("/dj-rest-auth/token/refresh/");
                 } catch (err) {
                     setCurrentUser((prevCurrentUser) => {
+                        // Redirect to sign in page if user is authenticated
                         if (prevCurrentUser) {
                             history.push("/signin");
                         }
