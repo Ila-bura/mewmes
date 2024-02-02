@@ -1,0 +1,34 @@
+.DropdownItem {
+    display: inline-block;
+    max-width: 50%;
+    padding: 0px;
+}
+.DropdownItem:hover {
+    background-color: transparent;
+}
+
+.Absolute {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    left: 93%;
+    color: grey;
+}
+
+/* Edit bars */
+.Bars {
+    position: absolute;
+    right: 10px;
+    z-index: 99;
+    left: 90%;
+    color: grey;
+}
+
+
+/* media query */
+/* For medium laptop screens sizes from 1024px wide and down */
+@media screen and (max-width: 1024px){
+    .Bars {
+        margin-right: 5%;
+    }
+}
