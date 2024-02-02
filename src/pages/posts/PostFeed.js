@@ -10,6 +10,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import ReplyCreateForm from "../replies/ReplyCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Reply from "../replies/Reply";
+
 
 function PostFeed() {
   // Get the 'id' parameter from URL  
@@ -26,11 +28,12 @@ function PostFeed() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: post }] = await Promise.all([
+        const [{ data: post }, { data: replies }] = await Promise.all([
           axiosReq.get(`/posts/${id}`),
+          axiosReq.get(`/reply/?post=${id}`),
         ]);
         setPost({ results: [post] });
-        console.log(post);
+        setReplies(replies);
       } catch (err) {
         console.log(err);
       }
@@ -55,7 +58,20 @@ function PostFeed() {
             />
         ) : replies.results.length ? (
             "Replies"
-        ) : null}                
+        ) : null} 
+
+         {replies.results.length ? (  
+            "Replies"
+            ) : null}
+            {replies.results.length ? (
+              replies.results.map((reply) => (
+                <Reply key={reply.id} {...reply} />
+              ))
+            ) : currentUser ? (
+              <span>No comments yet, be the first to comment!</span>
+            ) : (
+              <span>No comments... yet</span>
+            )}             
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
