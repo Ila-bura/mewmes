@@ -2,12 +2,12 @@
     font-size: 0.9rem;
     align-self: center;
     border-radius: 100px;
-    border-color: transparent;
+    border: 1px solid;
     padding: 4px 10px;
     margin-left: 2px;
     margin-right: 2px;
     min-width: 75px;
-    background-color: #F962A9 !important;
+    background-color: #E8A7CE !important;
     color: #1D1F21;
 }
 
@@ -15,9 +15,10 @@
     opacity: 0.7;
     border-color: transparent;
     cursor: pointer;
-    background-color: #E48CB4 !important;
+    background-color: #F962A9 !important;
     transform: scale(1.05);
     transition: all 0.8s;
+    color: #1D1F21;
 }
 
 
@@ -25,6 +26,7 @@
 .Button:active,
 .Button:focus {
     background-color: #F962A9 !important;
+    color: #1D1F21 !important;
 }
 
 .Wide {
@@ -33,6 +35,6 @@
 }
 
 .Light {
-    background-color: #E48CB4;
-    color: #1D1F21;;
+    background-color: #F962A9;
+    color: #1D1F21;
 }
