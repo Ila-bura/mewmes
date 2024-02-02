@@ -15,8 +15,8 @@ const Reply = (props) => {
           <Avatar src={profile_image} />
         </Link>
         <Media.Body className="align-self-center ml-2">
-          <span className={styles.Owner}>{owner}</span>
-          <span className={styles.Date}>{updated_at}</span>
+          <span className={styles.Owner}>{owner}</span> <span></span>
+          <span className={styles.Date} ml-4>{updated_at}</span>
           <p>{content}</p>
         </Media.Body>
       </Media>
