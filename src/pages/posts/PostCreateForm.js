@@ -10,7 +10,7 @@ import Image from "react-bootstrap/Image";
 
 import Asset from "../../components/Asset";
 
-import Upload from "../../assets/upload.png";
+import Upload from "../../assets/upload.jpg";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
@@ -95,11 +95,11 @@ function PostCreateForm() {
                 </Alert>
             ))}
 
-            <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+            <Button className={`${btnStyles.Button}`} type="submit">
                 Create
             </Button>
             <Button
-                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                className={`${btnStyles.Button}`}
                 onClick={() => history.goBack()}>
                 Cancel
             </Button>
@@ -121,7 +121,7 @@ function PostCreateForm() {
                     </figure>
                     <div>
                         <Form.Label
-                        className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                        className={`${btnStyles.Button} ${btnStyles.Light} btn`}
                         htmlFor="image-upload"
                         >
                         Change the image
@@ -135,12 +135,14 @@ function PostCreateForm() {
                     >
                     <Asset
                         src={Upload}
-                        message="Click or tap to upload an image"
+                        message="Click or tap to upload your meme"
                     />
                     </Form.Label>
                 )}
 
-                <Form.File
+                <Form.Control       
+                    className="d-none"
+                    type="file"
                     id="image-upload"
                     accept="image/*"
                     onChange={handleChangeImage}
