@@ -4,20 +4,25 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import { BeatLoader } from "react-spinners"; 
+import Asset from "../../components/Asset";
 
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { Button, Image } from "react-bootstrap";
+import NoResults from "../../assets/noresults.png";
+import Post from "../posts/Post";
 
 import PopularProfiles from "./PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import { fetchMoreData } from "../../utils/utils";
 import {
     useProfileData,
     useSetProfileData,
 } from "../../contexts/ProfileDataContext";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -102,11 +107,27 @@ function ProfilePage() {
 
   const mainProfilePosts = (
     <>
-      <hr />
-      <p className="text-center">Profile owner's posts</p>
-      <hr />
-    </>
-  );
+            <hr />
+            <p className={`text-center ${styles.OwnersPosts}`}>{profile?.owner}'s posts</p>
+            <hr />
+            {profilePosts.results.length ? (
+                <InfiniteScroll
+                    children={profilePosts.results.map((post) => (
+                        <Post key={post.id} {...post} setPosts={setProfilePosts} />
+                    ))}
+                    dataLength={profilePosts.results.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!profilePosts.next}
+                    next={() => fetchMoreData(profilePosts, setProfilePosts)}
+                />
+            ) : (
+                <Asset
+                    src={NoResults}
+                    message={`No memes found, ${profile?.owner} hasn't posted anything yet!`}
+                />
+            )}
+        </>
+    );
 
   return (
     <Row>
