@@ -26,7 +26,7 @@ function EditPostForm() {
         image: "",
         imageFilter: "",
     });
-    const { title, content, image, imageFilter } = postData;
+    const { title, content, image } = postData;
 
     // Ref for image input
     const imageInput = useRef(null);
