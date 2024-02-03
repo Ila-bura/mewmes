@@ -14,7 +14,6 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Reply from "../replies/Reply";
 
 import InfiniteScroll from "react-infinite-scroll-component";
-import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 
 

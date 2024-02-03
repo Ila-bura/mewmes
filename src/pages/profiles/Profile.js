@@ -3,6 +3,7 @@ import styles from "../../styles/Profile.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { Button } from "react-bootstrap";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 const Profile = (props) => {
@@ -15,13 +16,33 @@ const Profile = (props) => {
   return (
     <div className={`my-3 d-flex align-items-center ${mobile && "flex-column"}`}>
         <div>
-                <Link className="align-self-center" to={`/profiles/${id}`}>
-                    <Avatar src={image} height={imageSize} alt="avatar" />
-                </Link>
-            </div>
-            <div className={`mx-2 ${styles.WordBreak}`}>
+            <Link className="align-self-center" to={`/profiles/${id}`}>
+                <Avatar src={image} height={imageSize} alt="avatar" />
+            </Link>
+        </div>
+        <div className={`mx-2 ${styles.WordBreak}`}>
                 <strong>{owner}</strong>
-            </div>
+        </div>
+        <div className={`text-right ${!mobile && "ml-auto"}`}>
+            {!mobile &&
+                currentUser &&
+                !is_owner &&
+                (following_id ? (
+                    <Button
+                        className={btnStyles.UnFollow}
+                        onClick={() => {}}
+                    >
+                        Unfollow
+                    </Button>
+                ) : (
+                    <Button
+                    className={`${btnStyles.Button} ${btnStyles.Follow}`}
+                    onClick={() => {}}
+                    >
+                        Follow
+                    </Button>
+                ))}
+        </div>
     </div>
   )
 }
