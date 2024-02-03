@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import { BeatLoader } from "react-spinners"; 
 
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
@@ -75,7 +76,7 @@ function PostFeed() {
                     />
                 ))}
                 dataLength={replies.results.length}
-                loader={<Asset spinner />}
+                loader={<BeatLoader color="#36d7b7" />}
                 hasMore={!!replies.next}
                 next={() => fetchMoreData(replies, setReplies)}
                 />

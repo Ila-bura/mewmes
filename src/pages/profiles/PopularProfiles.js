@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
-import Asset from "../../components/Asset";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { BeatLoader } from "react-spinners"; 
 
 const PopularProfiles = () => {
   const [profileData, setProfileData] = useState({
@@ -42,7 +42,9 @@ const PopularProfiles = () => {
           ))}
         </>
       ) : (
-        <Asset spinner />
+        <Container className={appStyles.Content}>
+            <BeatLoader color="#36d7b7" />
+          </Container>
       )}
     </Container>
   );
