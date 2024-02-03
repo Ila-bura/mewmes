@@ -12,6 +12,10 @@ import ReplyCreateForm from "../replies/ReplyCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Reply from "../replies/Reply";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
+
 
 function PostFeed() {
   // Get the 'id' parameter from URL  
@@ -56,21 +60,29 @@ function PostFeed() {
                 setPost={setPost}
                 setReplies={setReplies}
             />
-        ) : replies.results.length ? (
-            "Replies"
-        ) : null} 
-
-         {replies.results.length ? (  
-            "Replies"
-            ) : null}
+            ) : replies.results.length ? (
+                "Replies"
+            ) : null} 
+            
             {replies.results.length ? (
-              replies.results.map((reply) => (
-                <Reply key={reply.id} {...reply} setPost={setPost} setReplies={setReplies}/>
-              ))
+                <InfiniteScroll
+                children={replies.results.map((reply) => (
+                    <Reply
+                        key={reply.id}
+                        {...reply}
+                        setPost={setPost}
+                        setReplies={setReplies}
+                    />
+                ))}
+                dataLength={replies.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!replies.next}
+                next={() => fetchMoreData(replies, setReplies)}
+                />
             ) : currentUser ? (
-              <span>No comments yet, be the first to comment!</span>
+              <span>No comments here for now, want to add something?</span>
             ) : (
-              <span>No comments... yet</span>
+              <span>Nothing to read yet!</span>
             )}             
         </Container>
       </Col>

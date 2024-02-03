@@ -9,13 +9,13 @@ import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsFeed.module.css";
 import NoResults from "../../assets/noresults.png";
-import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import Asset from "../../components/Asset";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
-import Asset from "../../components/Asset";
 
 
 // Functional component for rendering memes feed
