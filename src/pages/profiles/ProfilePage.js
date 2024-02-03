@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
-import Asset from "../../components/Asset";
+import { BeatLoader } from "react-spinners"; 
 
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
@@ -80,16 +79,16 @@ function ProfilePage() {
                     (profile?.following_id ? (
                         <Button
                             className={btnStyles.UnFollow}
-                            onClick={() => { handleUnfollow(profile) }}
+                            onClick={() => {}}
                         >
-                            Unfollow
+                            Unfollow me
                         </Button>
                     ) : (
                         <Button
                             className={`${btnStyles.Button} ${btnStyles.Follow}`}
-                            onClick={() => { handleFollow(profile) }}
+                            onClick={() => {}}
                         >
-                            Follow
+                            Follow me
                         </Button>
                     ))}
             </Col>
@@ -120,7 +119,7 @@ function ProfilePage() {
               {mainProfilePosts}
             </>
           ) : (
-            <Asset spinner />
+            <BeatLoader color="#36D7B7" />
           )}
         </Container>
       </Col>
