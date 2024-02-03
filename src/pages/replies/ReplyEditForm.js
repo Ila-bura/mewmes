@@ -59,14 +59,14 @@ function ReplyEditForm(props) {
                     disabled={!content.trim()}
                     type="submit"
                 >
-                    save
+                    Save
                 </button>
                 <button
                     className={styles.Button}
                     onClick={() => setShowEditForm(false)}
                     type="button"
                 >
-                    cancel
+                    Cancel
                 </button>
 
             </div>

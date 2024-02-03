@@ -8,11 +8,10 @@
     margin-right: 2px;
     min-width: 75px;
     background-color: #E8A7CE !important;
-    color: #1D1F21;
+    color: #1D1F21 !important;
 }
 
 .Button:hover {
-    opacity: 0.7;
     border-color: transparent;
     cursor: pointer;
     background-color: #F962A9 !important;
@@ -20,7 +19,6 @@
     transition: all 0.8s;
     color: #1D1F21;
 }
-
 
 .Button:hover:active,
 .Button:active,

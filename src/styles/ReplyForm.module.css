@@ -1,5 +1,5 @@
 .Form {
-    border: 1px solid rgb(121, 118, 118);
+    border: 1px solid;
     border-radius: 5px!important;
 }
 
@@ -10,7 +10,6 @@
     padding: 4px 10px;
     min-width: 75px;
     margin: 5px;
-    font-weight: 600;
 }
 
 .Button:hover {
