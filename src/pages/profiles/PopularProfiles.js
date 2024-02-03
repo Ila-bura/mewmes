@@ -5,7 +5,7 @@ import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { BeatLoader } from "react-spinners"; 
 
-const PopularProfiles = () => {
+const PopularProfiles = ({ mobile }) => {
   const [profileData, setProfileData] = useState({
     // we will use the pageProfile later!
     pageProfile: { results: [] },
@@ -33,18 +33,28 @@ const PopularProfiles = () => {
   }, [currentUser]);
 
   return (
-    <Container className={appStyles.Content}>
+    <Container
+      className={`${appStyles.Content} ${
+        mobile && "d-lg-none text-center mb-3"
+      }`}
+    >
       {popularProfiles.results.length ? (
         <>
           <p>Most followed profiles.</p>
-          {popularProfiles.results.map((profile) => (
-            <p key={profile.id}>{profile.owner}</p>
-          ))}
+          {mobile ? (
+            <div className="d-flex justify-content-around">
+              {popularProfiles.results.slice(0, 4).map((profile) => (
+                <p key={profile.id}>{profile.owner}</p>
+              ))}
+            </div>
+          ) : (
+            popularProfiles.results.map((profile) => (
+              <p key={profile.id}>{profile.owner}</p>
+            ))
+          )}
         </>
       ) : (
-        <Container className={appStyles.Content}>
-            <BeatLoader color="#36d7b7" />
-          </Container>
+        <BeatLoader color="#36D7B7" />
       )}
     </Container>
   );
