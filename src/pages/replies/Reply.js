@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { axiosRes } from '../../api/axiosDefaults';
@@ -6,17 +6,23 @@ import Avatar from "../../components/Avatar";
 import styles from "../../styles/Reply.module.css";
 import { MoreDropdown } from '../../components/MoreDropdown';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import ReplyEditForm from "./ReplyEditForm";
 
 const Reply = (props) => {
   const { profile_id, profile_image, owner, updated_at, content, id, setPost,
     setReplies, } = props;
 
+  const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
+
+  // Check if the current user is the owner of the reply
   const is_owner = currentUser?.username === owner;
 
+  // Function to delete the reply
   const handleDelete = async () => {
     try {
         await axiosRes.delete(`/reply/${id}/`);
+        // Update the reply count of the post
         setPost((prevPost) => ({
             results: [
                 {
@@ -26,6 +32,7 @@ const Reply = (props) => {
             ],
         }));
 
+        // Remove the deleted reply from the replies list
         setReplies((prevReplies) => ({
             ...prevReplies,
             results: prevReplies.results.filter((reply) => reply.id !== id),
@@ -33,24 +40,40 @@ const Reply = (props) => {
     } catch (err) { }
 };
 
-  return (
-    <div>
-      <hr />
-      <Media>
-        <Link to={`/profiles/${profile_id}`}>
-          <Avatar src={profile_image} />
-        </Link>
-        <Media.Body className="align-self-center ml-2">
-        {is_owner && (
-                     <MoreDropdown handleEdit={() => {}} handleDelete={handleDelete} />
+    return (
+        <>
+            <hr />
+            <Media>
+                <Link to={`/profiles/${profile_id}`}>
+                    <Avatar src={profile_image} />
+                </Link>
+                <Media.Body className="align-self-center ml-2">
+                    <span className={styles.Owner}>{owner}</span>
+                    <span className={styles.Date}>{updated_at}</span>
+                    {/* Render the edit form if showEditForm is true, otherwise the content of the reply */}
+                    {showEditForm ? (
+                        <ReplyEditForm
+                            id={id}
+                            profile_id={profile_id}
+                            content={content}
+                            profileImage={profile_image}
+                            setReplies={setReplies}
+                            setShowEditForm={setShowEditForm}
+                        />
+                    ) : (
+                        <p>{content}</p>
+                    )}
+                </Media.Body>
+                {/* Render the more dropdown menu if the current user is the owner of the reply */}
+                {is_owner && !showEditForm && (
+                    <MoreDropdown
+                        handleEdit={() => setShowEditForm(true)}
+                        handleDelete={handleDelete}
+                    />
                 )}
-          <span className={styles.Owner}>{owner}</span> <span></span>
-          <span className={styles.Date}>{updated_at}</span>
-          <p>{content}</p>
-        </Media.Body>
-      </Media>
-    </div>
-  );
-};
+            </Media>
+        </>
+    );
+    };
 
-export default Reply;
+    export default Reply;
