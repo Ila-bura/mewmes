@@ -116,7 +116,7 @@ function ProfilePage() {
                         <Post key={post.id} {...post} setPosts={setProfilePosts} />
                     ))}
                     dataLength={profilePosts.results.length}
-                    loader={<Asset spinner />}
+                    loader={<BeatLoader color="#36D7B7" />}
                     hasMore={!!profilePosts.next}
                     next={() => fetchMoreData(profilePosts, setProfilePosts)}
                 />
