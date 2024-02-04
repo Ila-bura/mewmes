@@ -1,0 +1,22 @@
+.InfoContent {
+    font-weight: 550;
+}
+
+.InfoContent h3 {
+    font-weight: bold;
+    color: #34B79F;
+}
+
+.InfoContent i {
+    text-decoration: none;
+    color: #F962A9;
+}
+
+
+/* Media query */
+/* For medium laptop screens sizes from 1024px wide and down */
+@media screen and (max-width: 1024px){
+    .InfoContent {
+        margin-bottom: 4% !important;
+    }
+}

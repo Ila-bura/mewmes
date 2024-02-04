@@ -5,7 +5,7 @@ import styles from "../../styles/InfoPage.module.css";
 
 const InfoPage = () => {
   return (
-    <Container className={`${appStyles.Content} ${styles.AboutContent} p-5 mt-4`}>
+    <Container className={`${appStyles.Content} ${styles.InfoContent} p-5 mt-4`}>
       <Row>
         <Col>
           <div className='d-flex justify-content-center'>
