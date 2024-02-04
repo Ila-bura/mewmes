@@ -1,0 +1,27 @@
+.ViralProfiles {
+font-weight: bold;
+color: #34B79F;
+text-align: center;
+}
+
+/* Media query */
+/* For medium laptop screens sizes from 1024px wide and down */
+@media screen and (max-width: 1024px) and (min-width: 900px){
+    .ProfContent {
+        margin-top: 15.8% !important;
+    }
+}
+
+/* For large tablet screens sizes from 768px wide and down */
+@media screen and (max-width: 768px) {
+    .ProfContent {
+        margin-top: 5% !important;
+    }
+}
+
+/* For large phone screen sizes from 425px wide and down */
+@media screen and (max-width: 425px){
+    .ProfContent {
+        margin: 10px auto !important;
+    }
+}

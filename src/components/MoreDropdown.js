@@ -26,6 +26,7 @@ const ProfileSettings = React.forwardRef(({ onClick }, ref) => (
     />
   ));
   
+  // Dropdown component for edit and delete options
   export const MoreDropdown = ({ handleEdit, handleDelete }) => {
     return (
         <Dropdown className={`ml-auto" ${styles.Absolute}`} drop="right">
@@ -54,7 +55,7 @@ const ProfileSettings = React.forwardRef(({ onClick }, ref) => (
     );
   };
 
-  
+  // Dropdown component for profile edit options
   export function ProfileEditDropdown({ id }) {
     const history = useHistory();
     return (

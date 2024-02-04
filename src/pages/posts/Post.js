@@ -180,7 +180,7 @@ const Post = (props) => {
             }
 
           <Card.Body>
-            {title && <Card.Title className="text-center">{title}</Card.Title>}
+            {title && <Card.Title className={`text-center ${styles.MemeTitle}`}>{title}</Card.Title>}
             {content && <Card.Text>{content}</Card.Text>}
             <div className={styles.PostBar}>
               {is_owner ? (

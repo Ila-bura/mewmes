@@ -70,18 +70,18 @@ function ProfilePage() {
         <h3 className={`mr-5 d-flex justify-content-center ${styles.ProfileName}`}>{profile?.owner}</h3>
         </Col>
         <Col lg={8}>
-        <Row className="justify-content-center no-gutters">
+        <Row className={`justify-content-center no-gutters ${styles.OwnersMemes}`}>
             <Col xs={4} className='my-5'>
                 <div>{profile?.posts_count}</div>
-                <div>posts</div>
+                <div>Memes</div>
             </Col>
             <Col xs={4} className='my-5'>
                 <div>{profile?.followers_count}</div>
-                <div>followers</div>
+                <div>Followers</div>
             </Col>
             <Col xs={4} className='my-5'>
                 <div>{profile?.following_count}</div>
-                <div>following</div>
+                <div>Following</div>
             </Col>
 
             <Col lg={5} className="text-lg-left">
@@ -106,7 +106,7 @@ function ProfilePage() {
         </Row>
     </Col>
     <hr />
-    {profile?.content && <Col className={`col-12 p-5 ${styles.BioContent}`}>{profile.content}</Col>}
+    {profile?.content && <Col className={`col-12 p-5 ${styles.AboutContent}`}>{profile.content}</Col>}
 </Row>
 </>
     );
@@ -115,7 +115,7 @@ function ProfilePage() {
   const mainProfilePosts = (
     <>
             <hr />
-            <p className={`text-center ${styles.OwnersPosts}`}>{profile?.owner}'s posts</p>
+            <p className={`text-center ${styles.OwnersMemes}`}>{profile?.owner}'s memes</p>
             <hr />
             {profilePosts.results.length ? (
                 <InfiniteScroll
