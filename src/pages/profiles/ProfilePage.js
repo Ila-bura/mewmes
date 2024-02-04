@@ -30,11 +30,14 @@ function ProfilePage() {
 
   const currentUser = useCurrentUser();
   const { id } = useParams();
-  const { setProfileData, handleFollow } = useSetProfileData();
+  const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
   const { pageProfile } = useProfileData();
   const [profile] = pageProfile.results;
+
+  // Check if the current user is the owner of the profile
   const is_owner = currentUser?.username === profile?.owner;
 
+  // Fetch profile data and profile memes
   useEffect(() => {
     const fetchData = async () => {
         try {
@@ -56,6 +59,7 @@ function ProfilePage() {
     fetchData();
 }, [id, setProfileData]);
 
+// JSX for main profile section
   const mainProfile = (
     <>
       <Row noGutters className="px-3 text-center">
@@ -84,7 +88,7 @@ function ProfilePage() {
                     (profile?.following_id ? (
                         <Button
                             className={btnStyles.UnFollow}
-                            onClick={() => {}}
+                            onClick={() => { handleUnfollow(profile) }}
                         >
                             Unfollow me
                         </Button>
@@ -105,6 +109,7 @@ function ProfilePage() {
 </>
     );
 
+    // JSX for main profile memes section
   const mainProfilePosts = (
     <>
             <hr />
@@ -121,6 +126,7 @@ function ProfilePage() {
                     next={() => fetchMoreData(profilePosts, setProfilePosts)}
                 />
             ) : (
+                // Render no results message if no memes available
                 <Asset
                     src={NoResults}
                     message={`No memes found, ${profile?.owner} hasn't posted anything yet!`}
@@ -140,7 +146,7 @@ function ProfilePage() {
               {mainProfilePosts}
             </>
           ) : (
-            <BeatLoader color="#36D7B7" />
+            <BeatLoader color="#36D7B7" /> // Render loading spinner if data is loading
           )}
         </Container>
       </Col>

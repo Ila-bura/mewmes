@@ -17,12 +17,15 @@ export const ProfileDataProvider = ({ children }) => {
 
     const currentUser = useCurrentUser();
 
+    // Function to handle follow action
     const handleFollow = async (clickedProfile) => {
         try {
+            // Send POST request to add follower relationship
             const { data } = await axiosRes.post("/followers/", {
                 followed: clickedProfile.id,
             });
 
+            // Update profile data with new follow relationship
             setProfileData((prevState) => ({
                 ...prevState,
                 pageProfile: {
@@ -42,10 +45,13 @@ export const ProfileDataProvider = ({ children }) => {
         }
     };
 
+    // Function to handle unfollow action
     const handleUnfollow = async (clickedProfile) => {
         try {
+            // Send delete request to remove follower relationship
             await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
 
+            // Update profile data after unfollow
             setProfileData((prevState) => ({
                 ...prevState,
                 pageProfile: {
@@ -66,12 +72,15 @@ export const ProfileDataProvider = ({ children }) => {
     };
 
 
+    // Fetch popular profiles on component mount or when current user changes
     useEffect(() => {
         const handleMount = async () => {
             try {
+                // Fetch popular profiles sorted by follower count
                 const { data } = await axiosReq.get(
                     "/profiles/?ordering=-followers_count"
                 );
+                // Update popular profiles in profile data
                 setProfileData((prevState) => ({
                     ...prevState,
                     popularProfiles: data,
