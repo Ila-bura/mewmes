@@ -59,8 +59,8 @@ const SignInForm = () => {
         className={`my-auto d-none d-md-block p-6 ${styles.SignInCol}`}>
         <Image
             className={`${styles.FillerImage}`}
-            src={"https://res.cloudinary.com/ilabura/image/upload/v1706459613/pexels-joa%CC%83o-jesus-4929241_tgwiwn.jpg"}
-            height={350}
+            src={"https://res.cloudinary.com/ilabura/image/upload/v1707059814/signup_jd2g6e.jpg"}
+            height={300}
             width={560}
             alt="signin picture"
             />
