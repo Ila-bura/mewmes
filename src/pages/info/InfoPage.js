@@ -19,7 +19,7 @@ const InfoPage = () => {
             <i className="far fa-grin-squint-tears"></i>
             <p>Join our vibrant community of cat aficionados and start sharing your favourite cat memes today! Whether you're a seasoned meme connoisseur or a casual cat lover, there's a place for you in our purr-fect universe.</p>
             <i className="fas fa-paw"></i>
-            <p>Ready to join our mew-nificent community? Simply create an account, upload your favorite cat memes, and let the laughter roar!</p>
+            <p>Ready to join our mew-nificent community? Simply create an account, upload your funniest cat memes, and let the laughter roar!</p>
           </div>
           <hr />
         </Col>
