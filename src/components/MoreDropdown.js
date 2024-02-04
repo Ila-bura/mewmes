@@ -3,11 +3,21 @@ import Dropdown from "react-bootstrap/Dropdown";
 import styles from "../styles/MoreDropdown.module.css";
 import { useHistory } from "react-router";
 
-// The forwardRef is important!!
-// Dropdown needs access to the DOM node in order to position the Menu
+
 const ThreeDrops = React.forwardRef(({ onClick }, ref) => (
     <i
       className="fas fa-ellipsis-v"
+      ref={ref}
+      onClick={(e) => {
+        e.preventDefault();
+        onClick(e);
+      }}
+    />
+  ));
+
+const ProfileSettings = React.forwardRef(({ onClick }, ref) => (
+    <i
+      className="fas fa-bars"
       ref={ref}
       onClick={(e) => {
         e.preventDefault();
@@ -48,7 +58,7 @@ const ThreeDrops = React.forwardRef(({ onClick }, ref) => (
   export function ProfileEditDropdown({ id }) {
     const history = useHistory();
     return (
-      <Dropdown className={`ml-auto px-3 ${styles.Bars}`} drop="right">
+      <Dropdown className={`ml-auto px-3 ${styles.Bars}`} drop="left">
         <Dropdown.Toggle as={ProfileSettings} />
         <Dropdown.Menu>
   

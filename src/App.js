@@ -11,6 +11,10 @@ import { useCurrentUser } from './contexts/CurrentUserContext';
 import PostsFeed from './pages/posts/PostsFeed';
 import EditPostForm from './pages/posts/EditPostForm';
 import ProfilePage from './pages/profiles/ProfilePage';
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import UsernameForm from './pages/profiles/UsernameForm';
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+
 
 function App() {
     const currentUser = useCurrentUser();
@@ -32,6 +36,21 @@ function App() {
             <Route exact path='/posts/:id' render={() => <PostFeed />} />
             <Route exact path='/posts/:id/edit' render={() => <EditPostForm />} />
             <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+            <Route
+            exact
+            path="/profiles/:id/edit/username"
+            render={() => <UsernameForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit/password"
+            render={() => <UserPasswordForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit"
+            render={() => <ProfileEditForm />}
+          />
             <Route render={() => <p>Page not found!</p>} />
         </Switch>
             </Container>
