@@ -83,13 +83,6 @@ const NavBar = () => {
     <i className="fas fa-plus-circle"></i>
     Sign Up
         </NavLink>
-
-        <NavLink
-            to={`/profiles/${currentUser?.profile_id}`}
-            className={`${styles.NavLink} ${styles.Profile}`}>
-            <Avatar text={currentUser?.username} src={currentUser?.profile_image} height={40} alt="avatar"/>
-        </NavLink>
-
     </>
     );
 
