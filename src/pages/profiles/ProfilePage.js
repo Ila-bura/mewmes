@@ -23,6 +23,7 @@ import {
     useSetProfileData,
 } from "../../contexts/ProfileDataContext";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -62,6 +63,7 @@ function ProfilePage() {
 // JSX for main profile section
   const mainProfile = (
     <>
+    {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
         <Image className={styles.ProfileImage} roundedCircle src={profile?.image} alt="avatar"/>
