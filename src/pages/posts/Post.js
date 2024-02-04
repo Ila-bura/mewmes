@@ -215,26 +215,26 @@ const Post = (props) => {
                 // Check if user is the owner of the meme 
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip>C'mon, you cannot vote for your own meme!</Tooltip>}
+                  overlay={<Tooltip>C'mon, you cannot laugh at your own meme!</Tooltip>}
                 >
-                  <i className="far fa-thumbs-up" />
+                  <i className="far fa-grin-squint-tears" />
                 </OverlayTrigger>
               ) : vote_id ? (
                 <span onClick={handleUnlike}>
-                  <i className={`far fa-thumbs-up ${styles.Upvote}`} />
+                  <i className={`far fa-grin-squint-tears ${styles.Laugh}`} />
                 </span>
               ) : currentUser ? (
                 <span onClick={handleLike}>
-                  <i className={`far fa-thumbs-up ${styles.UpvoteOutline}`} />
+                  <i className={`far fa-grin-squint-tears ${styles.LaughOutline}`} />
                 </span>
               ) : (
                 // Prompt users to log in to vote for memes
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip>Sign in to vote for memes!</Tooltip>}
+                  overlay={<Tooltip>Sign in to react to memes!</Tooltip>}
                 >
                   <Link to="/signin">
-                    <i className="far fa-thumbs-up" />
+                    <i className="far fa-grin-squint-tears" />
                   </Link>
                 </OverlayTrigger>
               )}
@@ -245,24 +245,24 @@ const Post = (props) => {
                   placement="bottom"
                   overlay={<Tooltip>C'mon, you cannot dislike your own meme!</Tooltip>}
                 >
-                  <i className="fas fa-thumbs-down" />
+                  <i className="far fa-sad-tear" />
                 </OverlayTrigger>
               ) : downvote_id ? (
                 <span onClick={handleUndislike}>
-                  <i className={`fas fa-thumbs-down ${styles.Downvote}`} />
+                  <i className={`far fa-sad-tear ${styles.Dislike}`} />
                 </span>
               ) : currentUser ? (
                 <span onClick={handleDislike}>
-                  <i className={`fas fa-thumbs-down ${styles.DownvoteOutline}`} />
+                  <i className={`far fa-sad-tear ${styles.DislikeOutline}`} />
                 </span>
               ) : (
                 // Prompt users to log in to vote for memes
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip>Sign in to vote for memes!</Tooltip>}
+                  overlay={<Tooltip>Sign in to react to memes!</Tooltip>}
                 >
                   <Link to="/signin">
-                    <i className="fas fa-thumbs-down" />
+                    <i className="far fa-sad-tear" />
                   </Link>
                 </OverlayTrigger>
               )}

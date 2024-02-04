@@ -24,19 +24,19 @@
 
   /* Bookmark and thumbs icons style */
 
-.Post .Upvote {
+.Post .Laugh {
     color: #F962A9;
 }
 
-.Post .Upvote:hover {
+.Post .Laugh:hover {
     color: #E8A7CE;
 }
 
-.Post .Downvote {
+.Post .Dislike {
     color: #F962A9;
 }
 
-.Post .Downvote:hover {
+.Post .Dislike:hover {
     color: #E8A7CE;
 }
 
