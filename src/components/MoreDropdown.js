@@ -73,14 +73,14 @@ const ProfileSettings = React.forwardRef(({ onClick }, ref) => (
             }
             aria-label="edit-username"
           >
-            <i className="fas fa-user" />
+            <i className="fas fa-people-arrows" />
             Change username
           </Dropdown.Item>
           <Dropdown.Item
             onClick={() => history.push(`/profiles/${id}/edit/password`)}
             aria-label="edit-password"
           >
-            <i className="fas fa-lock" />
+            <i className="fas fa-key" />
             Change password
           </Dropdown.Item>
         </Dropdown.Menu>
