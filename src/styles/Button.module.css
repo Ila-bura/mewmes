@@ -1,8 +1,8 @@
 .Button {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     align-self: center;
     border-radius: 100px;
-    border: 1px solid;
+    border-color: transparent;
     padding: 4px 10px;
     margin-left: 2px;
     margin-right: 2px;
@@ -35,4 +35,32 @@
 .Light {
     background-color: #F962A9;
     color: #1D1F21;
+}
+
+.UnFollow {
+    background-color: #36d7b7;
+    transform: 1.2;
+    font-size: 0.8rem;
+    align-self: center;
+    border-radius: 100px;
+    border-color: transparent;
+    padding: 4px 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 75px;
+    color: #1D1F21 !important;
+}
+
+.UnFollow:hover {
+    border-color: transparent;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.8s;
+    background-color: #34B79F;
+    color: #1D1F21 !important;
+    
+}
+.UnFollow:focus {
+    background-color: #34B79F;
+    color: #1D1F21 !important;
 }

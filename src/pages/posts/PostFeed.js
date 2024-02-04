@@ -81,9 +81,9 @@ function PostFeed() {
                 next={() => fetchMoreData(replies, setReplies)}
                 />
             ) : currentUser ? (
-              <span>No comments here for now, want to add something?</span>
+              <span className={`py-2 p-0 p-lg-4 d-flex justify-content-center`}>No comments for now, want to say something?</span>
             ) : (
-              <span>Nothing to read yet!</span>
+              <span className={`py-2 p-0 p-lg-4 d-flex justify-content-center`}>Sign up to add your comments here!</span>
             )}             
         </Container>
       </Col>

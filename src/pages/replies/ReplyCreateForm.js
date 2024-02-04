@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
 import styles from "../../styles/ReplyForm.module.css";
+import btnStyles from "../../styles/Button.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
@@ -68,7 +69,7 @@ function ReplyCreateForm(props) {
                 </InputGroup>
             </Form.Group>
             <button
-                className={`${styles.Button} btn d-block m-auto`}
+                className={`${btnStyles.Button} btn d-block m-auto`}
                 disabled={!content.trim()}
                 type="submit"
             >
