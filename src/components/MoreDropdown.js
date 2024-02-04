@@ -28,13 +28,13 @@ const ProfileSettings = React.forwardRef(({ onClick }, ref) => (
 
 const renderTooltip1 = (props) => (
   <Tooltip id="button-tooltip" {...props}>
-    Edit meme
+    Edit
   </Tooltip>
 );
 
 const renderTooltip2 = (props) => (
   <Tooltip id="button-tooltip" {...props}>
-    Delete meme
+    Delete
   </Tooltip>
 );
 
@@ -56,7 +56,7 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
           <Dropdown.Item
             className={styles.DropdownItem}
             onClick={handleEdit}
-            aria-label="Edit meme"
+            aria-label="Edit"
           >
             <i className="far fa-edit" />
           </Dropdown.Item>
@@ -69,7 +69,7 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
           <Dropdown.Item
             className={styles.DropdownItem}
             onClick={handleDelete}
-            aria-label="Delete meme"
+            aria-label="Delete"
           >
             <i className="far fa-trash-alt" />
           </Dropdown.Item>

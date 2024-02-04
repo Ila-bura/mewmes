@@ -49,7 +49,7 @@ const SignUpForm = () => {
             <Col className={`my-auto d-none d-md-block p-6 ${styles.SignUpCol}`} md={7}>
                 <Image
                     className={`${styles.FillerImage}`}
-                    src={"https://res.cloudinary.com/ilabura/image/upload/v1707060636/funny-cats-089-030_mw94zl.jpg"}
+                    src={"https://res.cloudinary.com/ilabura/image/upload/v1707081374/360_F_139467125_0AWeutakD4dzNp7MmsouL8PDBiftShTI_rvkzzx.jpg"}
                     height={350}
                     width={560}
                     alt="signup picture"
