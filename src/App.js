@@ -14,6 +14,7 @@ import ProfilePage from './pages/profiles/ProfilePage';
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import UsernameForm from './pages/profiles/UsernameForm';
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import InfoPage from './pages/info/InfoPage';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
             filter={`owner__followed__owner__profile=${profile_id}&`}/>} />
             <Route exact path='/saved' render={() => <PostsFeed message="Sorry, no results! Try another keyword or save a meme." 
             filter={`saved__owner__profile=${profile_id}&ordering=-saved__created_at&`}/>} />
-            <Route exact path="/about" render={() => <h1>About</h1>} />
+            <Route exact path="/info" render={() => <InfoPage />} />
             <Route exact path='/posts/create' render={() => <PostCreateForm />} />
             <Route exact path='/signin' render={() => <SignInForm />} />
             <Route exact path="/signup" render={() => <SignUpForm />} />

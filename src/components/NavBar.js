@@ -111,9 +111,9 @@ const NavBar = () => {
             <i className="fas fa-house-user"></i>
             Home
             </NavLink>
-            <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/about">
-            <i className="far fa-question-circle"></i>
-            About
+            <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/info">
+            <i className="fas fa-cat"></i>
+            Info
             </NavLink>
             {/* Display new meme icon if user is logged in */}
             {currentUser && newPostIcon}
