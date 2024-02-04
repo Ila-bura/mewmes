@@ -50,9 +50,4 @@
 .FillerImage {
     border-radius: 2px;
     margin-top: 15px;
-    
-    box-shadow: 8px 8px 3px #ccc;
-    -moz-box-shadow: 8px 8px 3px #ccc;
-    -webkit-box-shadow: 8px 8px 3px #ccc;
-    -khtml-box-shadow: 8px 8px 3px #ccc;
 }
