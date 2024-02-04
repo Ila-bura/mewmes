@@ -20,7 +20,10 @@
     color: #34B79F;
     font-weight: bold;
     }
-    
+ 
+.PostBar i {
+    padding: 10px;
+    }
 
   /* Bookmark and thumbs icons style */
 

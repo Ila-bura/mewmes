@@ -15,10 +15,13 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const SignInForm = () => {
     // State for current user
     const setCurrentUser = useSetCurrentUser();
+
+    useRedirect('loggedIn')
 
       // State for sign in data
     const [signInData, setSignInData] = useState({
@@ -47,7 +50,7 @@ const SignInForm = () => {
             // Set current user after successful sign in
             setCurrentUser(data.user);
              // Redirect to home page
-            history.push("/");
+            history.goBack();
         }   catch (err) {
             setErrors(err.response?.data);
         }

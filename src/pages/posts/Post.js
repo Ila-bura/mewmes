@@ -154,7 +154,7 @@ const Post = (props) => {
 
 
     return (
-        // Render a card component for the meme post
+        // Render a card component for the meme
         <Card className={styles.Post}>
           <Card.Body>
             <Media className="align-items-center justify-content-between">
