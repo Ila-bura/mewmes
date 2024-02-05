@@ -31,6 +31,7 @@ const Post = (props) => {
     const currentUser = useCurrentUser();
     // Check if current user is the owner of the meme
     const is_owner = currentUser?.username === owner;
+    const is_user = currentUser?.username;
     const history = useHistory();
 
     // Bookmark memes 
@@ -204,10 +205,12 @@ const Post = (props) => {
               ) : (
                 // Prompt user to log in to save memes
                 <OverlayTrigger
-                  placement="top"
+                  placement="bottom"
                   overlay={<Tooltip>Log in to save memes!</Tooltip>}
                 >
+                <Link to="/signin">
                   <i className="fas fa-thumbtack" />
+                </Link>
                 </OverlayTrigger>
               )}
     
@@ -231,7 +234,7 @@ const Post = (props) => {
                 // Prompt users to log in to vote for memes
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip>Sign in to react to memes!</Tooltip>}
+                  overlay={<Tooltip>Log in to laugh at memes!</Tooltip>}
                 >
                   <Link to="/signin">
                     <i className="far fa-grin-squint-tears" />
@@ -259,7 +262,7 @@ const Post = (props) => {
                 // Prompt users to log in to vote for memes
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip>Sign in to react to memes!</Tooltip>}
+                  overlay={<Tooltip>Log in to react to memes!</Tooltip>}
                 >
                   <Link to="/signin">
                     <i className="far fa-sad-tear" />
@@ -268,9 +271,21 @@ const Post = (props) => {
               )}
               {downvotes_count}
     
-              <Link to={`/posts/${id}`}>
-            <i className="far fa-comments" />
-          </Link>
+              {is_user ? (
+              <Link to={`/posts/${id}`} aria-label="comment">
+            <i className="far fa-comments"/></Link>
+             ) : currentUser ? (
+                <span>
+                    <i className="far fa-comments"/>
+                    </span>
+                    ) : (
+                        <OverlayTrigger
+                            placement="bottom"
+                            overlay={<Tooltip>Log in to comment on memes!</Tooltip>}
+                        ><Link to="/signin">
+                                <i className="far fa-comments" /></Link>
+                        </OverlayTrigger>
+                        )}
               {reply_count}
             </div>
           </Card.Body>
