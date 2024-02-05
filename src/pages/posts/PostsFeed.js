@@ -13,6 +13,7 @@ import { fetchMoreData } from "../../utils/utils";
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
 import PopularProfiles from "../profiles/PopularProfiles";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -24,6 +25,7 @@ function PostsFeed({ message, filter = "" }) {
     const [posts, setPosts] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
+    const currentUser = useCurrentUser();
     const [query, setQuery] = useState("");
 
     useEffect(() => {
@@ -47,7 +49,7 @@ function PostsFeed({ message, filter = "" }) {
             clearTimeout(timer);
         };
 
-    }, [filter, query, pathname]);
+    }, [filter, query, pathname, currentUser]);
 
   
   return (
