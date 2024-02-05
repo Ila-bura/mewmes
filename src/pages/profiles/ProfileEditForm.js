@@ -99,7 +99,7 @@ const ProfileEditForm = () => {
                 </Alert>
             ))}
             <Button className={`${btnStyles.Button} ${btnStyles.Light}`} type="submit">
-                Save
+                Save changes
             </Button>
             <Button
                 className={`${btnStyles.Button} ${btnStyles.Light}`}

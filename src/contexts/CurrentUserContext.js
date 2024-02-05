@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { axiosReq, axiosRes } from '../api/axiosDefaults';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { removeTokenTimestamp, shouldRefreshToken } from '../utils/utils';
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -32,24 +33,26 @@ export const CurrentUserProvider = ({ children }) => {
   useMemo(() => {
     // Intercept request to refresh token
     axiosReq.interceptors.request.use(
-      async (config) => {
-        try {
-          await axios.post("/dj-rest-auth/token/refresh/");
-        } catch (err) {
-          setCurrentUser((prevCurrentUser) => {
-            // Redirect to sign in page if user is authenticated
-            if (prevCurrentUser) {
-              history.push("/signin");
+        async (config) => {
+            if (shouldRefreshToken()) {
+                try {
+                    await axios.post("/dj-rest-auth/token/refresh/");
+                } catch (err) {
+                    setCurrentUser((prevCurrentUser) => {
+                        if (prevCurrentUser) {
+                            history.push("/signin");
+                        }
+                        return null;
+                    });
+                    removeTokenTimestamp();
+                    return config;
+                }
             }
-            return null;
-          });
-          return config;
+            return config;
+        },
+        (err) => {
+            return Promise.reject(err);
         }
-        return config;
-      },
-      (err) => {
-        return Promise.reject(err);
-      }
     );
 
     // Intercept response to handle unauthorized status
@@ -67,6 +70,7 @@ export const CurrentUserProvider = ({ children }) => {
                         }
                         return null;
                     });
+                    removeTokenTimestamp();
                 }
                 return axios(err.config);
             }
