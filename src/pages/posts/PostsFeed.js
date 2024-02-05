@@ -63,7 +63,8 @@ function PostsFeed({ message, filter = "" }) {
                         onChange={(event) => setQuery(event.target.value)}
                         type="text"
                         className="mr-sm-4"
-                        placeholder="Search memes" />
+                        placeholder="Search memes"
+                        name="search" />
                 </Form>
         {hasLoaded ? (
           <>
