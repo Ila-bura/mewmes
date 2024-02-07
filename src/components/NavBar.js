@@ -10,6 +10,8 @@ import Avatar from './Avatar';
 import axios from 'axios';
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from '../utils/utils';
+import {NotificationManager} from 'react-notifications';
+
 
 const NavBar = () => {
     // Access current user and setCurrentUser functions from context
@@ -23,6 +25,8 @@ const NavBar = () => {
     const handleSignOut = async () => {
         try {
             await axios.post("dj-rest-auth/logout/");
+             // Display success notification
+            NotificationManager.success("Logged out successfully!", "Bye for now!", 2000);
             setCurrentUser(null);
             removeTokenTimestamp();
         } catch (err) {

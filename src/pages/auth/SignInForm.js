@@ -52,7 +52,7 @@ const SignInForm = () => {
             // Send sign in request
             const { data } = await axios.post("/dj-rest-auth/login/", signInData);
             // Display success notification
-            NotificationManager.success("You're signed in!", 'Welcome!', 2000);
+            NotificationManager.success("You're signed in!", "Welcome to MewMes!", 2000);
             
             // Set current user after successful sign in
             setCurrentUser(data.user);
@@ -61,6 +61,8 @@ const SignInForm = () => {
             history.goBack();
         }   catch (err) {
             setErrors(err.response?.data);
+            // Display error notification
+            NotificationManager.error('Please try again', 'Something went wrong!', 2000)
         }
       };
 
