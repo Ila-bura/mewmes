@@ -7,6 +7,7 @@ import styles from "../../styles/Reply.module.css";
 import { MoreDropdown } from '../../components/MoreDropdown';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import ReplyEditForm from "./ReplyEditForm";
+import {NotificationManager} from 'react-notifications';
 
 const Reply = (props) => {
   const { profile_id, profile_image, owner, updated_at, content, id, setPost,
@@ -20,24 +21,38 @@ const Reply = (props) => {
 
   // Function to delete the reply
   const handleDelete = async () => {
-    try {
-        await axiosRes.delete(`/reply/${id}/`);
-        // Update the reply count of the post
-        setPost((prevPost) => ({
-            results: [
-                {
-                    ...prevPost.results[0],
-                    reply_count: prevPost.results[0].reply_count - 1,
-                },
-            ],
-        }));
+    // Display warning notification
+    NotificationManager.warning(
+        'Are you sure you want to delete your comment?', 
+        'Click to delete', 
+        5000,
+        async () => {
+            try {
+                await axiosRes.delete(`/reply/${id}/`);
+                // Display success notification
+                NotificationManager.success('Comment Deleted!', 'Success!');
+                // Update the reply count of the post
+                setPost((prevPost) => ({
+                    results: [
+                        {
+                            ...prevPost.results[0],
+                            reply_count: prevPost.results[0].reply_count - 1,
+                        },
+                    ],
+                }));
 
-        // Remove the deleted reply from the replies list
-        setReplies((prevReplies) => ({
-            ...prevReplies,
-            results: prevReplies.results.filter((reply) => reply.id !== id),
-        }));
-    } catch (err) { }
+                // Remove the deleted reply from the replies list
+                setReplies((prevReplies) => ({
+                    ...prevReplies,
+                    results: prevReplies.results.filter((reply) => reply.id !== id),
+                }));
+            } catch (err) {
+                // Handle error
+                // Display error notification
+                NotificationManager.error('Please try again', 'Something went wrong!');
+            }
+        }
+    );
 };
 
     return (

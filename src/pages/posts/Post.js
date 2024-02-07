@@ -10,6 +10,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import {NotificationManager} from 'react-notifications';
 
 const Post = (props) => {
     const {
@@ -148,12 +149,24 @@ const Post = (props) => {
     }
     // Meme owner can delete their posts 
     const handleDelete = async () => {
-        try {
-            await axiosRes.delete(`/posts/${id}/`);
-            history.goBack();
-        } catch (err) {
-            // console.log(err);
-        }
+        // Display warning notification
+        NotificationManager.warning(
+            'Are you sure you want to delete your meme?', 
+            'Click to delete', 
+            5000,
+            async () => {
+                try {
+                    await axiosRes.delete(`/posts/${id}/`);
+                    // Display success notification
+                    NotificationManager.success('Meme Deleted!', "It's gone!");
+                    history.goBack();
+                } catch (err) {
+                    // console.log(err);
+                    // Display error notification
+                    NotificationManager.error('Please try again', 'Something went wrong!');
+                }
+            }
+        );
     };
 
 

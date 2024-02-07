@@ -8,6 +8,7 @@ import styles from "../../styles/ReplyForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import {NotificationManager} from 'react-notifications';
 
 function ReplyCreateForm(props) {
     // Destructure props
@@ -28,6 +29,8 @@ function ReplyCreateForm(props) {
                 content,
                 post,
             });
+            // Display success notification
+            NotificationManager.success('Comment published!', 'Success!');
             // Update replies state with the new reply
             setReplies((prevReplies) => ({
                 ...prevReplies,
@@ -46,6 +49,8 @@ function ReplyCreateForm(props) {
             setContent("");
         } catch (err) {
             // console.log(err);
+            // Display error notification
+            NotificationManager.error('Please try again', 'Something went wrong!');
         }
     };
 

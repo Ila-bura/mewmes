@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/ReplyCreateEditForm.module.css";
+import {NotificationManager} from 'react-notifications';
 
 function ReplyEditForm(props) {
     const { id, content, setShowEditForm, setReplies } = props;
@@ -21,6 +22,8 @@ function ReplyEditForm(props) {
             await axiosRes.put(`/reply/${id}/`, {
                 content: formContent.trim(),
             });
+            // Display success notification
+            NotificationManager.success('Comment updated!', 'Success!');
             // Update the replies state with the edited reply content
             setReplies((prevReplies) => ({
                 ...prevReplies,
@@ -38,6 +41,8 @@ function ReplyEditForm(props) {
             setShowEditForm(false);
         } catch (err) {
             // console.log(err);
+            // Display error notification
+            NotificationManager.error('Please try again', 'Something went wrong!');
         }
     };
 
