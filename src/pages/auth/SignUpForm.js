@@ -14,6 +14,7 @@ import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
+import {NotificationManager} from 'react-notifications';
 
 const SignUpForm = () => {
     useRedirect('loggedIn')
@@ -43,6 +44,8 @@ const SignUpForm = () => {
         try {
             // Send sign up request
             await axios.post("/dj-rest-auth/registration/", signUpData);
+            // Display Info notification
+            NotificationManager.info("Now please sign in!", "You're signed up!", 2000);
             // Redirect to sign in page after successful sign up
             history.push("/signin");
         } catch (err) {

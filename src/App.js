@@ -16,6 +16,8 @@ import UsernameForm from './pages/profiles/UsernameForm';
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import InfoPage from './pages/info/InfoPage';
 import NotFound from './components/404';
+import {NotificationContainer} from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
     <div className={styles.App}>
             <NavBar />
             <Container className={styles.Main}>
+            <NotificationContainer/>
             <Switch>
             <Route exact path='/' render={() => <PostsFeed message="Sorry, no results! Try another keyword." />} />
             <Route exact path='/feed' render={() => <PostsFeed message="Sorry, no results! Try another keyword or start following a user." 

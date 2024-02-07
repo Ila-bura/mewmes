@@ -17,6 +17,8 @@ import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
+import {NotificationManager} from 'react-notifications';
+
 
 const SignInForm = () => {
     // State for current user
@@ -35,6 +37,7 @@ const SignInForm = () => {
 
     const history = useHistory();
 
+
     // Function to handle input change
     const handleChange = (event) => {
         setSignInData({
@@ -48,6 +51,9 @@ const SignInForm = () => {
         try {
             // Send sign in request
             const { data } = await axios.post("/dj-rest-auth/login/", signInData);
+            // Display success notification
+            NotificationManager.success("You're signed in!", 'Welcome!', 2000);
+            
             // Set current user after successful sign in
             setCurrentUser(data.user);
             setTokenTimestamp(data);
