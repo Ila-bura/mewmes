@@ -10,6 +10,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import {NotificationManager} from 'react-notifications';
 
 
 const UserPasswordForm = () => {
@@ -42,10 +43,14 @@ const UserPasswordForm = () => {
         event.preventDefault();
         try {
             await axiosRes.post("/dj-rest-auth/password/change/", userData);
+            // Display success notification
+            NotificationManager.success('Password Updated!', 'Success!', 2000);
             history.goBack();
         } catch (err) {
             // console.log(err);
             setErrors(err.response?.data);
+            // Display error notification
+            NotificationManager.error('Please try again', 'Something went wrong!', 2000)
         }
     };
 
@@ -55,9 +60,9 @@ const UserPasswordForm = () => {
                 <Container className={appStyles.Content}>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group>
-                            <Form.Label>New password</Form.Label>
+                            <Form.Label>Type your new password</Form.Label>
                             <Form.Control
-                                placeholder="new password"
+                                placeholder="New password"
                                 type="password"
                                 value={new_password1}
                                 onChange={handleChange}
@@ -70,9 +75,9 @@ const UserPasswordForm = () => {
                             </Alert>
                         ))}
                         <Form.Group>
-                            <Form.Label>Confirm new password</Form.Label>
+                            <Form.Label>Confirm your new password</Form.Label>
                             <Form.Control
-                                placeholder="confirm new password"
+                                placeholder="Confirm new password"
                                 type="password"
                                 value={new_password2}
                                 onChange={handleChange}
@@ -88,13 +93,13 @@ const UserPasswordForm = () => {
                             type="submit"
                             className={`${btnStyles.Button} ${btnStyles.Light}`}
                         >
-                            save
+                            Save
                         </Button>
                         <Button
                             className={`${btnStyles.Button} ${btnStyles.Light}`}
                             onClick={() => history.goBack()}
                         >
-                            cancel
+                            Cancel
                         </Button>
                     </Form>
                 </Container>

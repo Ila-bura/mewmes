@@ -16,6 +16,8 @@ import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
+import {NotificationManager} from 'react-notifications';
+
 
 function EditPostForm() {
     const [errors, setErrors] = useState({});
@@ -89,10 +91,14 @@ function EditPostForm() {
         try {
             await axiosReq.put(`/posts/${id}/`, formData);
             history.push(`/posts/${id}`);
+            // Display success notification
+            NotificationManager.success('Meme updated successfully!', 'Well done!', 2000);
         } catch (err) {
             //console.log(err);
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
+                // Display error notification
+                NotificationManager.error('Please try again', 'Something went wrong!', 2000)
             }
         }
     };
@@ -122,7 +128,7 @@ function EditPostForm() {
             ))}
 
             <Button className={`${btnStyles.Button}`} type="submit">
-                Save
+                Save changes
             </Button>
             <Button
                 className={`${btnStyles.Button}`}

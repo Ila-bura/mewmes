@@ -14,6 +14,7 @@ import {
 } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import {NotificationManager} from 'react-notifications';
 
 const ProfileEditForm = () => {
     const currentUser = useCurrentUser();
@@ -69,6 +70,8 @@ const ProfileEditForm = () => {
 
         try {
             const { data } = await axiosReq.put(`/profiles/${id}/`, formData);
+            // Display success notification
+            NotificationManager.success('Profile Updated!', 'Success!', 2000);
             setCurrentUser((currentUser) => ({
                 ...currentUser,
                 profile_image: data.image,
@@ -77,6 +80,8 @@ const ProfileEditForm = () => {
         } catch (err) {
             // console.log(err);
             setErrors(err.response?.data);
+            // Display error notification
+            NotificationManager.error('Please try again', 'Something went wrong!', 2000)
         }
     };
 

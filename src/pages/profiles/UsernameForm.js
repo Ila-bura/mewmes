@@ -13,6 +13,7 @@ import {
 } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import {NotificationManager} from 'react-notifications';
 
 const UsernameForm = () => {
     const [username, setUsername] = useState("");
@@ -38,6 +39,8 @@ const UsernameForm = () => {
             await axiosRes.put("/dj-rest-auth/user/", {
                 username,
             });
+            // Display success notification
+            NotificationManager.success('Username Updated!', 'Success!', 2000);
             setCurrentUser((prevUser) => ({
                 ...prevUser,
                 username,
@@ -46,6 +49,8 @@ const UsernameForm = () => {
         } catch (err) {
             // console.log(err);
             setErrors(err.response?.data);
+            // Display error notification
+            NotificationManager.error('Please try again', 'Something went wrong!', 2000)
         }
     };
 

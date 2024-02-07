@@ -31,6 +31,8 @@ const NavBar = () => {
             removeTokenTimestamp();
         } catch (err) {
             //console.log(err);
+            // Display error notification
+            NotificationManager.error('Please try again', 'Something went wrong!', 2000)
         }
     };
 
