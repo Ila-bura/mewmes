@@ -47,7 +47,6 @@ const UsernameForm = () => {
             }));
             history.goBack();
         } catch (err) {
-            // console.log(err);
             setErrors(err.response?.data);
             // Display error notification
             NotificationManager.error('Please try again', 'Something went wrong!', 2000)

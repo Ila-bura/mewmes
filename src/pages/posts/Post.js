@@ -51,7 +51,6 @@ const Post = (props) => {
                 }),
             }));
         } catch (err) {
-            // console.log(err);
         }
     };
 
@@ -68,7 +67,6 @@ const Post = (props) => {
                 }),
             }));
         } catch (err) {
-            // console.log(err);
         }
     };
 
@@ -87,7 +85,6 @@ const Post = (props) => {
                 }),
             }));
         } catch (err) {
-            // console.log(err);
         }
     };
 
@@ -105,7 +102,6 @@ const Post = (props) => {
                 }),
             }));
         } catch (err) {
-            // console.log(err);
         }
     };
 
@@ -122,7 +118,6 @@ const Post = (props) => {
                 }),
             }));
         } catch (err) {
-            // console.log(err);
         }
     };
 
@@ -139,7 +134,6 @@ const Post = (props) => {
                     }),
                 }));
             } catch (err) {
-                // console.log(err);
             }
         };
 
@@ -161,7 +155,6 @@ const Post = (props) => {
                     NotificationManager.success('Meme Deleted!', "It's gone!");
                     history.goBack();
                 } catch (err) {
-                    // console.log(err);
                     // Display error notification
                     NotificationManager.error('Please try again', 'Something went wrong!');
                 }

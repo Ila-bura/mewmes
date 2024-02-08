@@ -40,7 +40,6 @@ function ReplyEditForm(props) {
             // Hide the edit form after successful submission
             setShowEditForm(false);
         } catch (err) {
-            // console.log(err);
             // Display error notification
             NotificationManager.error('Please try again', 'Something went wrong!');
         }

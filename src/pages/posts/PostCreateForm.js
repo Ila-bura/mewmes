@@ -75,7 +75,6 @@ function PostCreateForm() {
             NotificationManager.success('Meme created successfully!', 'Well done!', 2000);
             history.push(`/posts/${data.id}`);
         } catch (err) {
-            //console.log(err);
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
                 // Display error notification
