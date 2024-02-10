@@ -1,10 +1,10 @@
 # MewMes
 
-MewMes is a social media platform for cat lovers and meme enthusiasts alike. It was created using React and Django Rest Frameowork. The purpose of the site is to allow users to share cat memes they find funny.
+MewMes is a social media platform for cat lovers and meme enthusiasts alike. It was created using React and Django Rest Framework. The purpose of the site is to allow users to share cat memes they find funny.
 
 #
 
-![password-form-blank](readme/amiresponsive.JPG)
+![amiresponsive](readme/amiresponsive.png)
 
 - [Deployed Front-End page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
 - [Deployed Back-End page](https://mewmes-dc42376a8874.herokuapp.com/)
