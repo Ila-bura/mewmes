@@ -36,6 +36,7 @@ function PostsFeed({ message, filter = "" }) {
                 setPosts(data);
                 setHasLoaded(true);
             } catch (err) {
+                // console.log(err)
             }
         };
         // Set a timeout before fetching memes 

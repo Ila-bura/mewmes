@@ -47,7 +47,6 @@ const Reply = (props) => {
                     results: prevReplies.results.filter((reply) => reply.id !== id),
                 }));
             } catch (err) {
-                // Handle error
                 // Display error notification
                 NotificationManager.error('Please try again', 'Something went wrong!');
             }

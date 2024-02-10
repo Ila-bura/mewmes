@@ -13,7 +13,9 @@ export const fetchMoreData = async (resource, setResource) => {
                     : [...acc, cur];
             }, prevResource.results),
         }));
-    } catch (err) { }
+    } catch (err) {
+        // console.log(err)
+    }
 };
 
 // Function to update profile data after a user follows another profile

@@ -81,7 +81,7 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 ### **Site Goals**
 
 - To build an online community around a common interest of cat memes.
-- To allow community members to share their favoutite memes and interact with each otehr via the comment feature.
+- To allow community members to share their favourite memes and interact with each other using the reactions and comment features.
 - To allow commnunity members to follow other users whose content is interesting to them.
 - To allow users to save meme that are funny to them.
 
@@ -89,6 +89,7 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 
 - Allow users to interact more efficiently by implementing private messaging.
 - Add the functionality to like user's comments.
+- Allow profile's owners to delete their profile.
 
 [Back to top](#contents)
 
@@ -96,25 +97,24 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 
 #### **GitHub Project Board**
 
-This project was devised using agile methodologies.
-Epics, user stories, bugs and issues are recorded on the [Project Board]().
-
-![Screenshot of project board]()
+This project was designed using agile methodologies.
+User stories are recorded on the [Project Board](https://github.com/users/Ila-bura/projects/22/views/1).
 
 [Back to top](#contents)
 
 #### **Wireframes**
 
 - The plan for this project is based on the Code Institute Moments walkthrough project.
-- Most of the UI is based on the same kind of features and functionality but customised for the specific purposes of this site
+- Most of the UI is based on the same kind of features and functionality but customised for the specific purposes of MewMes.
 
 #### **List of Wireframe pages**
 
-- [Home page](readme/home_page.png)
-- [Sign up page](readme/sign_up_page.png)
-- [Sign in page](readme/sign_in_page.png)
-- [Create post form](readme/create_post_form.png)
-- [Profile page](readme/profile_page.png)
+- [Home page Desktop](readme/homepage_desktop.png)
+- [Home page Mobile](readme/homepage_mobile.png)
+- [Sign up page](readme/signup.png)
+- [Sign in page](readme/signin.png)
+- [Profile page](readme/userprofile.png)
+- [Info page](readme/info.png)
 
 [Back to top](#contents)
 
@@ -124,78 +124,77 @@ Epics, user stories, bugs and issues are recorded on the [Project Board]().
 
 #### **Authentication**
 
-1. Sign up: As a **user** I can **create an account** so that I can **access all the site features**
+1. Sign up: As a **user** I can **create an account** so that I can **access the features for signed up users**
 
-2. Sign in: As a **user** I can **login** so that I can **access features only available to logged in users**
+2. Sign in: As a **user** I can **log in** so that I can **access features only available to logged in users**
 
-3. Sign out: As a **user** I can **logout** so that I can **exit my account and prevent others from gaining access**
+3. Sign out: As a **user** I can **log out** so that I can **exit my account and prevent others from gaining access**
 
 4. Refreshing access tokens: As a **user** I can **maintain my logged in status for 24 hours** so that I can **easily interact with the app throughout the day**.
-
-5. Create admin panel: As a **site owner** I can **access the admin panel** so that **I have access to all site features and functionality**.
-
-6. Create superuser: As a **site owner** I can **create a superuser** so that **I can give admin users access to the admin panel**.
 
 [Back to top](#contents)
 
 #### **Navigation:**
 
-7. As a **user** I can **quickly view my logged in/out status in the navbar** so that I can **decide on my next action**
-8. Routing: As a **user** I can **view the navbar on every page** so that I can **easily navigate through the site**.
+5. As a **user** I can **quickly view my logged in/out status in the navbar** so that I can **decide on my next action**.
 
-9. Conditional Rendering: As a **logged out user** I can **view sign in and sign up options** so that I can **easily tell whether I am logged in and can log in easily if not**.
+6. Routing: As a **user** I can **view the navbar on every page** so that I can **easily navigate through the site**.
 
-10. Avatar: As a **logged in user** I can **view my profile link and avatar image on the navbar** so that I can **quickly see that I am logged in**
+7. Conditional Rendering: As a **logged out user** I can **view sign in and sign up options** so that I can **easily tell whether I am logged in and can log in easily if not**.
 
-11. Popular profiles list: As a **logged in user** I can **view other user’s profile names and avatars** so that I can **easily identify and follow other users**
+8. Avatar: As a **logged in user** I can **view my profile link and avatar image on the navbar** so that I can **quickly see that I am logged in**.
 
-[Back to top](#contents)
-
-#### **Posts**
-
-12. Create a meme: As a **logged in user** I can **create a new post** so that I can \*\*\*\*.
-
-13. Edit a post: As a **logged in user** I can**edit my post** so that I can **revise my content**
-
-14. Delete a post: As a **logged in user** I can **delete my post** so that I can **remove content I have posted**
-
-15. View all posts: As a **user** I can **view all posts** so that I can \*\*\*\*
-
-16. View post detail: As a **user** I can **view individual post details** so that I can **view other details and comments about the post**
-
-17. Like a post: As a **logged in user** I can **like a post** so that I can **quickly show my appreciation for another users content**
-
-18. View liked posts: As a **logged in user** I can **view liked posts** so that I can **easily find the posts about trails that interested me**
-
-19. Search posts: As a **user** I can **search posts** so that I can \*\*\*\*
+9. Viral profiles list: As a **logged in user** I can **view other user’s profile names and avatars** so that I can **easily identify and follow other users**.
 
 [Back to top](#contents)
 
-#### **Epic 4: Comments**
+#### **Memes**
 
-20. Create a comment: As a **user** I can **leave a comment under a post** so that I can **express my opinion and engage with the content and the community**
+10. Create a meme: As a **logged in user** I can **create a new post** so that I can **share my best memes with the world**.
 
-21. Comment date: As a **user** I can **see the comment date** so that I can **know how long a go a comment was left**
+11. Edit a meme: As a **logged in user** I can**edit my memes** so that I can **revise my content, if necessary**.
 
-22. View comments: As a **user** I can **view other comments** so that I can **see what others have said**
+12. Delete a meme: As a **logged in user** I can **delete my memes** so that I can **remove content I have posted, if necessary**.
 
-23. Edit comments: As a **user** I can **edit my comment** so that I can **revise the information**
+13. View most recent memes: As a **user** I can **view all the most recent memes, ordered by most recently created first** so that I can **immediately be up to date with the newest content**.
 
-24. Delete comments: As a **user** I can **delete my comment** so that I can **remove it from the post**
+14. View meme detail: As a **user** I can **view individual meme details** so that I can **view more details and comments about the meme**.
+
+15. React to a meme: As a **logged in user** I can **like or unlike a meme** so that I can **quickly show my reaction to another users content**.
+
+16. Save memes: As a **logged in user** I can **save a meme** so that I can **easily find all the memes I might wnat to view again at a later stage**.
+
+17. View saved memes: As a **logged in user** I can **view saved memes** so that I can **easily find all the memes that interested me under the Saved section**.
+
+18. Search memes: As a **user** I can **search meme with keywords** so that I can **find the memes and user profiles I am most interested in**.
 
 [Back to top](#contents)
 
-#### **Epic 5: Profiles**
+#### Comments
 
-25. Profile page: As a **user** I can **view another user’s profile page** so that I can **see their posts and their bio**
+19. Create a comment: As a **user** I can **leave a comment under a meme** so that I can **express my opinion and engage with the content and the community**.
 
-26. User stats: As a **user** I can **see stats via a user profile** so that I can **see how many posts/followers/following/comments they have**
+20. Comment date: As a **user** I can **see the comment date** so that I can **know how long a go a comment was left**.
 
-27. Follow/Unfollow a user: As a **logged in user** I can **follow other users whose content is more relevant or meaningful to me** so that I can **view content filtered by the users I follow**
+21. View comments: As a **user** I can **view other comments** so that I can **see what others have said**.
 
-28. Edit Profile: As a **user** I can **edit my profile** so that I can **update my personal details**
+22. Edit comments: As a **user** I can **edit my comments** so that I can **revise the content, if necessary**.
 
-29. Update username and password: As a **user** I can **update my username/password** so that I can **make alterations as needed**
+23. Delete comments: As a **user** I can **delete my comments** so that I can **remove them, if necessary**.
+
+[Back to top](#contents)
+
+#### Profiles
+
+25. Profile page: As a **user** I can **view another user’s profile page** so that I can **see their memes and their bio**.
+
+26. User stats: As a **user** I can **see stats on a user profile** so that I can **see how many memes/followers/following they have**.
+
+27. Follow/Unfollow a user: As a **logged in user** I can **follow other users whose content is relevant or meaningful to me** so that I can **view content filtered by the users I follow**.
+
+28. Edit Profile: As a **user** I can **edit my profile** so that I can **update my personal details and profile picture**.
+
+29. Update username and password: As a **user** I can **update my username/password** so that I can **make changes as needed**.
 
 [Back to top](#contents)
 
@@ -203,18 +202,34 @@ Epics, user stories, bugs and issues are recorded on the [Project Board]().
 
 #### **Images**
 
-- Images of were all taken from free photo stock on [Pixabay](https://www.pixabay.com/)
+- The images used for the profile avatar and the one that shows when no results are found, were taken from the Code Institute Moments walkthrough.
 
-#### **Colour Scheme and Accessibility**
+<details><summary>Avatar</summary>
+<img src="readme/avatar.png" >
+</details
 
--
+<details><summary>No Results</summary>
+<img src="assets/noresults.png" >
+</details>
 
--
+- The images used for the user profiles as well as the memes were all taken from the Internet using Google images.
+
+- The favicons were created on [Favicon.io](https://favicon.io/).
+
+#### **Colour Scheme**
+
+- The colour palette was generated with Canva, to match the colours of the logo.
+
+<details><summary>Colour Scheme</summary>
+<img src="readme/colour_palette.png" >
+</details>
 
 #### **Typography**
 
-- I also used canva to decide on the typography along with the design for the logo.
--
+- The two main font families used were obtained from the Google Fonts library:
+
+1. Comfortaa
+2. Outfit
 
 [Back to top](#contents)
 
@@ -224,21 +239,26 @@ Epics, user stories, bugs and issues are recorded on the [Project Board]().
 
 ### **logo**
 
-- Logo was designed
-- I used [Canva](https://www.canva.com/) to adjust the color to my liking and to add the site name.
+- The logo was designed with [Canva](https://www.canva.com/) and customised to add the site name.
 - The logo was used as the favicon for the webpage as well as the navbar logo home link.
 
-![logo](readme/large-logo.png)
+<details><summary>Logo</summary>
+<img src="assets/logo.png" >
+</details
 
 [Back to top](#contents)
 
 #
 
-### **custom 404 page**
+### **Custom 404 page**
 
-- The 404 page let's user's know they are still connected to the site but on a non-existent page.
+- The 404 page lets user's know they are still connected to the site but on a non-existent page.
 
-![404](readme/404.JPG)
+The image used for the 404 Not Found page was created using [Canva](https://www.canva.com/)
+
+<details><summary>Not Found</summary>
+<img src="assets/notfound.png" >
+</details>
 
 [Back to top](#contents)
 
@@ -246,8 +266,8 @@ Epics, user stories, bugs and issues are recorded on the [Project Board]().
 
 ### **Future Features**
 
-- Private messaging would be a good feature for a site like this, especially once event organisation becomes a feature.
-- Social Account sign in using apis to allow users to login via their email accounts rather than going through the whole sign up process.
+- Private messaging would be a good feature to implement.
+- Registered users might find it useful to be able to delete their own account.
 
 [Back to top](#contents)
 
@@ -272,11 +292,9 @@ Epics, user stories, bugs and issues are recorded on the [Project Board]().
 - [Cloudinary](https://cloudinary.com/)
   - Used to store media files and images.
 - [Heroku](https://www.heroku.com/)
-  - Used to host the deployed sitewhat
+  - Used to host the deployed site.
 - [ElephantSQL]()
-  - Used to host and operate the PostgresSQL database
-
-[Back to top](#contents)
+  - Used to host and operate the PostgresSQL database.
 
 [Back to top](#contents)
 
@@ -344,7 +362,7 @@ Epics, user stories, bugs and issues are recorded on the [Project Board]().
 
 ## **Components**
 
-Below are some components not featured in user stories testing but which have been implemented within this project that have been reused throughout the project:
+Below are some components that have been implemented and reused throughout the project:
 
 1. axiosDefault.js : Send http request to the backend API in the case of user crud actions or get requests for a specific object or list of objects.
 2. Asset.js : exports the loading spinner when/where requied in the site.
@@ -354,11 +372,6 @@ Below are some components not featured in user stories testing but which have be
 6. ProfileDataContext.js : provide un/follow ability to authorised user via popular profiles componenet and profile page component.
 7. useRedirect.js : redirects a user to another page if they are not authorised to be on the page they are trying to access.
 8. useClickOutsideToggle.js : Implemented for the mobile dropdown nav component, which allows users to close the expanded navbar by tapping/clicking outside the navbar.
-
-   - It hasn't been reused for another feature yet but will be for future feature.
-   - One of my future feature will potentially crowd the navbar with too many navlinks so I am planning to use a dropdown menu in the desktop navbar and will have to implement it for that feature eventually.
-   - See the [Home page wireframe](readme/home_page.png) for this design feature
-
 9. utils.js : supplies functionality to all of the components that utilise the Infinite Scroll.
 
 [Back to top](#contents)
@@ -377,11 +390,18 @@ The testing documentation can be viewed [here](/TESTING.md)
 
 ### **Unresolved bugs**
 
+- No unfixed bugs to report during the production of this project.
+
+- One thing to note is when doing the lighthouse report, best practices for the sign-in and sign-up page show a result of 75, the image shows up tagged as low resolution.
+- There are errors in the console of these pages, that were also brought up during the walkthrough Moments. The errors are as follows:
+
+_Failed to load resource: the server responded with a status of 401 (Unauthorized)_
+
 [Back to top](#contents)
 
-## **Gitpod set up and deployment**
+## **Codeanywheee set up and deployment**
 
-- This project was created and developed using gitpod using the following steps:
+- This project was created and developed using CodeAnywhere using the following steps:
 
 ### Set-up in gitpod
 
@@ -404,47 +424,49 @@ The testing documentation can be viewed [here](/TESTING.md)
 
 ### Initial Deployment
 
-- Navigate to heroku for initial deployment
+- Navigate to Heroku for initial deployment
 - Click on the "new" dropdown and select "Create new app"
 - Give the app a name and select the region, I selected Europe for this app.
 - Click the Create app button
-- Under the "Deploy" tab, click on github for deployment method and connect the app to the [trekkers](https://github.com/HPCarey/trekkers/tree/main) github repositiory.
+- Under the "Deploy" tab, click on github for deployment method and connect the app to the [MewMes](https://github.com/Ila-bura/mewmes/tree/main) github repository.
 - Once the app is connected to the correct github repository, click "Deploy Branch" and open the app in the browser to make sure it works.
 
 ### Deployment issues and bugs
 
-- I did not use the CI gitpod template as it was not availabe and the instructions had changed after the codeanywhere switch.
-- As a result I encountered a lot of issues installingpackages and deployment/ app running issues.
-- A full report of these issues and the solutions I implemented can be seen in the [issues](https://github.com/H88PCarey/trekkers/issues) and [Project Board](https://github.com/users/HPCarey/projects/5/views/1).
+-
 
 [Back to top](#contents)
 
-### Connect the Frontend app with the Backend API
+## Deployment
 
-- In order to connect not only the deployed Frontend app but also the development version of the app, we need to provide both heroku and local urls to the API on heroku.
-- This was done using the following steps:
+The site was deployed to Heroku. The steps to deploy are as follows:
 
-1. Navigate to the deployed Backend api on heroku and go to the "Settings" tab.
-2. Set two new Config Vars with the following key:value:
-   - CLIENT_ORIGIN : https://trekkers.herokuapp.com
-   - CLIENT_ORIGIN_DEV : https://3000-githubname-appname-435h43j34h543h-eu101.gitpod.io
-     - Note that the CLIENT_ORIGIN_DEV value might need to be updated in the Config Vars as this is not a permanent value and may change during development.
-   - The CLIENT-ORIGIN-DEV in this example is not an actual local url for security reasons.
-
-- Next we need to tell the Frontend app where to send requests to.
-- This was done using the Axios library using the following steps:
-
-1. Install the Axios library : npm install axios.
-2. Create an api folder inside the src folder and inside create an axiosDefaults.js file.
-3. Set the baseURL to the deployed api,and set the content type and Credentials.
-
-   ![axios](/readme/axios.JPG)
-
-4. Import into App.js:
+1. Launch the CodeAnywhere workspace.
+2. Install ReactJS:
 
 ```
-   import "./api/axiosDefaults";
+npx create-react-app . --use-npm
+npm start
 ```
+
+2. Install the following packages using the command `npm install`:
+
+```
+react-bootstrap@1.6.3 bootstrap@4.6.0
+react-router-dom@5.3.0
+axios
+react-infinite-scroll-component
+msw --save-dev
+jwt-decode
+-g eslint
+```
+
+3. Git add, commit, and push changes.
+4. Navigate to Heroku and click on the "new" dropdown and select "Create new app"
+5. Give the app a name and select the region, I selected Europe for this app.
+6. Click the Create app button.
+7. Under the "Deploy" tab, click on github for deployment method and connect the app to the [MewMes](https://github.com/Ila-bura/mewmes/tree/main) github repository.
+8. Once the app is connected to the correct github repository, click "Deploy Branch" and open the app in the browser to make sure it works.
 
 [Back to top](#contents)
 
@@ -452,7 +474,7 @@ The testing documentation can be viewed [here](/TESTING.md)
 
 ### Final Deployment
 
-- In GITPOD IDE:
+- In CodeAnywhere IDE:
 
 1. Remove React.StrictMode component from index.js.
 2. Optimise bootstrap imports by making sure each component is imported individually:
@@ -466,32 +488,13 @@ The testing documentation can be viewed [here](/TESTING.md)
 
 3. Remove console.logs
 
-   - note: I am following the advice of the moments walkthrough instructions and have left the console.logs inside the catch blocks commented out fr easy access to debug things later.
+- Note: following the instructions found the Moments walkthrough, the console.logs were left and commented out inside the catch blocks for easier debugging practices later on.
 
 4. Add the Heroku deployment commands in package.json in the "scripts" section.
 
 ```
    "heroku-prebuild": "npm install -g serve",
 ```
-
-Note: Due to some dependency conflicts I have an opesnssl legacy provider tag on the start and build commands in the scripst sectionof package.json.
-
-- This needs to be removed before the deployment commit and push or the heroku deployment build will fail.
-- If you want to run this app locally and there is an error, check if the openssl legacy provider tag is there and if not add it according to the below example:
-
-```
-   "start": "react-scripts --openssl-legacy-provider start",
-   "build": "react-scripts --openssl-legacy-provider build",
-```
-
-- If you wish to make changes and deploy, remember to readjust these values before committing:
-
-```
-   "start": "react-scripts start",
-   "build": "react-scripts build",
-```
-
-Please see the bugs for full details of this issue.
 
 5. Add a Procfile to the root of the project with the following command:
 
@@ -549,7 +552,7 @@ Here are the steps to fork the repository:
 
 ### Code Institute
 
-This project is a variation and laregely based on the [Code Institute Moments](https://github.com/Code-Institute-Solutions/moments) walkthrough project.
-It contains styles and logic from that project which have bee modified for the purpose of this one.
+This project is largely based on the [Code Institute Moments](https://github.com/Code-Institute-Solutions/moments) walkthrough project.
+It contains some of the styles and logic from that project which have bee modified and customised for the purpose of MewMes project.
 
 [Back to top](#contents)
