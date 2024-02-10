@@ -408,25 +408,29 @@ This project has been continuously tested throughout the development stages usin
 
   | Section   | Performance | Accessibility | Best Practices | SEO |
   | --------- | ----------- | ------------- | -------------- | --- |
-  | Home      | 73          | 100           | 92             | 100 |
-  | Post Page | 81          | 100           | 92             | 100 |
-  | Feed      | 73          | 100           | 92             | 100 |
-  | Saved     | 73          | 100           | 92             | 100 |
-  | Sign Up   | 87          | 100           | 75             | 100 |
-  | Sign in   | 87          | 100           | 75             | 100 |
-  | Profile   | 83          | 100           | 92             | 100 |
+  | Home      | 89          | 94            | 95             | 100 |
+  | Post Page | 95          | 94            | 95             | 100 |
+  | Feed      | 95          | 94            | 100            | 100 |
+  | Saved     | 95          | 94            | 100            | 100 |
+  | Sign Up   | 98          | 94            | 91             | 100 |
+  | Sign in   | 98          | 94            | 95             | 100 |
+  | Profile   | 97          | 100           | 100            | 100 |
+  | Add       | 99          | 94            | 95             | 100 |
+  | Info      | 100         | 93            | 95             | 100 |
 
 - **For Mobile devices:**
 
   | Section   | Performance | Accessibility | Best Practices | SEO |
   | --------- | ----------- | ------------- | -------------- | --- |
-  | Home      | 51          | 100           | 92             | 100 |
-  | Post Page | 50          | 100           | 92             | 100 |
-  | Feed.     | 53          | 100           | 92             | 100 |
-  | Saved     | 51          | 100           | 92             | 100 |
-  | Sign Up   | 53          | 100           | 83             | 100 |
-  | Sign in   | 53          | 100           | 83             | 100 |
-  | Profile   | 51          | 100           | 92             | 100 |
+  | Home      | 72          | 100           | 95             | 100 |
+  | Post Page | 71          | 94            | 95             | 100 |
+  | Feed      | 75          | 100           | 100            | 100 |
+  | Saved     | 74          | 100           | 100            | 100 |
+  | Sign Up   | 85          | 94            | 91             | 100 |
+  | Sign in   | 86          | 94            | 95             | 100 |
+  | Profile   | 79          | 100           | 100            | 100 |
+  | Add       | 82          | 100           | 91             | 100 |
+  | Info      | 90          | 100           | 95             | 100 |
 
 ### **Manual Testing**
 
