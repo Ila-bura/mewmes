@@ -52,7 +52,7 @@
 }
 
 .UnFollow:hover {
-    background-color: #1F8E7E;
+    background-color: #266D66;
     border-color: transparent;
     color: #1D1F21 !important;
     cursor: pointer;
@@ -61,6 +61,6 @@
 }
 
 .UnFollow:focus {
-    background-color: #1F8E7E;
+    background-color: #36d7b7;
     color: #1D1F21 !important;
 }
