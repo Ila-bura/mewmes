@@ -168,7 +168,7 @@ const Post = (props) => {
         <Card className={styles.Post}>
           <Card.Body>
             <Media className="align-items-center justify-content-between">
-              <Link to={`/profiles/${profile_id}`}>
+              <Link to={`/profiles/${profile_id}`} aria-label={`View profile of ${owner}`}>
                 <Avatar src={profile_image} height={52} />
                 {owner}
               </Link>
@@ -217,7 +217,7 @@ const Post = (props) => {
                   placement="bottom"
                   overlay={<Tooltip>Log in to save memes!</Tooltip>}
                 >
-                <Link to="/signin">
+                <Link to="/signin" aria-label="Log in to save memes">
                   <i className="fas fa-thumbtack" />
                 </Link>
                 </OverlayTrigger>
@@ -236,7 +236,7 @@ const Post = (props) => {
                   <i className={`far fa-grin-squint-tears ${styles.Laugh}`} />
                 </span>
               ) : currentUser ? (
-                <span onClick={handleLike}>
+                <span onClick={handleLike} aria-label="Like this post">
                   <i className={`far fa-grin-squint-tears ${styles.LaughOutline}`} />
                 </span>
               ) : (
@@ -245,7 +245,7 @@ const Post = (props) => {
                   placement="bottom"
                   overlay={<Tooltip>Log in to laugh at memes!</Tooltip>}
                 >
-                  <Link to="/signin">
+                  <Link to="/signin" aria-label="Log in to react">
                     <i className="far fa-grin-squint-tears" />
                   </Link>
                 </OverlayTrigger>
@@ -264,7 +264,7 @@ const Post = (props) => {
                   <i className={`far fa-sad-tear ${styles.Dislike}`} />
                 </span>
               ) : currentUser ? (
-                <span onClick={handleDislike}>
+                <span onClick={handleDislike} aria-label="Dislike this post">
                   <i className={`far fa-sad-tear ${styles.DislikeOutline}`} />
                 </span>
               ) : (
@@ -273,7 +273,7 @@ const Post = (props) => {
                   placement="bottom"
                   overlay={<Tooltip>Log in to react to memes!</Tooltip>}
                 >
-                  <Link to="/signin">
+                  <Link to="/signin" aria-label="Log in to react">
                     <i className="far fa-sad-tear" />
                   </Link>
                 </OverlayTrigger>
@@ -281,7 +281,7 @@ const Post = (props) => {
               {downvotes_count}
     
               {is_user ? (
-              <Link to={`/posts/${id}`} aria-label="comment">
+              <Link to={`/posts/${id}`} aria-label="Comment on this post">
             <i className="far fa-comments"/></Link>
              ) : currentUser ? (
                 <span>
@@ -291,7 +291,7 @@ const Post = (props) => {
                         <OverlayTrigger
                             placement="bottom"
                             overlay={<Tooltip>Log in to comment on memes!</Tooltip>}
-                        ><Link to="/signin">
+                        ><Link to="/signin" aria-label="Log in to comment">
                                 <i className="far fa-comments" /></Link>
                         </OverlayTrigger>
                         )}
