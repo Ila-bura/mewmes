@@ -48,7 +48,6 @@ function ReplyCreateForm(props) {
             // Clear the content after successful submission
             setContent("");
         } catch (err) {
-            // console.log(err);
             // Display error notification
             NotificationManager.error('Please try again', 'Something went wrong!');
         }

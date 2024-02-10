@@ -1,36 +1,35 @@
-.NavBar {
-    background-color: #CDECFB;
-    border: 1px solid #E8A7CE;
-    text-align: center;
-    opacity: 0.97;
-  }
-
-
-  .NavLink:hover {
-    opacity: 1;
-    visibility: visible;
-    height: 100%;
+.Active {
+    color: #F962A9;
+    font-weight: bold;
     transform: scale(1.1);
-    transition: all 550ms;
-  }
-  
-  .NavLink {
-    padding: 7px;
+}
+
+.Active i {
+    color: #F962A9;
+}
+
+.NavBar {
+    background-color: rgba(205, 236, 251, 0.8);
+    border: 1px solid #E8A7CE;
+    font-weight: bold;
+    opacity: 0.97;
+    text-align: center;
+}
+
+.NavLink {
     font-weight: 550;
     line-height: 40px;
-  }
-  
-  .NavLink.Active {
-    color: #F962A9;
-    transform: scale(1.1);
-  }
-  
-  .Active i {
-    color: #F962A9;
-  }
+    padding: 7px;
+}
 
-  .Profile {
-    position: relative;
+.NavLink:hover {
+    height: 100%;
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 550ms;
+}
+
+.Profile {
     left: 20%;
-  }
-  
+    position: relative;
+}

@@ -1,23 +1,23 @@
 .Button {
-    font-size: 0.8rem;
     align-self: center;
-    border-radius: 100px;
+    background-color: #E8A7CE !important;
     border-color: transparent;
-    padding: 4px 10px;
+    border-radius: 100px;
+    color: #1D1F21 !important;
+    font-size: 0.8rem;
     margin-left: 2px;
     margin-right: 2px;
     min-width: 75px;
-    background-color: #E8A7CE !important;
-    color: #1D1F21 !important;
+    padding: 4px 10px;
 }
 
 .Button:hover {
-    border-color: transparent;
-    cursor: pointer;
     background-color: #F962A9 !important;
+    border-color: transparent;
+    color: #1D1F21;
+    cursor: pointer;
     transform: scale(1.05);
     transition: all 0.8s;
-    color: #1D1F21;
 }
 
 .Button:hover:active,
@@ -38,29 +38,29 @@
 }
 
 .UnFollow {
-    background-color: #36d7b7;
-    transform: 1.2;
-    font-size: 0.8rem;
     align-self: center;
-    border-radius: 100px;
+    background-color: #36d7b7;
     border-color: transparent;
-    padding: 4px 10px;
+    border-radius: 100px;
+    color: #1D1F21 !important;
+    font-size: 0.8rem;
     margin-left: 2px;
     margin-right: 2px;
     min-width: 75px;
-    color: #1D1F21 !important;
+    padding: 4px 10px;
+    transform: scale(1.02);
 }
 
 .UnFollow:hover {
+    background-color: #1F8E7E;
     border-color: transparent;
+    color: #1D1F21 !important;
     cursor: pointer;
     transform: scale(1.05);
     transition: all 0.8s;
-    background-color: #34B79F;
-    color: #1D1F21 !important;
-    
 }
+
 .UnFollow:focus {
-    background-color: #34B79F;
+    background-color: #1F8E7E;
     color: #1D1F21 !important;
 }

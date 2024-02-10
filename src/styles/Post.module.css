@@ -1,37 +1,18 @@
 .Post {
-    background-color: #CDECFB;
+    background-color: rgba(205, 236, 251, 0.6);
+    border: 1px solid rgb(121, 118, 118);
     border-radius: 4px;
+    justify-content: center;
     margin-bottom: 16px;
     text-align: center;
-    justify-content: center;
-    border: 1px solid rgb(121, 118, 118);
-  }
-  
-.PostPic {
-    border-radius: 12px;
-    padding: 5px;
-    width: 90%;
-    max-height: 70vh;
-    object-fit: contain;
-    margin-bottom: 2px;
-  }
+}
 
-.MemeTitle {
-    color: #34B79F;
-    font-weight: bold;
-    }
- 
-.PostBar i {
-    padding: 10px;
-    }
-
-  /* Bookmark and thumbs icons style */
-
-.Post .Laugh {
+.Post .Bookmark {
     color: #F962A9;
 }
 
-.Post .Laugh:hover {
+.Post .Bookmark:hover,
+.Post .BookmarkOutline:hover {
     color: #E8A7CE;
 }
 
@@ -43,23 +24,35 @@
     color: #E8A7CE;
 }
 
-.Post .Bookmark {
+.Post .Laugh {
     color: #F962A9;
 }
 
-.Post .Bookmark:hover {
+.Post .Laugh:hover {
     color: #E8A7CE;
 }
 
-.Post .BookmarkOutline:hover {
-    color: #E8A7CE;
+.PostBar i {
+    padding: 10px;
 }
 
+.MemeTitle {
+    font-weight: bold;
+}
+
+.PostPic {
+    border-radius: 12px;
+    margin-bottom: 2px;
+    max-height: 70vh;
+    object-fit: contain;
+    padding: 5px;
+    width: 90%;
+}
 
 /* For large phone screen sizes from 425px wide and down */
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
     .PostPic {
-        object-fit: contain;
         height: auto;
+        object-fit: contain;
     }
 }

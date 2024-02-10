@@ -1,33 +1,28 @@
-.ProfileImage {
-    object-fit: cover;
-    height: 120px;
-    width: 120px;
-    margin: 4px;
-}
-
-/* About me section */
 .AboutContent {
-    border: 1px solid #E8A7CE;
+    border: 1px solid #266D66;
     border-radius: 10px;
-    margin-top: 10px;
     font-size: 18px;
+    margin-top: 10px;
 }
 
-/* Owner's meme container */
 .OwnersMemes {
     font-weight: 600;
-    color: #E48CB4;
+}
+
+.ProfileImage {
+    height: 120px;
+    margin: 4px;
+    object-fit: cover;
+    width: 120px;
 }
 
 .ProfileName {
-    color: #34B79F;
     font-weight: bold;
 }
 
-
 @media screen and (max-width: 991px) {
     .ProfileImage {
-        width: 250px;
         height: 250px;
+        width: 250px;
     }
 }
