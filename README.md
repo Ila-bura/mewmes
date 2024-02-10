@@ -1,6 +1,6 @@
 # MewMes
 
-MewMes is a social media platform for cat lovers and meme enthusiasts alike. It was created using React and Django Rest Framework. The purpose of the site is to allow users to share cat memes and interact with memes posted by otehr users.
+MewMes is a social media platform for cat lovers and meme enthusiasts alike. It was created using React and Django Rest Framework. The purpose of the site is to allow users to share cat memes and interact with memes posted by other users.
 
 #
 
@@ -20,18 +20,12 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
     - [**Github Issues**](#github-issues)
     - [**Wireframes**](#wireframes)
     - [**List of Wireframe pages**](#list-of-wireframe-pages)
-  - [**Epics**](#epics)
+  - [**User Stories**](#user-stories)
     - [Authentication](#authentication)
     - [Navigation](#navigation)
     - [Posts](#posts)
     - [Comments](#comments)
     - [Profiles](#profiles)
-  - [**User Stories**](#user-stories)
-    - [**Epic 1: Authentication**](#epic-1-authentication)
-    - [**Epic 2: Navigation:**](#epic-2-navigation)
-    - [**Epic 3: Posts**](#epic-3-posts)
-    - [**Epic 4: Comments**](#epic-4-comments)
-    - [**Epic 5: Profiles**](#epic-5-profiles)
   - [**Design**](#design)
     - [**Images**](#images)
     - [**Colour Scheme and Accessibility**](#colour-scheme-and-accessibility)
@@ -196,7 +190,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 <details><summary>Avatar</summary>
 <img src="readme/avatar.png" >
-</details
+</details>
 
 <details><summary>No Results</summary>
 <img src="src/assets/noresults.png" >
@@ -242,7 +236,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 ### **Custom 404 page**
 
-- The 404 page lets user's know they are still connected to the site but on a non-existent page.
+- The 404 page lets users know they are still connected to the site but on a non-existent page.
 
 The image used for the 404 Not Found page was created using [Canva](https://www.canva.com/)
 
@@ -368,11 +362,15 @@ This project has been continuously tested throughout the development stages usin
 
 ### **Validator Testing**
 
+## HTML Validation
+
 - All HTML files passed through the HTML checker with no errors.
 
 <details><summary>HTML</summary>
 <img src="readme/validation_HTML.png" >
 </details>
+
+## CSS Validation
 
 - CSS files passed through the Jigsaw validator with one error. This was easily fixed by restoring the correct transform value.
 
@@ -382,13 +380,27 @@ This project has been continuously tested throughout the development stages usin
 
 - Once this error was fixed, I found some warnings:
 
-![CSS Warnings](readme/css_warnings.JPG)
+![CSS Warnings](readme/css_warnings.png)
 
 - The vendor extention warning can be ignored as it is simply an extension not supported by w3c standard css and can be ignored as it is not a code error: [source](https://stackoverflow.com/questions/21889767/warnings-from-w3c-validation-for-css-cant-find-the-warning-message-for-vendor).
 
-* All JSX code was validated and corrected throughout the development of the project.
+### JSX Validation
 
-![screenshot](documentation/test_screenshots/EsLint.png)
+- All JSX code was validated and corrected throughout the development of the project.
+- Most of the code validation was done through the CodeAnywhere ide problems tab and with the help of the prettier code formatting extension.
+- For good measure, I ran the jsx files through this [eslint](https://eslint.org/play/).
+- These are the settings I used for this validator so as not to get unrelated javascript errors as a result of the html tags in jsx.
+
+<details><summary>Settings</summary>
+<img src="readme/eslint_settings.png" >
+</details>
+
+- It was not an ideal way to validate due to the fact that it is bound to throw unused variable/undefined variable errors because of the nature of importing/exporting components and variables between the different files.
+- The below error types were ignored and no syntax errors were found.
+
+<details><summary>ESLint errors</summary>
+<img src="readme/jsx_errors.png" >
+</details>
 
 #### **LightHouse testing**
 
