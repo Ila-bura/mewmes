@@ -1,6 +1,6 @@
 # MewMes
 
-MewMes is a social media platform for cat lovers and meme enthusiasts alike. It was created using React and Django Rest Framework. The purpose of the site is to allow users to share cat memes they find funny.
+MewMes is a social media platform for cat lovers and meme enthusiasts alike. It was created using React and Django Rest Framework. The purpose of the site is to allow users to share cat memes and interact with memes posted by otehr users.
 
 #
 
@@ -8,7 +8,7 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 
 - [Deployed Front-End page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
 - [Deployed Back-End page](https://mewmes-dc42376a8874.herokuapp.com/)
-- [Backend repository](https://github.com/Ila-bura/MewMes_API)
+- [Back-End repository](https://github.com/Ila-bura/MewMes_API)
 
 ## **Contents**
 
@@ -76,8 +76,6 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 
 ### **Project Goals**
 
-[Back to top](#contents)
-
 ### **Site Goals**
 
 - To build an online community around a common interest of cat memes.
@@ -114,7 +112,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 - [Sign up page](readme/signup.png)
 - [Sign in page](readme/signin.png)
 - [Profile page](readme/userprofile.png)
-- [Info page](readme/info.png)
+- [Info page](readme/Info.png)
 
 [Back to top](#contents)
 
@@ -132,8 +130,6 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 4. Refreshing access tokens: As a **user** I can **maintain my logged in status for 24 hours** so that I can **easily interact with the app throughout the day**.
 
-[Back to top](#contents)
-
 #### **Navigation:**
 
 5. As a **user** I can **quickly view my logged in/out status in the navbar** so that I can **decide on my next action**.
@@ -145,8 +141,6 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 8. Avatar: As a **logged in user** I can **view my profile link and avatar image on the navbar** so that I can **quickly see that I am logged in**.
 
 9. Viral profiles list: As a **logged in user** I can **view other user’s profile names and avatars** so that I can **easily identify and follow other users**.
-
-[Back to top](#contents)
 
 #### **Memes**
 
@@ -168,8 +162,6 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 18. Search memes: As a **user** I can **search meme with keywords** so that I can **find the memes and user profiles I am most interested in**.
 
-[Back to top](#contents)
-
 #### Comments
 
 19. Create a comment: As a **user** I can **leave a comment under a meme** so that I can **express my opinion and engage with the content and the community**.
@@ -182,19 +174,17 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 23. Delete comments: As a **user** I can **delete my comments** so that I can **remove them, if necessary**.
 
-[Back to top](#contents)
-
 #### Profiles
 
-25. Profile page: As a **user** I can **view another user’s profile page** so that I can **see their memes and their bio**.
+24. Profile page: As a **user** I can **view another user’s profile page** so that I can **see their memes and their bio**.
 
-26. User stats: As a **user** I can **see stats on a user profile** so that I can **see how many memes/followers/following they have**.
+25. User stats: As a **user** I can **see stats on a user profile** so that I can **see how many memes/followers/following they have**.
 
-27. Follow/Unfollow a user: As a **logged in user** I can **follow other users whose content is relevant or meaningful to me** so that I can **view content filtered by the users I follow**.
+26. Follow/Unfollow a user: As a **logged in user** I can **follow other users whose content is relevant or meaningful to me** so that I can **view content filtered by the users I follow**.
 
-28. Edit Profile: As a **user** I can **edit my profile** so that I can **update my personal details and profile picture**.
+27. Edit Profile: As a **user** I can **edit my profile** so that I can **update my personal details and profile picture**.
 
-29. Update username and password: As a **user** I can **update my username/password** so that I can **make changes as needed**.
+28. Update username and password: As a **user** I can **update my username/password** so that I can **make changes as needed**.
 
 [Back to top](#contents)
 
@@ -209,10 +199,10 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 </details
 
 <details><summary>No Results</summary>
-<img src="assets/noresults.png" >
+<img src="src/assets/noresults.png" >
 </details>
 
-- The images used for the user profiles as well as the memes were all taken from the Internet using Google images.
+- The images used for the user profiles as well as the memes were all sourced from [Google Images](https://images.google.com/).
 
 - The favicons were created on [Favicon.io](https://favicon.io/).
 
@@ -237,13 +227,13 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 ### **Existing Features**
 
-### **logo**
+### **Logo**
 
 - The logo was designed with [Canva](https://www.canva.com/) and customised to add the site name.
 - The logo was used as the favicon for the webpage as well as the navbar logo home link.
 
 <details><summary>Logo</summary>
-<img src="assets/logo.png" >
+<img src="src/assets/logo.png" >
 </details
 
 [Back to top](#contents)
@@ -257,7 +247,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 The image used for the 404 Not Found page was created using [Canva](https://www.canva.com/)
 
 <details><summary>Not Found</summary>
-<img src="assets/notfound.png" >
+<img src="src/assets/notfound.png" >
 </details>
 
 [Back to top](#contents)
@@ -324,39 +314,29 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 - [Font Awesome](https://fontawesome.com/)
 - [Canva](https://www.canva.com/)
 - [Favicon.io](https://favicon.io/favicon-converter/)
-- [Schemecolor](https://www.schemecolor.com/)
-- [Pixabay](https://pixabay.com/)
 - [Google fonts](https://fonts.google.com/)
 - [Markdown TOC generator](https://magnetikonline.github.io/markdown-toc-generate/)
 
 [Back to top](#contents)
 
-### **Installed packages, libraries and componenets**
+### **Installed packages, libraries and components**
 
-- React
-  - npx create-react-app . --use-npm
-  - Main JavaScript framework for creating the UI
-- Node
-  - Package manager used to install dependencies
-- React simple star rating:
-  - npm i react-simple-star-rating@4.0.5
-  - Star rating component as a rating field in the Posts model.
-- React Router:
-  - npm install react-router-dom
-  - Handles routing of the React app:
-    - Keeps the UI in sync with the URL and only renders components required by whichever URL path the user navigates to.
-- Axios library:
-  - npm install axios
-  - Tells React app to send requests to the api
-- React Infinite scroll
-  - npm install react-infinite-scroll-component
-  - Used with list pages instead of pagination
-  - Utilised by posts and comments when there are long lists of these components
-- jwtDecode library:
-  - npm install jwt-decode
-  - Stops unneccessary network requests every time unauthenticated user interacts with the app.
-  - Stores the logged in user's refresh token timestamp in the browser using localStorage.
-  - Then check if this timestamp exists and only if it does make attempt to refresh access token.
+- [Axios](https://axios-http.com/): a promised-based HTTP client for JavaScript. It has the ability to make HTTP requests from the browser and handle the transformation of request and response data.
+- [jwt-decode](https://jwt.io/): is an open standard (RFC 7519) for securely transmitting information between parties as JSON object.
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom): enables you to implement dynamic routing in a web app.
+- [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component): a technique that automatically adds the next page as the user scrolls down through content, more content is loaded.
+- ['Notification Container' component](https://www.npmjs.com/package/react-notifications): to provide real-time feedback and notify users of any changes they make to their data and content.
+- [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/): an open-source tool for running technical website audits.
+- [Am I Responsive?](https://ui.dev/amiresponsive): to ensure the project looked good across all devices.
+- [HTML Markup Validation](https://validator.w3.org/): used to validate HTML code syntax.
+- [CSS Validation Service](https://jigsaw.w3.org/css-validator/): used to validate CSS code syntax.
+- [Balsamiq](https://balsamiq.com/): used to create mockups/wireframes of the project prior to starting.
+- [Google Fonts](https://fonts.google.com/): a computer font and web font service owned by Google. This includes free and open source font families.
+- [GitHub](https://github.com/): an Internet hosting service for software development and version control using Git.
+- [Heroku](https://heroku.com/): a cloud platform as a service (PaaS) supporting several programming languages. Used to
+  deploy and store for final deployment.
+- Google Developer Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+- [TinyPNG](https://tinypng.com/) - To compress images.
 
 [Back to top](#content)
 
@@ -378,9 +358,84 @@ Below are some components that have been implemented and reused throughout the p
 
 ## **Testing**
 
-The testing documentation can be viewed [here](/TESTING.md)
+### **Introduction**
 
-[Back to top](#contents)
+This project has been continuously tested throughout the development stages using the following features:
+
+- Python terminal for backend functionalities
+- Google Developer Tools
+- Manual Testing
+
+### **Validator Testing**
+
+- All HTML files passed through the HTML checker with no errors.
+
+<details><summary>HTML</summary>
+<img src="readme/validation_HTML.png" >
+</details>
+
+- CSS files passed through the Jigsaw validator with one error. This was easily fixed by restoring the correct transform value.
+
+<details><summary>CSS error</summary>
+<img src="readme/css_error.png" >
+</details>
+
+- Once this error was fixed, I found some warnings:
+
+![CSS Warnings](readme/css_warnings.JPG)
+
+- The vendor extention warning can be ignored as it is simply an extension not supported by w3c standard css and can be ignored as it is not a code error: [source](https://stackoverflow.com/questions/21889767/warnings-from-w3c-validation-for-css-cant-find-the-warning-message-for-vendor).
+
+* All JSX code was validated and corrected throughout the development of the project.
+
+![screenshot](documentation/test_screenshots/EsLint.png)
+
+#### **LightHouse testing**
+
+- **For Desktop:**
+
+  | Section   | Performance | Accessibility | Best Practices | SEO |
+  | --------- | ----------- | ------------- | -------------- | --- |
+  | Home      | 73          | 100           | 92             | 100 |
+  | Post Page | 81          | 100           | 92             | 100 |
+  | Feed      | 73          | 100           | 92             | 100 |
+  | Saved     | 73          | 100           | 92             | 100 |
+  | Sign Up   | 87          | 100           | 75             | 100 |
+  | Sign in   | 87          | 100           | 75             | 100 |
+  | Profile   | 83          | 100           | 92             | 100 |
+
+- **For Mobile devices:**
+
+  | Section   | Performance | Accessibility | Best Practices | SEO |
+  | --------- | ----------- | ------------- | -------------- | --- |
+  | Home      | 51          | 100           | 92             | 100 |
+  | Post Page | 50          | 100           | 92             | 100 |
+  | Feed.     | 53          | 100           | 92             | 100 |
+  | Saved     | 51          | 100           | 92             | 100 |
+  | Sign Up   | 53          | 100           | 83             | 100 |
+  | Sign in   | 53          | 100           | 83             | 100 |
+  | Profile   | 51          | 100           | 92             | 100 |
+
+### **Manual Testing**
+
+Manual testing for this project was carried out as follows:
+
+- Users can see sign-in, sign-up, and about pages only when not logged in.
+- Users can create a new account.
+- Users can then, sign in to their account and then be redirected to the home page.
+- Users can log out.
+- Once signed in, users can create, vote, save, and reply to posts. They can edit and delete their posts and replies.
+- Users can edit and update their profiles, which include a profile picture, bio entry, and a separate username and password edit feature.
+- All NavLinks and buttons go to their destination.
+- Clicking on the post image brings you to the post's page.
+- You can vote, downvote and save and also undo all of these actions if you change your mind.
+- Once you hover over the votes/replies/save icons, they let you know if you need to sign-in to use this feature, and once clicked on if the user is signed out, you will be redirected to the sign-in page.
+- The user is notified of what each icon represents. In each post page, if the user is the owner, the three dots to the right side of the post image will bring up the edit and delete feature, both icons have an overlay trigger to indicate which one does what feature.
+- The site was continuously built on google chrome, and once built, it was successfully tested on firefox browser, and safari browser. The only issue found on safari was the inability to sign-in properly, which was resolved after some research on Slack. (mentioned and detailed in the fixed bugs section below)
+
+### **User story testing**
+
+**User story:**
 
 ## **Bugs**
 
@@ -396,27 +451,6 @@ The testing documentation can be viewed [here](/TESTING.md)
 - There are errors in the console of these pages, that were also brought up during the walkthrough Moments. The errors are as follows:
 
 _Failed to load resource: the server responded with a status of 401 (Unauthorized)_
-
-[Back to top](#contents)
-
-## **Codeanywheee set up and deployment**
-
-- This project was created and developed using CodeAnywhere using the following steps:
-
-### Set-up in gitpod
-
-- Navigate to your github repository page and click the green "new" button to create a new repo.
-- choose a name with all lower case letters: trekkers
-- Click the green "create repository" button.
-- Click the Green "Gitpod button to create a workspace.
-- Enter the following commands:
-  - npx create-react-app . --use-npm
-  - npm install -g npm@9.6.6
-- Run npm start to check the app is working.
-- Add extension to help manage the code:
-  - ES7 React/Redux/GraphQl/React-Native : (snippets) by dsznajder
-  - Prettier : (Code formatter) by esbenp
-- Commit and push to github tr prepare for initial deployment.
 
 [Back to top](#contents)
 
