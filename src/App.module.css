@@ -54,10 +54,6 @@ a:hover i {
     transition: color ease-in-out 0.4s;
 }
 
-body h5 {
-    color: #1F8E7E;
-}
-
 figure {
     display: inline-block;
     text-align: center;
