@@ -12,59 +12,55 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 
 ## **Contents**
 
-- [**Planning and Project Conception**](#planning-and-project-conception)
-  - [**Project Goals**](#project-goals)
-  - [**Site Goals**](#site-goals)
-  - [**Future Goals**](#future-goals)
-    - [**GitHub Project Board**](#github-project-board)
-    - [**Github Issues**](#github-issues)
-    - [**Wireframes**](#wireframes)
-    - [**List of Wireframe pages**](#list-of-wireframe-pages)
-  - [**User Stories**](#user-stories)
+- [Planning and Project Conception](#planning-and-project-conception)
+  - [Project Goals](#project-goals)
+  - [Site Goals](#site-goals)
+  - [Future Goals](#future-goals)
+    - [GitHub Project Board](#github-project-board)
+    - [Github Issues](#github-issues)
+    - [Wireframes](#wireframes)
+    - [List of Wireframe pages](#list-of-wireframe-pages)
+  - [User Stories](#user-stories)
     - [Authentication](#authentication)
     - [Navigation](#navigation)
-    - [Posts](#posts)
+    - [Memes](#memes)
     - [Comments](#comments)
     - [Profiles](#profiles)
-  - [**Design**](#design)
-    - [**Images**](#images)
-    - [**Colour Scheme and Accessibility**](#colour-scheme-and-accessibility)
-    - [**Typography**](#typography)
-- [**Features**](#features)
-  - [**Existing Features**](#existing-features)
-  - [**logo**](#logo)
-  - [**custom 404 page**](#custom-404-page)
-  - [**Future Features**](#future-features)
-- [**Technologies**](#technologies)
-  - [**Languages used**](#languages-used)
-  - [**Databases**](#databases)
-  - [**Cloud storage and deployment services**](#cloud-storage-and-deployment-services)
-  - [**Frameworks, tools and libraries**](#frameworks-tools-and-libraries)
-    - [**API Back-End**](#api-back-end)
-    - [**Front-End**](#front-end)
-  - [**Installed packages, libraries and componenets**](#installed-packages-libraries-and-componenets)
-- [**Components**](#components)
-- [**Testing**](#testing)
-  - [**Manual Testing**](#manual-testing)
-  - [**Test cases**](#test-cases)
-  - [**Integration Testing**](#integration-testing)
-  - [**Code Validation**](#code-validation)
-- [**Bugs**](#bugs)
-  - [**Bugs encountered during development**](#bugs-encountered-during-development)
-  - [**Bugs and issues encountered during testing**](#bugs-and-issues-encountered-during-testing)
-  - [**Unresolved bugs**](#unresolved-bugs)
-- [**Gitpod set up and deployment**](#gitpod-set-up-and-deployment)
-  - [Set-up in gitpod](#set-up-in-gitpod)
+  - [Design](#design)
+    - [Images](#images)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Logo](#logo)
+  - [Custom 404 page](#custom-404-page)
+  - [Future Features](#future-features)
+- [Technologies](#technologies)
+  - [Languages used](#languages-used)
+  - [Databases](#databases)
+  - [Cloud storage and deployment services](#cloud-storage-and-deployment-services)
+  - [Frameworks, tools and libraries](#frameworks-tools-and-libraries)
+    - [API Back-End](#api-back-end)
+    - [Front-End](#front-end)
+  - [Installed packages, libraries and components](#installed-packages-libraries-and-components)
+- [Components](#components)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Test cases](#test-cases)
+  - [Integration Testing](#integration-testing)
+  - [Code Validation](#code-validation)
+- [Bugs](#bugs)
+  - [Bugs encountered during development](#bugs-encountered-during-development)
+  - [Bugs and issues encountered during testing](#bugs-and-issues-encountered-during-testing)
+  - [Unresolved bugs](#unresolved-bugs)
+- [Gitpod set up and deployment](#gitpod-set-up-and-deployment)
+  - [Set-up](#set-up-in-gitpod)
   - [Initial Deployment](#initial-deployment)
   - [Deployment issues and bugs](#deployment-issues-and-bugs)
-  - [Connect the Frontend app with the Backend API](#connect-the-frontend-app-with-the-backend-api)
   - [Final Deployment](#final-deployment)
   - [Cloning](#cloning)
   - [Forking](#forking)
-- [**Credits**](#credits)
-  - [Code Institute](#code-institute)
-  - [Resources for creating the star rating component:](#resources-for-creating-the-star-rating-component)
-  - [Bug fix sources:](#bug-fix-sources)
+- [Credits](#credits)
 
 ## **Planning and Project Conception**
 
@@ -116,69 +112,69 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 #### **Authentication**
 
-1. Sign up: As a **user** I can **create an account** so that I can **access the features for signed up users**
+1. Sign up: as a user I can create an account so that I can access the features for signed up users.
 
-2. Sign in: As a **user** I can **log in** so that I can **access features only available to logged in users**
+2. Sign in: as a user I can log in so that I can access features only available to logged in users.
 
-3. Sign out: As a **user** I can **log out** so that I can **exit my account and prevent others from gaining access**
+3. Sign out: as a user I can log out so that I can exit my account and prevent others from gaining access.
 
-4. Refreshing access tokens: As a **user** I can **maintain my logged in status for 24 hours** so that I can **easily interact with the app throughout the day**.
+4. Refreshing access tokens: as a user I can maintain my logged in status for 24 hours so that I can easily interact with the app throughout the day.
 
 #### **Navigation:**
 
-5. As a **user** I can **quickly view my logged in/out status in the navbar** so that I can **decide on my next action**.
+5. As a user I can easily view my logged in or out status in the navbar so that I can decide on my next action.
 
-6. Routing: As a **user** I can **view the navbar on every page** so that I can **easily navigate through the site**.
+6. Routing: as a user I can view the navbar on every page so that I can easily navigate through the site.
 
-7. Conditional Rendering: As a **logged out user** I can **view sign in and sign up options** so that I can **easily tell whether I am logged in and can log in easily if not**.
+7. Conditional Rendering: as a logged out user I can view sign in and sign up options so that I can easily tell whether I am logged in and can log in easily if not.
 
-8. Avatar: As a **logged in user** I can **view my profile link and avatar image on the navbar** so that I can **quickly see that I am logged in**.
+8. Avatar: as a logged in user I can view my profile link and avatar image in the navbar so that I can quickly check that I am logged in.
 
-9. Viral profiles list: As a **logged in user** I can **view other user’s profile names and avatars** so that I can **easily identify and follow other users**.
+9. Viral profiles list: as a logged in user I can view other user’s profile names and avatars so that I can easily identify and follow other users.
 
 #### **Memes**
 
-10. Create a meme: As a **logged in user** I can **create a new post** so that I can **share my best memes with the world**.
+10. Create a meme: as a logged in user I can create a new meme so that I can share my best memes with the world.
 
-11. Edit a meme: As a **logged in user** I can**edit my memes** so that I can **revise my content, if necessary**.
+11. Edit a meme: as a logged in user I can edit my own memes so that I can revise my content, if necessary.
 
-12. Delete a meme: As a **logged in user** I can **delete my memes** so that I can **remove content I have posted, if necessary**.
+12. Delete a meme: as a logged in user I can delete my own memes so that I can remove content I have posted, if necessary.
 
-13. View most recent memes: As a **user** I can **view all the most recent memes, ordered by most recently created first** so that I can **immediately be up to date with the newest content**.
+13. View most recent memes: as a user I can view all the most recent memes, ordered by most recently created first** so that I can immediately be up to date with the newest content.
 
-14. View meme detail: As a **user** I can **view individual meme details** so that I can **view more details and comments about the meme**.
+14. View meme detail: as a logged in user I can view individual meme details so that I can view more details and comments about the meme.
 
-15. React to a meme: As a **logged in user** I can **like or unlike a meme** so that I can **quickly show my reaction to another users content**.
+15. React to a meme: as a logged in user I can laugh or unlike a meme so that I can quickly show my reaction to another users content.
 
-16. Save memes: As a **logged in user** I can **save a meme** so that I can **easily find all the memes I might wnat to view again at a later stage**.
+16. Save memes: as a logged in user I can save a meme so that I can easily find all the memes I might want to view again at a later stage.
 
-17. View saved memes: As a **logged in user** I can **view saved memes** so that I can **easily find all the memes that interested me under the Saved section**.
+17. View saved memes: as a logged in user I can view saved memes so that I can easily find all the memes that interested me under the Saved section.
 
-18. Search memes: As a **user** I can **search meme with keywords** so that I can **find the memes and user profiles I am most interested in**.
+18. Search memes: As a user I can search meme and users with keywords so that I can find the memes and user profiles I am most interested in.
 
 #### Comments
 
-19. Create a comment: As a **user** I can **leave a comment under a meme** so that I can **express my opinion and engage with the content and the community**.
+19. Create a comment: as a user I can leave a comment under a meme so that I can express my opinion and engage with the content and the community.
 
-20. Comment date: As a **user** I can **see the comment date** so that I can **know how long a go a comment was left**.
+20. View comment date: as a user I can see the comment date so that I know how long a go a comment was left.
 
-21. View comments: As a **user** I can **view other comments** so that I can **see what others have said**.
+21. View comments: as a user I can view other comments so that I can see what others have said.
 
-22. Edit comments: As a **user** I can **edit my comments** so that I can **revise the content, if necessary**.
+22. Edit comments: as a user I can edit my own comments so that I can revise the content, if necessary.
 
-23. Delete comments: As a **user** I can **delete my comments** so that I can **remove them, if necessary**.
+23. Delete comments: as a user I can delete my own comments so that I can remove them, if necessary.
 
 #### Profiles
 
-24. Profile page: As a **user** I can **view another user’s profile page** so that I can **see their memes and their bio**.
+24. Profile page: as a user I can view another user’s profile page so that I can see their memes and their bio.
 
-25. User stats: As a **user** I can **see stats on a user profile** so that I can **see how many memes/followers/following they have**.
+25. User stats: as a user I can see stats on a user profile so that I can see how many memes, followers and following users they have.
 
-26. Follow/Unfollow a user: As a **logged in user** I can **follow other users whose content is relevant or meaningful to me** so that I can **view content filtered by the users I follow**.
+26. Follow/Unfollow a user: as a logged in user I can follow other users whose content is relevant or meaningful to me so that I can view content filtered by the users I follow.
 
-27. Edit Profile: As a **user** I can **edit my profile** so that I can **update my personal details and profile picture**.
+27. Edit Profile: as a user I can edit my profile so that I can update my personal details and profile picture.
 
-28. Update username and password: As a **user** I can **update my username/password** so that I can **make changes as needed**.
+28. Update username and password: as a user I can update my username and password so that I can make changes as needed.
 
 [Back to top](#contents)
 

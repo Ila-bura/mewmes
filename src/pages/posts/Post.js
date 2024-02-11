@@ -49,7 +49,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-        // console.log(err)
+      // console.log(err)
     }
   };
 
@@ -299,7 +299,7 @@ const Post = (props) => {
             // Prompt users to log in to vote for memes
             <OverlayTrigger
               placement="bottom"
-              overlay={<Tooltip>Log in to react to memes!</Tooltip>}
+              overlay={<Tooltip>Log in to react on memes!</Tooltip>}
             >
               <Link to="/signin" aria-label="Log in to react">
                 <i className="far fa-sad-tear" />
