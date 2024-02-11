@@ -75,7 +75,6 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 
 ### **Future Goals**
 
-- Allow users to interact more efficiently by implementing private messaging.
 - Add the functionality to like user's comments.
 - Allow profile's owners to delete their profile.
 
@@ -246,8 +245,8 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 
 ### **Future Features**
 
-- Private messaging would be a good feature to implement.
 - Registered users might find it useful to be able to delete their own account.
+- Another future that might be useful to implement is giving signed in users to ability to like other people's comments.
 
 [Back to top](#contents)
 
@@ -407,14 +406,50 @@ This project has been continuously tested throughout the development stages usin
   | Section   | Performance | Accessibility | Best Practices | SEO |
   | --------- | ----------- | ------------- | -------------- | --- |
   | Home      | 89          | 94            | 95             | 100 |
-  | Post Page | 95          | 94            | 95             | 100 |
+  | Meme Page | 95          | 94            | 95             | 100 |
   | Feed      | 95          | 94            | 100            | 100 |
   | Saved     | 95          | 94            | 100            | 100 |
   | Sign Up   | 98          | 94            | 91             | 100 |
   | Sign in   | 98          | 94            | 95             | 100 |
   | Profile   | 97          | 100           | 100            | 100 |
-  | Add       | 99          | 94            | 95             | 100 |
+  | Add Meme  | 99          | 94            | 95             | 100 |
   | Info      | 100         | 93            | 95             | 100 |
+
+- <details><summary>Home on Desktop</summary>
+  <img src="readme/home_desktop.png" >
+  </details>
+
+- <details><summary>Meme page on Desktop</summary>
+  <img src="readme/meme_desktop.png" >
+  </details>
+
+- <details><summary>Feed on Desktop</summary>
+  <img src="readme/feed_desktop.png" >
+  </details>
+
+- <details><summary>Saved on Desktop</summary>
+  <img src="readme/saved_desktop.png" >
+  </details>
+
+- <details><summary>Sign Up on Desktop</summary>
+  <img src="readme/signup_desktop.png" >
+  </details>
+
+- <details><summary>Sign In on Desktop</summary>
+  <img src="readme/signin_desktop.png" >
+  </details>
+
+  - <details><summary>Profile on Desktop</summary>
+    <img src="readme/profile_desktop.png" >
+    </details>
+
+  - <details><summary>Add Meme on Desktop</summary>
+    <img src="readme/addmemes_desktop.png" >
+    </details>
+
+  - <details><summary>Info on Desktop</summary>
+    <img src="readme/info_desktop.png" >
+    </details>
 
 - **For Mobile devices:**
 
@@ -427,8 +462,44 @@ This project has been continuously tested throughout the development stages usin
   | Sign Up   | 85          | 94            | 91             | 100 |
   | Sign in   | 86          | 94            | 95             | 100 |
   | Profile   | 79          | 100           | 100            | 100 |
-  | Add       | 82          | 100           | 91             | 100 |
+  | Add Meme  | 82          | 100           | 91             | 100 |
   | Info      | 90          | 100           | 95             | 100 |
+
+- <details><summary>Home on Mobile</summary>
+  <img src="readme/home_mobile.png" >
+  </details>
+
+- <details><summary>Meme page on Mobile</summary>
+  <img src="readme/meme_mobile.png" >
+  </details>
+
+- <details><summary>Feed on Mobile</summary>
+  <img src="readme/feed_mobile.png" >
+  </details>
+
+- <details><summary>Saved on Mobile</summary>
+  <img src="readme/saved_mobile.png" >
+  </details>
+
+- <details><summary>Sign Up on Mobile</summary>
+  <img src="readme/signup_mobile.png" >
+  </details>
+
+- <details><summary>Sign In on Mobile</summary>
+  <img src="readme/signin_mobile.png" >
+  </details>
+
+  - <details><summary>Profile on Mobile</summary>
+    <img src="readme/profile_mobile.png" >
+    </details>
+
+  - <details><summary>Add Meme on Mobile</summary>
+    <img src="readme/addmemes_mobile.png" >
+    </details>
+
+  - <details><summary>Info on Mobile</summary>
+    <img src="readme/info_mobile.png" >
+    </details>
 
 ### **Manual Testing**
 
@@ -465,11 +536,15 @@ Manual testing for this project was carried out as follows:
 _Failed to load resource: the server responded with a status of 401 (Unauthorized)_
 
 - When testing the functionalities of the app, I came across some unexpected behaviour. As a logged out user, when I open a single meme post and I hover on the icons for saving and reacting to a meme, the overlay trigger message is showed at the top left corner of the screen. This appears to happen even if the property "bottom" is correctly set in the code
-This behaviour is encountered also on mobile testing. A relevant ticket was kept open in the MewMes Stories board in GitHub.
-It is worth noting that this bug does not affect the functionality of the app in the slightest.
+  This behaviour can be reproduced also on mobile testing. A relevant ticket was kept open in the MewMes Stories board in GitHub.
+  It is worth noting that this bug does not affect the functionality of the app in the slightest.
 
-<details><summary>Overlay Trigger</summary>
-<img src="static/readme-images/readme-bugs-register-alert-error.png" >
+<details><summary>Overlay Trigger expected behaviour</summary>
+<img src="readme/expected" >
+</details
+
+<details><summary>Overlay Trigger unexpected behaviour</summary>
+<img src="readme/unexpected" >
 </details
 
 [Back to top](#contents)
