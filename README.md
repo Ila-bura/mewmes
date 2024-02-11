@@ -122,7 +122,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 #### **Navigation:**
 
-5. As a user I can easily view my logged in or out status in the navbar so that I can decide on my next action.
+5. As a logged in user I can easily view my logged in or out status in the navbar so that I can decide on my next action.
 
 6. Routing: as a user I can view the navbar on every page so that I can easily navigate through the site.
 
@@ -140,7 +140,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 12. Delete a meme: as a logged in user I can delete my own memes so that I can remove content I have posted, if necessary.
 
-13. View most recent memes: as a user I can view all the most recent memes, ordered by most recently created first** so that I can immediately be up to date with the newest content.
+13. View most recent memes: as a user I can view all the most recent memes, ordered by most recently created first so that I can immediately be up to date with the newest content.
 
 14. View meme detail: as a logged in user I can view individual meme details so that I can view more details and comments about the meme.
 
@@ -154,15 +154,15 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 #### Comments
 
-19. Create a comment: as a user I can leave a comment under a meme so that I can express my opinion and engage with the content and the community.
+19. Create a comment: as a logged in user I can leave a comment under a meme so that I can express my opinion and engage with the content and the community.
 
 20. View comment date: as a user I can see the comment date so that I know how long a go a comment was left.
 
 21. View comments: as a user I can view other comments so that I can see what others have said.
 
-22. Edit comments: as a user I can edit my own comments so that I can revise the content, if necessary.
+22. Edit comments: as a logged in user I can edit my own comments so that I can revise the content, if necessary.
 
-23. Delete comments: as a user I can delete my own comments so that I can remove them, if necessary.
+23. Delete comments: as a logged in user I can delete my own comments so that I can remove them, if necessary.
 
 #### Profiles
 
@@ -172,9 +172,9 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 26. Follow/Unfollow a user: as a logged in user I can follow other users whose content is relevant or meaningful to me so that I can view content filtered by the users I follow.
 
-27. Edit Profile: as a user I can edit my profile so that I can update my personal details and profile picture.
+27. Edit Profile: as a logged in user I can edit my profile so that I can update my personal details and profile picture.
 
-28. Update username and password: as a user I can update my username and password so that I can make changes as needed.
+28. Update username and password: as a logged in user I can update my username and password so that I can make changes as needed.
 
 [Back to top](#contents)
 
