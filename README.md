@@ -396,7 +396,7 @@ This project has been continuously tested throughout the development stages usin
 <img src="readme/css_warnings.png" >
 </details>
 
-- The vendor extention warning can be ignored as it is simply an extension not supported by w3c standard css and can be ignored as it is not a code error: [source](https://stackoverflow.com/questions/21889767/warnings-from-w3c-validation-for-css-cant-find-the-warning-message-for-vendor).
+- The vendor extension warning can be ignored as it is simply an extension not supported by w3c standard css and can be ignored as it is not a code error: [source](https://stackoverflow.com/questions/21889767/warnings-from-w3c-validation-for-css-cant-find-the-warning-message-for-vendor).
 
 ### JSX Validation
 
@@ -487,41 +487,41 @@ This project has been continuously tested throughout the development stages usin
   | Add Meme  | 82          | 100           | 91             | 100 |
   | Info      | 90          | 100           | 95             | 100 |
 
-- <details><summary>Home on Mobile</summary>
-  <img src="readme/home_mobile.png" >
-  </details>
+<details><summary>Home on Mobile</summary>
+<img src="readme/home_mobile.png" >
+</details>
 
-- <details><summary>Meme page on Mobile</summary>
-  <img src="readme/meme_mobile.png" >
-  </details>
+<details><summary>Meme page on Mobile</summary>
+<img src="readme/meme_mobile.png" >
+</details>
 
-- <details><summary>Feed on Mobile</summary>
-  <img src="readme/feed_mobile.png" >
-  </details>
+<details><summary>Feed on Mobile</summary>
+<img src="readme/feed_mobile.png" >
+</details>
 
-- <details><summary>Saved on Mobile</summary>
-  <img src="readme/saved_mobile.png" >
-  </details>
+<details><summary>Saved on Mobile</summary>
+<img src="readme/saved_mobile.png" >
+</details>
 
-- <details><summary>Sign Up on Mobile</summary>
-  <img src="readme/signup_mobile.png" >
-  </details>
+<details><summary>Sign Up on Mobile</summary>
+<img src="readme/signup_mobile.png" >
+</details>
 
-- <details><summary>Sign In on Mobile</summary>
-  <img src="readme/signin_mobile.png" >
-  </details>
+<details><summary>Sign In on Mobile</summary>
+<img src="readme/signin_mobile.png" >
+</details>
 
-  - <details><summary>Profile on Mobile</summary>
-    <img src="readme/profile_mobile.png" >
-    </details>
+<details><summary>Profile on Mobile</summary>
+<img src="readme/profile_mobile.png" >
+</details>
 
-  - <details><summary>Add Meme on Mobile</summary>
-    <img src="readme/addmemes_mobile.png" >
-    </details>
+<details><summary>Add Meme on Mobile</summary>
+<img src="readme/addmemes_mobile.png" >
+</details>
 
-  - <details><summary>Info on Mobile</summary>
-    <img src="readme/info_mobile.png" >
-    </details>
+<details><summary>Info on Mobile</summary>
+<img src="readme/info_mobile.png" >
+</details>
 
 ### **Manual Testing**
 
@@ -551,7 +551,8 @@ Manual testing for this project was carried out as follows:
 - The first deployment attempt failed and I came across an error message suggesting a CORS (Cross-Origin Resource Sharing) issue. After rewatching the Code Institite walkthrough instructions and reserching the issue in Slack, I managed to correctly configure CORS settings in the back-end Settings.py file.
 
 - While testing on Safari mobile, there was an issue with logging in through Safari: once a new user was created and logged in with the correct credentials, the system would redirect back to the sign-in page.
-- Solution: Upon researching the matter using Slack, I found the issue was with the JWT json web token as a HTTP-only cookie in the browser. This was solved by enabling "Allow cross-website tracking" in Safari settings.
+
+Solution: Upon researching the matter using Slack, I found the issue was with the JWT json web token as a HTTP-only cookie in the browser. This was solved by enabling "Allow cross-website tracking" in Safari settings.
 
 [Back to top](#contents)
 
@@ -567,11 +568,11 @@ _Failed to load resource: the server responded with a status of 401 (Unauthorize
   It is worth noting that this bug does not affect the functionality of the app in the slightest.
 
 <details><summary>Overlay Trigger expected behaviour</summary>
-<img src="readme/expected" >
+<img src="readme/expected.png" >
 </details
 
 <details><summary>Overlay Trigger unexpected behaviour</summary>
-<img src="readme/unexpected" >
+<img src="readme/unexpected.png" >
 </details
 
 [Back to top](#contents)
