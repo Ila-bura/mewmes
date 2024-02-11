@@ -376,14 +376,16 @@ This project has been continuously tested throughout the development stages usin
 
 - Once this error was fixed, I found some warnings:
 
-![CSS Warnings](readme/css_warnings.png)
+<details><summary>CSS warnings</summary>
+<img src="readme/css_warnings.png" >
+</details>
 
 - The vendor extention warning can be ignored as it is simply an extension not supported by w3c standard css and can be ignored as it is not a code error: [source](https://stackoverflow.com/questions/21889767/warnings-from-w3c-validation-for-css-cant-find-the-warning-message-for-vendor).
 
 ### JSX Validation
 
 - All JSX code was validated and corrected throughout the development of the project.
-- Most of the code validation was done through the CodeAnywhere ide problems tab and with the help of the prettier code formatting extension.
+- Most of the code validation was done through the CodeAnywhere IDE problems tab and with the help of the prettier code formatting extension.
 - For good measure, I ran the jsx files through this [eslint](https://eslint.org/play/).
 - These are the settings I used for this validator so as not to get unrelated javascript errors as a result of the html tags in jsx.
 
@@ -457,12 +459,18 @@ Manual testing for this project was carried out as follows:
 
 ### **Unresolved bugs**
 
-- No unfixed bugs to report during the production of this project.
-
-- One thing to note is when doing the lighthouse report, best practices for the sign-in and sign-up page show a result of 75, the image shows up tagged as low resolution.
+- One thing to note is when doing the Lighthouse report, best practices for the sign in and sign up page show a result of 75, the image shows up tagged as low resolution.
 - There are errors in the console of these pages, that were also brought up during the walkthrough Moments. The errors are as follows:
 
 _Failed to load resource: the server responded with a status of 401 (Unauthorized)_
+
+- When testing the functionalities of the app, I came across some unexpected behaviour. As a logged out user, when I open a single meme post and I hover on the icons for saving and reacting to a meme, the overlay trigger message is showed at the top left corner of the screen. This appears to happen even if the property "bottom" is correctly set in the code
+This behaviour is encountered also on mobile testing. A relevant ticket was kept open in the MewMes Stories board in GitHub.
+It is worth noting that this bug does not affect the functionality of the app in the slightest.
+
+<details><summary>Overlay Trigger</summary>
+<img src="static/readme-images/readme-bugs-register-alert-error.png" >
+</details
 
 [Back to top](#contents)
 
@@ -601,4 +609,25 @@ Here are the steps to fork the repository:
 This project is largely based on the [Code Institute Moments](https://github.com/Code-Institute-Solutions/moments) walkthrough project.
 It contains some of the styles and logic from that project which have bee modified and customised for the purpose of MewMes project.
 
+### Sources
+
+- [Stack Overflow](https://stackoverflow.com/)
+- [Slack](https://www.slack.com/) - to look up how to fix common bugs.
+- [W3 Schools](https://www.w3schools.com/)
+- [educative.io](https://www.educative.io/answers/how-to-handle-react-notifications) - to learn how to implement React notifications.
+- [davidhu.io](https://www.davidhu.io/react-spinners/storybook/?path=/docs/beatloader--main) - to learn how to implement the BeatLoader spinner.
+
+### **Media**
+
+The media sourced for this website were mostly found on Google and Google Images. These are more websites pictures were souced from:
+
+- [boredpanda](https://www.boredpanda.com/)
+- [Friends of the Animal Village](https://www.friendsoftheanimalvillage.org/)
+- [Pinterest](https://www.pinterest.com/)
+
 [Back to top](#contents)
+
+## **Acknowledgements**
+
+- My mentor at Code Institute - Martina Terlevic.
+- To say that using CodeAnywhere as my IDE has been challenging is an understatement. I struggled multiple times with infinite long loading times, which greatly slowed down my project progress. A big thank you to Bruno from CodeAnywhere support who provided assistance, when he could.

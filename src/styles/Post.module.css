@@ -20,7 +20,8 @@
     color: #F962A9;
 }
 
-.Post .Dislike:hover {
+.Post .Dislike:hover,
+.Post .DislikeOutline:hover {
     color: #E8A7CE;
 }
 
@@ -28,7 +29,8 @@
     color: #F962A9;
 }
 
-.Post .Laugh:hover {
+.Post .Laugh:hover,
+.Post .LaughOutline:hover {
     color: #E8A7CE;
 }
 

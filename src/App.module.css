@@ -46,7 +46,7 @@ a {
 
 a:hover {
     color: #F962A9;
-    text-decoration: none;
+    transition: color ease-in-out 0.4s;
 }
 
 a:hover i {

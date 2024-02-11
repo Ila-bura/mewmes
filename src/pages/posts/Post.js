@@ -218,8 +218,8 @@ const Post = (props) => {
           {is_owner ? (
             // Check if user is the owner of the meme
             <OverlayTrigger
-              placement="top"
               overlay={<Tooltip>You cannot save your own meme!</Tooltip>}
+              placement="bottom"
             >
               <i className="fas fa-thumbtack" />
             </OverlayTrigger>
@@ -236,8 +236,8 @@ const Post = (props) => {
           ) : (
             // Prompt user to log in to save memes
             <OverlayTrigger
-              placement="bottom"
               overlay={<Tooltip>Log in to save memes!</Tooltip>}
+              placement="bottom"
             >
               <Link to="/signin" aria-label="Log in to save memes">
                 <i className="fas fa-thumbtack" />
@@ -248,10 +248,10 @@ const Post = (props) => {
           {is_owner ? (
             // Check if user is the owner of the meme
             <OverlayTrigger
-              placement="bottom"
               overlay={
                 <Tooltip>C'mon, you cannot laugh at your own meme!</Tooltip>
               }
+              placement="bottom"
             >
               <i className="far fa-grin-squint-tears" />
             </OverlayTrigger>
@@ -268,8 +268,8 @@ const Post = (props) => {
           ) : (
             // Prompt users to log in to vote for memes
             <OverlayTrigger
-              placement="bottom"
               overlay={<Tooltip>Log in to laugh at memes!</Tooltip>}
+              placement="bottom"
             >
               <Link to="/signin" aria-label="Log in to react">
                 <i className="far fa-grin-squint-tears" />
@@ -280,10 +280,10 @@ const Post = (props) => {
           {is_owner ? (
             // Check if user is the owner of the meme
             <OverlayTrigger
-              placement="bottom"
               overlay={
                 <Tooltip>C'mon, you cannot dislike your own meme!</Tooltip>
               }
+              placement="bottom"
             >
               <i className="far fa-sad-tear" />
             </OverlayTrigger>
@@ -298,8 +298,8 @@ const Post = (props) => {
           ) : (
             // Prompt users to log in to vote for memes
             <OverlayTrigger
-              placement="bottom"
               overlay={<Tooltip>Log in to react on memes!</Tooltip>}
+              placement="bottom"
             >
               <Link to="/signin" aria-label="Log in to react">
                 <i className="far fa-sad-tear" />
