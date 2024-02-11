@@ -96,30 +96,29 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 #### **List of Wireframe pages**
 
-- <details><summary>Home Page on Desktop</summary>
+<details><summary>Home Page on Desktop</summary>
   <img src="readme/homepage_desktop.png" >
   </details>
 
-- <details><summary>Home Page on Mobile</summary>
+<details><summary>Home Page on Mobile</summary>
   <img src="readme/homepage_mobile.png" >
   </details>
 
-- <details><summary>Sign Up Page</summary>
+<details><summary>Sign Up Page</summary>
   <img src="readme/signup.png" >
   </details>
 
-- <details><summary>Sign In Page</summary>
+<details><summary>Sign In Page</summary>
   <img src="readme/signin.png" >
   </details>
 
-- <details><summary>User Profile</summary>
+<details><summary>User Profile</summary>
   <img src="readme/userprofile.png" >
   </details>
 
-- <details><summary>Info Page</summary>
+<details><summary>Info Page</summary>
   <img src="readme/Info.png" >
   </details>
-
 
 [Back to top](#contents)
 
@@ -403,6 +402,11 @@ This project has been continuously tested throughout the development stages usin
 
 - All JSX code was validated and corrected throughout the development of the project.
 - Most of the code validation was done through the CodeAnywhere IDE problems tab and with the help of the prettier code formatting extension.
+
+<details><summary>Successfully Compiled message</summary>
+<img src="readme/compiled.png" >
+</details>
+
 - For good measure, I ran the jsx files through this [eslint](https://eslint.org/play/).
 - These are the settings I used for this validator so as not to get unrelated javascript errors as a result of the html tags in jsx.
 
@@ -433,41 +437,41 @@ This project has been continuously tested throughout the development stages usin
   | Add Meme  | 99          | 94            | 95             | 100 |
   | Info      | 100         | 93            | 95             | 100 |
 
-- <details><summary>Home on Desktop</summary>
-  <img src="readme/home_desktop.png" >
-  </details>
+<details><summary>Home on Desktop</summary>
+<img src="readme/home_desktop.png" >
+</details>
 
-- <details><summary>Meme page on Desktop</summary>
-  <img src="readme/meme_desktop.png" >
-  </details>
+<details><summary>Meme page on Desktop</summary>
+<img src="readme/meme_desktop.png" >
+</details>
 
-- <details><summary>Feed on Desktop</summary>
-  <img src="readme/feed_desktop.png" >
-  </details>
+<details><summary>Feed on Desktop</summary>
+<img src="readme/feed_desktop.png" >
+</details>
 
-- <details><summary>Saved on Desktop</summary>
-  <img src="readme/saved_desktop.png" >
-  </details>
+<details><summary>Saved on Desktop</summary>
+<img src="readme/saved_desktop.png" >
+</details>
 
-- <details><summary>Sign Up on Desktop</summary>
-  <img src="readme/signup_desktop.png" >
-  </details>
+<details><summary>Sign Up on Desktop</summary>
+<img src="readme/signup_desktop.png" >
+</details>
 
-- <details><summary>Sign In on Desktop</summary>
-  <img src="readme/signin_desktop.png" >
-  </details>
+<details><summary>Sign In on Desktop</summary>
+<img src="readme/signin_desktop.png" >
+</details>
 
-  - <details><summary>Profile on Desktop</summary>
-    <img src="readme/profile_desktop.png" >
-    </details>
+<details><summary>Profile on Desktop</summary>
+<img src="readme/profile_desktop.png" >
+</details>
 
-  - <details><summary>Add Meme on Desktop</summary>
-    <img src="readme/addmemes_desktop.png" >
-    </details>
+<details><summary>Add Meme on Desktop</summary>
+<img src="readme/addmemes_desktop.png" >
+</details>
 
-  - <details><summary>Info on Desktop</summary>
-    <img src="readme/info_desktop.png" >
-    </details>
+<details><summary>Info on Desktop</summary>
+<img src="readme/info_desktop.png" >
+</details>
 
 - **For Mobile devices:**
 
@@ -534,7 +538,7 @@ Manual testing for this project was carried out as follows:
 - You can vote, downvote and save and also undo all of these actions if you change your mind.
 - Once you hover over the votes/replies/save icons, they let you know if you need to sign-in to use this feature, and once clicked on if the user is signed out, you will be redirected to the sign-in page.
 - The user is notified of what each icon represents. In each post page, if the user is the owner, the three dots to the right side of the post image will bring up the edit and delete feature, both icons have an overlay trigger to indicate which one does what feature.
-- The site was continuously built on google chrome, and once built, it was successfully tested on firefox browser, and safari browser. The only issue found on safari was the inability to sign-in properly, which was resolved after some research on Slack. (mentioned and detailed in the fixed bugs section below)
+- The site was continuously built on google chrome, and once built, it was successfully tested on firefox browser, and safari browser.
 
 ### **User story testing**
 
@@ -542,7 +546,12 @@ Manual testing for this project was carried out as follows:
 
 ## **Bugs**
 
-### **Bugs encountered during development**
+### **Fixed bugs and solutions**
+
+- The first deployment attempt failed and I came across an error message suggesting a CORS (Cross-Origin Resource Sharing) issue. After rewatching the Code Institite walkthrough instructions and reserching the issue in Slack, I managed to correctly configure CORS settings in the back-end Settings.py file.
+
+- While testing on Safari mobile, there was an issue with logging in through Safari: once a new user was created and logged in with the correct credentials, the system would redirect back to the sign-in page.
+- Solution: Upon researching the matter using Slack, I found the issue was with the JWT json web token as a HTTP-only cookie in the browser. This was solved by enabling "Allow cross-website tracking" in Safari settings.
 
 [Back to top](#contents)
 
