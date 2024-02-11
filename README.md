@@ -96,12 +96,30 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 #### **List of Wireframe pages**
 
-- [Home page Desktop](readme/homepage_desktop.png)
-- [Home page Mobile](readme/homepage_mobile.png)
-- [Sign up page](readme/signup.png)
-- [Sign in page](readme/signin.png)
-- [Profile page](readme/userprofile.png)
-- [Info page](readme/Info.png)
+- <details><summary>Home Page on Desktop</summary>
+  <img src="readme/homepage_desktop.png" >
+  </details>
+
+- <details><summary>Home Page on Mobile</summary>
+  <img src="readme/homepage_mobile.png" >
+  </details>
+
+- <details><summary>Sign Up Page</summary>
+  <img src="readme/signup.png" >
+  </details>
+
+- <details><summary>Sign In Page</summary>
+  <img src="readme/signin.png" >
+  </details>
+
+- <details><summary>User Profile</summary>
+  <img src="readme/userprofile.png" >
+  </details>
+
+- <details><summary>Info Page</summary>
+  <img src="readme/Info.png" >
+  </details>
+
 
 [Back to top](#contents)
 
