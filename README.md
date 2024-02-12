@@ -91,7 +91,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 #### **Wireframes**
 
-- The plan for this project is based on the Code Institute Moments walkthrough project.
+- The plan for this project is loosely based on the Code Institute Moments walkthrough project.
 - Most of the UI is based on the same kind of features and functionality but customised for the specific purposes of MewMes.
 
 #### **List of Wireframe pages**
@@ -233,6 +233,77 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 ### **Existing Features**
 
+### **NavBar**
+
+NavBar, when the user is not logged in.
+
+<details><summary>Logged Out NavBar</summary>
+<img src="readme/loggedout_navbar.png" >
+</details>
+
+NavBar, when the user is logged in.
+
+<details><summary>Logged In NavBar</summary>
+<img src="readme/loggedin_navbar.png" >
+</details>
+
+### **Home Page**
+
+The landing page, with the "Most viral profiles" sidebar.
+
+<details><summary>Logged In NavBar</summary>
+<img src="readme/landing.png" >
+</details>
+
+### **Meme Page**
+
+- When clicking on a single meme, user is directed to that meme's page, which still features the most viral profiles sidebar.
+- Under the meme, the first three icons represent the action a user can take.
+- The pin icon is for saving the meme, which can be viewed in the "Saved" section from the NavBar. You need to be logged in to save a meme. When you save a meme, this will be indicated by the "pinned" icon, which turns to a solid shade once it's clicked and if clicked again, this will undo the action of saving the meme.
+- The laughing and crying icons are for reacting to the meme. Each icon turns to a solid shade, once a user has clicked on it and will also undo the action if clicked on again. The number next to the icon indicates how many users added their reaction.
+- The comment icon displays the number of comments for that meme.
+- Underneath the meme, the comment section shows all the comments users left for any given meme.
+
+**Single meme page, when the user is not logged in**
+
+When a logged out user hovers on the pin icon, an overlay message is displayed encouraging logging in to be able to save memes.
+When a logged out user hovers on the laughing or crying icons, an overlay message is displayed encouraging logging in to be able to react to memes.
+When a logged out user hovers on the comment icon, an overlay message is displayed encouraging logging in to be able to comment on memes. If they click on any of the icons, they are redirected to the Sign In page.
+Logged out user do not have the opportunity to leave a comment.
+
+<details><summary>Logged Out Meme Page</summary>
+<img src="readme/loggedout_meme.png" >
+</details>
+
+**Single meme page, when the user is logged in**
+
+<details><summary>Logged In Meme Page</summary>
+<img src="readme/meme_page.png" >
+</details>
+
+- In the comment section logged in users have the opportunity to publish a comment.
+  After having published a comment, three vertical dots are displayed on the side of their comment: when clicked, users can edit or delete their own comments.
+
+<details><summary>Logged In Comment Creator</summary>
+<img src="readme/owner_comment.png" >
+</details>
+
+<details><summary>Logged In Comment Edit</summary>
+<img src="readme/owner_edit_comment.png" >
+</details>
+
+Single meme page, when the user is logged in and the owner of the meme.
+
+- If a user is the creator of the meme, three vertical dots are displayed on the side of the meme image: when clicked, users can edit or delete their meme.
+
+<details><summary>Logged In Owner Meme Page</summary>
+<img src="readme/owner_meme_page.png" >
+</details>
+
+<details><summary>Logged In Owner Meme Edit</summary>
+<img src="readme/owner_edit_meme.png" >
+</details>
+
 ### **Logo**
 
 - The logo was designed with [Canva](https://www.canva.com/) and customised to add the site name.
@@ -240,7 +311,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 <details><summary>Logo</summary>
 <img src="src/assets/logo.png" >
-</details
+</details>
 
 [Back to top](#contents)
 
