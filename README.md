@@ -304,6 +304,22 @@ Single meme page, when the user is logged in and the owner of the meme.
 <img src="readme/owner_edit_meme.png" >
 </details>
 
+### **Info Page**
+
+Here you will find a few engaging lines to describe MewMes to the uninitiated. The icon and link to this page will only appear in the NavBar to not signed in users.
+
+<details><summary>Info Page</summary>
+<img src="readme/info_page.png" >
+</details>
+
+### **Feed**
+
+The Feed consists of memes from users that you follow.
+
+<details><summary>Feed Page</summary>
+<img src="readme/feed.png" >
+</details>
+
 ### **Logo**
 
 - The logo was designed with [Canva](https://www.canva.com/) and customised to add the site name.
@@ -360,7 +376,7 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
   - Used to store media files and images.
 - [Heroku](https://www.heroku.com/)
   - Used to host the deployed site.
-- [ElephantSQL]()
+- [ElephantSQL](https://www.elephantsql.com/)
   - Used to host and operate the PostgresSQL database.
 
 [Back to top](#contents)
@@ -392,7 +408,7 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 - [Canva](https://www.canva.com/)
 - [Favicon.io](https://favicon.io/favicon-converter/)
 - [Google fonts](https://fonts.google.com/)
-- [Markdown TOC generator](https://magnetikonline.github.io/markdown-toc-generate/)
+- [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
 
