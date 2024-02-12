@@ -233,6 +233,15 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 ### **Existing Features**
 
+### **Logo**
+
+- The logo was designed with [Canva](https://www.canva.com/) and customised to add the site name.
+- The logo was used as the favicon for the webpage as well as the navbar logo home link.
+
+<details><summary>Logo</summary>
+<img src="src/assets/logo.png" >
+</details>
+
 ### **NavBar**
 
 NavBar, when the user is not logged in.
@@ -292,9 +301,9 @@ Logged out user do not have the opportunity to leave a comment.
 <img src="readme/owner_edit_comment.png" >
 </details>
 
-Single meme page, when the user is logged in and the owner of the meme.
+**Single meme page, when the user is logged in and the owner of the meme**
 
-- If a user is the creator of the meme, three vertical dots are displayed on the side of the meme image: when clicked, users can edit or delete their meme.
+- If a user is the owner of the meme, three vertical dots are displayed on the side of the meme image: when clicked, users can edit or delete their meme.
 
 <details><summary>Logged In Owner Meme Page</summary>
 <img src="readme/owner_meme_page.png" >
@@ -306,7 +315,7 @@ Single meme page, when the user is logged in and the owner of the meme.
 
 ### **Info Page**
 
-Here you will find a few engaging lines to describe MewMes to the uninitiated. The icon and link to this page will only appear in the NavBar to not signed in users.
+Here you will find a few engaging lines to describe MewMes to the uninitiated. The icon and link to this page will only appear in the NavBar to logged out users.
 
 <details><summary>Info Page</summary>
 <img src="readme/info_page.png" >
@@ -314,24 +323,92 @@ Here you will find a few engaging lines to describe MewMes to the uninitiated. T
 
 ### **Feed**
 
-The Feed consists of memes from users that you follow.
+- The Feed consists of memes created by users that you follow.
+- If the logged in user is not following anyone, the no results found message is displayed, encouraging them to start following someone.
 
 <details><summary>Feed Page</summary>
 <img src="readme/feed.png" >
 </details>
 
-### **Logo**
-
-- The logo was designed with [Canva](https://www.canva.com/) and customised to add the site name.
-- The logo was used as the favicon for the webpage as well as the navbar logo home link.
-
-<details><summary>Logo</summary>
-<img src="src/assets/logo.png" >
+<details><summary>No Followers Feed Page</summary>
+<img src="readme/no_feed.png" >
 </details>
 
-[Back to top](#contents)
+### **Saved**
 
-#
+- The Saved page consists of memes the user has saved by clicking on the pin icon.
+- If the logged in user hasn't saved any memes yet, the no results found message is displayed, encouraging them to save a meme.
+
+<details><summary>Saved Page</summary>
+<img src="readme/saved.png" >
+</details>
+
+<details><summary>No Saved Page</summary>
+<img src="readme/no_saved.png" >
+</details>
+
+### **Profile Page**
+
+- The profile page shows the profile owner's avatar or image, the stats reporting the number of posted memes, the number of followed and following profiles. There is also a bio section, under which all the memes the owner of that given profile has added.
+- On the left-hand side, the section displaying the most viral profiles is visibie.
+- If the user is logged in, the button "Follow/Unfollow me" is displayed at the top of the profile section.
+- If the logged in user is also the owner of that given profile, the three bar icon is displayed on the top right corner. By clicking on it, the profile owner is able to edit or delete their profile.
+
+<details><summary>Logged Out Profile Page</summary>
+<img src="readme/loggedout_profile_page.png" >
+</details>
+
+<details><summary>Logged In Profile Page</summary>
+<img src="readme/loggedin_profile_page.png" >
+</details>
+
+<details><summary>Profile Page by Owner</summary>
+<img src="readme/owner_profile_page.png" >
+</details>
+
+### **Sign In**
+
+Sign in page with a link to sign up for an account if the user does not have an account yet.
+
+<details><summary>Sign In Page</summary>
+<img src="readme/signin_page.png" >
+</details>
+
+### **Sign Up**
+
+Sign up page with a link to sign in if the user already has an account.
+
+<details><summary>Sign Up Page</summary>
+<img src="readme/signup_page.png" >
+</details>
+
+### **No results found**
+
+- The "No results image" is displayed in these scenarios:
+
+* The keyword entered in the search bar does not exist:
+
+<details><summary>No Result Search Bar</summary>
+<img src="readme/noresult_keyword.png" >
+</details>
+
+- In the user's Saved page, when no memes have been saved yet:
+
+<details><summary>No Result Saved</summary>
+<img src="readme/noresult_saved.png" >
+</details>
+
+- In the user's Feed page, if the user does not follow anyone:
+
+<details><summary>No Result Feed</summary>
+<img src="readme/noresult_feed.png" >
+</details>
+
+- On the user's profile page, if memes have been added yet:
+
+<details><summary>No Result Profile</summary>
+<img src="readme/noresult_profile.png" >
+</details>
 
 ### **Custom 404 page**
 
@@ -342,6 +419,37 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 <details><summary>Not Found</summary>
 <img src="src/assets/notfound.png" >
 </details>
+
+### **Real Time Notification**
+
+The user is notified in real time with a pop up message appearing on the top right corner of the screen on the following situations:
+
+- The user is successfully signed up.
+<details><summary>Signed Up Notification</summary>
+<img src="readme/notification_signedup.png" >
+</details>
+
+- The user is successfully logged in.
+<details><summary>Logged In Notification</summary>
+<img src="readme/notification_loggedin.png" >
+</details>
+
+- The user is successfully logged out.
+<details><summary>Logged Out Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
+
+
+
+### **CRUD**
+
+The CRUD functionalities in this project are the following:
+
+- Once signed up to an account, the user can update their profile with a profile picture and a bio. They can also update their username and password from the profile page.
+- Once a meme has been created, the owner of the meme can update or delete their meme. The three dots on the right of the post's image will either delete the post (and bring you back to the home page once this is done) or edit the meme, bringing the user to an edit meme form.
+- Once a comment to a meme is created, the comment creator can delete or edit their comments. If user chooses to edit their comment, an edit form lets the user modify their comment and either save or cancel the edit.
+- Users can positively or negatively react to memes as well as save memes. These actions can always be undone, should the user chaneg their mind at a later stage.
+- Users can also follow and unfollow other users.
 
 [Back to top](#contents)
 
@@ -408,7 +516,6 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 - [Canva](https://www.canva.com/)
 - [Favicon.io](https://favicon.io/favicon-converter/)
 - [Google fonts](https://fonts.google.com/)
-- [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
 
