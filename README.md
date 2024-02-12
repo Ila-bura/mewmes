@@ -350,15 +350,16 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 
 Below are some components that have been implemented and reused throughout the project:
 
-1. axiosDefault.js : Send http request to the backend API in the case of user crud actions or get requests for a specific object or list of objects.
-2. Asset.js : exports the loading spinner when/where requied in the site.
-3. Avatar.js exports users' avatar image to the popular profileslist, profile page and navbar profile link.
-4. MoreDropdown.js : displays menu to authorised users with options to edit/delete Posts, comments and profile details.
-5. CurrentUserContext.js : confirm users logged-in status to determine what functionality is available to that user.
-6. ProfileDataContext.js : provide un/follow ability to authorised user via popular profiles componenet and profile page component.
-7. useRedirect.js : redirects a user to another page if they are not authorised to be on the page they are trying to access.
-8. useClickOutsideToggle.js : Implemented for the mobile dropdown nav component, which allows users to close the expanded navbar by tapping/clicking outside the navbar.
-9. utils.js : supplies functionality to all of the components that utilise the Infinite Scroll.
+1. axiosDefault.js : used to send http requests to the backend API in the case of user crud actions or get requests for a specific object or list of objects.
+2. Asset.js : used to export the loading spinner when required.
+3. Avatar.js : used to export users' avatar image to the most viral profiles list, profile page and navbar profile link.
+4. MoreDropdown.js : used to display menu to authorised users with options to edit and delete memes, comments and profile details.
+5. CurrentUserContext.js : used to confirm users logged-in status to determine what functionality is available to that user.
+6. ProfileDataContext.js : used to provide follow and unfollow ability to authorised user via PopularProfiles component and ProfilePage component.
+7. useRedirect.js : used to redirect a user to another page if they are not authorised to be on the page they are trying to access.
+8. useClickOutsideToggle.js : implemented for the mobile dropdown nav component, which allows users to close the expanded navbar by tapping or clicking outside the navbar.
+9. utils.js : used to supply functionality to all of the components that utilise the Infinite Scroll.
+10. 404.js : used to display an error image and a message if an invalid page is typed in. After a few seconds the user is redirected to the Home page.
 
 [Back to top](#contents)
 
@@ -407,8 +408,8 @@ This project has been continuously tested throughout the development stages usin
 <img src="readme/compiled.png" >
 </details>
 
-- For good measure, I ran the jsx files through this [eslint](https://eslint.org/play/).
-- These are the settings I used for this validator so as not to get unrelated javascript errors as a result of the html tags in jsx.
+- For good measure, I ran the JSX files through this [eslint](https://eslint.org/play/).
+- These are the settings I used for this validator so as not to get unrelated javascript errors as a result of the html tags in JSX.
 
 <details><summary>Settings</summary>
 <img src="readme/eslint_settings.png" >
