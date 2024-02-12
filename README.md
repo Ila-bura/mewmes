@@ -321,6 +321,14 @@ Here you will find a few engaging lines to describe MewMes to the uninitiated. T
 <img src="readme/info_page.png" >
 </details>
 
+### **Add Meme**
+
+This is where logged in users can upload an image of their meme and complete the Title and Content section, before clicking on the "Create" button to post their meme.
+
+<details><summary>Add Meme</summary>
+<img src="readme/add_meme.png" >
+</details>
+
 ### **Feed**
 
 - The Feed consists of memes created by users that you follow.
@@ -422,7 +430,7 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 
 ### **Real Time Notification**
 
-The user is notified in real time with a pop up message appearing on the top right corner of the screen on the following situations:
+The user is notified in real time with a range of pop up message appearing on the top right corner of the screen to inform users of a change of their content or when user's action is requested.
 
 - The user is successfully signed up.
 <details><summary>Signed Up Notification</summary>
@@ -439,7 +447,50 @@ The user is notified in real time with a pop up message appearing on the top rig
 <img src="readme/notification_loggedout.png" >
 </details>
 
+- A meme is successfully edited
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
 
+- Confirmation is necessary to delete a meme
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
+
+- A meme is successfully deleted
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
+
+- A comment is successfully edited
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
+
+- Confirmation is necessary to delete a comment
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
+
+- A comment is successfully deleted
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
+
+- User profile is successfully edited
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
+
+- User username is successfully edited
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
+
+- User password is successfully edited
+<details><summary> Notification</summary>
+<img src="readme/notification_loggedout.png" >
+</details>
 
 ### **CRUD**
 
