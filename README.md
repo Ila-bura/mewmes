@@ -502,19 +502,7 @@ The user is notified in real time with a range of pop up message appearing on th
 <img src="readme/password_updated.png" >
 </details>
 
-- Error notifications are also displayed on various scenarios:
-
-- <details><summary>Common Password</summary>
-  <img src="readme/error_notification.png" >
-  </details>
-
-- <details><summary>Sign Up Error</summary>
-  <img src="readme/error_notification1.png" >
-  </details>
-
-- <details><summary>Existing User Error</summary>
-  <img src="readme/error_notification2.png" >
-  </details>
+[Back to top](#contents)
 
 ### **CRUD**
 
@@ -523,12 +511,62 @@ The CRUD functionalities in this project are the following:
 - Once signed up to an account, the user can update their profile with a profile picture and a bio. They can also update their username and password from the profile page.
 - Once a meme has been created, the owner of the meme can update or delete their meme. The three dots on the right of the post's image will either delete the post (and bring you back to the home page once this is done) or edit the meme, bringing the user to an edit meme form.
 - Once a comment to a meme is created, the comment creator can delete or edit their comments. If user chooses to edit their comment, an edit form lets the user modify their comment and either save or cancel the edit.
-- Users can positively or negatively react to memes as well as save memes. These actions can always be undone, should the user chaneg their mind at a later stage.
+- Users can positively or negatively react to memes as well as save memes. These actions can always be undone, should the user change their mind at a later stage.
 - Users can also follow and unfollow other users.
 
 [Back to top](#contents)
 
-#
+### **Defensive Design**
+
+- When creating a new account, the following error message will appear if any of the inputs are left blank:
+
+<details><summary>Blank Input Error</summary>
+<img src="readme/blank_input_error.png" >
+</details>
+
+- Login attempts with the wrong credentials will trigger the following error message:
+
+<details><summary>Sign Up Error</summary>
+<img src="readme/error_notification1.png" >
+</details>
+
+- Sign up attempts with a common password will trigger the following error message:
+
+<details><summary>Common Password</summary>
+<img src="readme/error_notification.png" >
+</details>
+
+- Sign up attempts using existing credentials will trigger the following error message:
+
+<details><summary>Existing User Error</summary>
+<img src="readme/error_notification2.png" >
+</details>
+
+- Attempts to save or react to one's own memes will show the following messages, when hovering on the relevant icons:
+
+<details><summary>Overlay Message Save</summary>
+<img src="readme/overlay_trigger1.png" >
+</details>
+
+<details><summary>Overlay Message Laugh</summary>
+<img src="readme/overlay_trigger2.png" >
+</details>
+
+<details><summary>Overlay Message Cry</summary>
+<img src="readme/overlay_trigger3.png" >
+</details>
+
+- In the "Add meme" page, leaving the title input blank will trigger the following error message:
+
+<details><summary>Blank Title</summary>
+<img src="readme/blank_title.png" >
+</details>
+
+- In the "Add meme" page, failing to add an image will trigger the following error message:
+
+<details><summary>Blank Image</summary>
+<img src="readme/blank_image.png" >
+</details>
 
 ### **Future Features**
 

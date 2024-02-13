@@ -158,7 +158,7 @@ const Post = (props) => {
     NotificationManager.warning(
       "Are you sure you want to delete your meme?",
       "Click to delete",
-      5000,
+      6000,
       async () => {
         try {
           await axiosRes.delete(`/posts/${id}/`);
