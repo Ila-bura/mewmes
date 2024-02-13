@@ -45,7 +45,7 @@ const SignUpForm = () => {
             // Send sign up request
             await axios.post("/dj-rest-auth/registration/", signUpData);
             // Display Info notification
-            NotificationManager.info("Now please sign in!", "Almost there!", 2000);
+            NotificationManager.info("Now please sign in!", "Almost there!", 6000);
             // Redirect to sign in page after successful sign up
             history.push("/signin");
         } catch (err) {

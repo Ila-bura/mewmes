@@ -447,12 +447,12 @@ The user is notified in real time with a range of pop up message appearing on th
 <img src="readme/notification_loggedout.png" >
 </details>
 
-- A meme is successfully edited
+- A meme is successfully edited.
 <details><summary> Notification</summary>
 <img src="readme/notification_loggedout.png" >
 </details>
 
-- Confirmation is necessary to delete a meme
+- Confirmation is necessary to delete a meme.
 <details><summary> Notification</summary>
 <img src="readme/notification_loggedout.png" >
 </details>

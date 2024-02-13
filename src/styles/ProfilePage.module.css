@@ -26,3 +26,23 @@
         width: 250px;
     }
 }
+
+/* For small phone screen sizes from 369px wide and down */
+@media screen and (max-width: 369px) {
+    .ProfileImage {
+        height: 100px;
+        width: 100px;
+    }
+
+    .ProfileName {
+        font-size: 22px;
+        text-align: centre;
+    }
+}
+
+/* For small phone screen sizes from 280px wide and down */
+@media screen and (max-width: 320px) {
+    .OwnersMemes {
+    font-size: smaller;
+    }
+}

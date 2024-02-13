@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import { BeatLoader } from "react-spinners"; 
+import { BeatLoader } from "react-spinners";
 import Asset from "../../components/Asset";
 
 import styles from "../../styles/ProfilePage.module.css";
@@ -20,8 +20,8 @@ import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { fetchMoreData } from "../../utils/utils";
 import {
-    useProfileData,
-    useSetProfileData,
+  useProfileData,
+  useSetProfileData,
 } from "../../contexts/ProfileDataContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
@@ -42,101 +42,122 @@ function ProfilePage() {
   // Fetch profile data and profile memes
   useEffect(() => {
     const fetchData = async () => {
-        try {
-            const [{ data: pageProfile }, { data: profilePosts }] =
-                await Promise.all([
-                    axiosReq.get(`/profiles/${id}/`),
-                    axiosReq.get(`/posts/?owner__profile=${id}`),
-                ]);
-            setProfileData((prevState) => ({
-                ...prevState,
-                pageProfile: { results: [pageProfile] },
-            }));
-            setProfilePosts(profilePosts);
-            setHasLoaded(true);
-        } catch (err) {
-            // console.log(err);
-        }
+      try {
+        const [{ data: pageProfile }, { data: profilePosts }] =
+          await Promise.all([
+            axiosReq.get(`/profiles/${id}/`),
+            axiosReq.get(`/posts/?owner__profile=${id}`),
+          ]);
+        setProfileData((prevState) => ({
+          ...prevState,
+          pageProfile: { results: [pageProfile] },
+        }));
+        setProfilePosts(profilePosts);
+        setHasLoaded(true);
+      } catch (err) {
+        // console.log(err);
+      }
     };
     fetchData();
-}, [id, setProfileData]);
+  }, [id, setProfileData]);
 
-// JSX for main profile section
+  // JSX for main profile section
   const mainProfile = (
     <>
-    {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
-        <Image className={styles.ProfileImage} roundedCircle src={profile?.image} alt="avatar"/>
-        <h3 className={`mr-5 d-flex justify-content-center ${styles.ProfileName}`}>{profile?.owner}</h3>
+          <Image
+            className={styles.ProfileImage}
+            roundedCircle
+            src={profile?.image}
+            alt="avatar"
+          />
+          <h3
+            className={`mr-5 d-flex justify-content-center ${styles.ProfileName}`}
+          >
+            {profile?.owner}
+          </h3>
         </Col>
         <Col lg={8}>
-        <Row className={`justify-content-center no-gutters ${styles.OwnersMemes}`}>
-            <Col xs={4} className='my-5'>
-                <div>{profile?.posts_count}</div>
-                <div>Memes</div>
+          <Row
+            className={`justify-content-center no-gutters ${styles.OwnersMemes}`}
+          >
+            <Col xs={4} className="my-5">
+              <div>{profile?.posts_count}</div>
+              <div>Memes</div>
             </Col>
-            <Col xs={4} className='my-5'>
-                <div>{profile?.followers_count}</div>
-                <div>Followers</div>
+            <Col xs={4} className="my-5">
+              <div>{profile?.followers_count}</div>
+              <div>Followers</div>
             </Col>
-            <Col xs={4} className='my-5'>
-                <div>{profile?.following_count}</div>
-                <div>Following</div>
+            <Col xs={4} className="my-5">
+              <div>{profile?.following_count}</div>
+              <div>Following</div>
             </Col>
 
             <Col lg={5} className="text-lg-left">
-                {currentUser &&
-                    !is_owner &&
-                    (profile?.following_id ? (
-                        <Button
-                            className={btnStyles.UnFollow}
-                            onClick={() => { handleUnfollow(profile) }}
-                        >
-                            Unfollow me
-                        </Button>
-                    ) : (
-                        <Button
-                            className={`${btnStyles.Button} ${btnStyles.Follow}`}
-                            onClick={() => { handleFollow(profile) }}
-                        >
-                            Follow me
-                        </Button>
-                    ))}
+              {currentUser &&
+                !is_owner &&
+                (profile?.following_id ? (
+                  <Button
+                    className={btnStyles.UnFollow}
+                    onClick={() => {
+                      handleUnfollow(profile);
+                    }}
+                  >
+                    Unfollow me
+                  </Button>
+                ) : (
+                  <Button
+                    className={`${btnStyles.Button} ${btnStyles.Follow}`}
+                    onClick={() => {
+                      handleFollow(profile);
+                    }}
+                  >
+                    Follow me
+                  </Button>
+                ))}
             </Col>
-        </Row>
-    </Col>
-    <hr />
-    {profile?.content && <Col className={`col-12 p-5 ${styles.AboutContent}`}>{profile.content}</Col>}
-</Row>
-</>
-    );
+          </Row>
+        </Col>
+        <hr />
+        {profile?.content && (
+          <Col className={`col-12 p-5 ${styles.AboutContent}`}>
+            {profile.content}
+          </Col>
+        )}
+      </Row>
+    </>
+  );
 
-    // JSX for main profile memes section
+  // JSX for main profile memes section
   const mainProfilePosts = (
     <>
-            <hr />
-            <p className={`text-center ${styles.OwnersMemes}`}>{profile?.owner}'s memes</p>
-            <hr />
-            {profilePosts.results.length ? (
-                <InfiniteScroll
-                    children={profilePosts.results.map((post) => (
-                        <Post key={post.id} {...post} setPosts={setProfilePosts} />
-                    ))}
-                    dataLength={profilePosts.results.length}
-                    loader={<BeatLoader color="#36D7B7" />}
-                    hasMore={!!profilePosts.next}
-                    next={() => fetchMoreData(profilePosts, setProfilePosts)}
-                />
-            ) : (
-                // Render no results message if no memes available
-                <Asset
-                    src={NoResults}
-                    message={`No memes found, ${profile?.owner} hasn't posted anything yet!`}
-                />
-            )}
-        </>
-    );
+      <hr />
+      <p className={`text-center ${styles.OwnersMemes}`}>
+        {profile?.owner}'s memes
+      </p>
+      <hr />
+      {profilePosts.results.length ? (
+        <InfiniteScroll
+          children={profilePosts.results.map((post) => (
+            <Post key={post.id} {...post} setPosts={setProfilePosts} />
+          ))}
+          dataLength={profilePosts.results.length}
+          loader={<BeatLoader color="#36D7B7" />}
+          hasMore={!!profilePosts.next}
+          next={() => fetchMoreData(profilePosts, setProfilePosts)}
+        />
+      ) : (
+        // Render no results message if no memes available
+        <Asset
+          src={NoResults}
+          message={`No memes found, ${profile?.owner} hasn't posted anything yet!`}
+        />
+      )}
+    </>
+  );
 
   return (
     <Row>
