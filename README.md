@@ -430,11 +430,11 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 
 ### **Real Time Notification**
 
-The user is notified in real time with a range of pop up message appearing on the top right corner of the screen to inform users of a change of their content or when user's action is requested.
+The user is notified in real time with a range of pop up message appearing on the top right corner of the screen. These notifications inform users of a change of their content or when user's action is required.
 
-- The user is successfully signed up.
+- After signing up, the user is encouraged to sign in.
 <details><summary>Signed Up Notification</summary>
-<img src="readme/notification_signedup.png" >
+<img src="readme/info_notification.png" >
 </details>
 
 - The user is successfully logged in.
@@ -447,50 +447,74 @@ The user is notified in real time with a range of pop up message appearing on th
 <img src="readme/notification_loggedout.png" >
 </details>
 
+- A meme is successfully created.
+<details><summary>Meme Created Notification</summary>
+<img src="readme/meme_created.png" >
+</details>
+
 - A meme is successfully edited.
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+<details><summary>Meme Edited Notification</summary>
+<img src="readme/meme_edit_confirmation.png" >
 </details>
 
 - Confirmation is necessary to delete a meme.
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+<details><summary>Meme Deletion Confirmation</summary>
+<img src="readme/meme_delete_confirmation.png" >
 </details>
 
 - A meme is successfully deleted
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+<details><summary>Meme Deleted Notification</summary>
+<img src="readme/meme_delete_success.png" >
+</details>
+
+- A comment is successfully published
+<details><summary>Comment Published Notification</summary>
+<img src="readme/comment_published.png" >
 </details>
 
 - A comment is successfully edited
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+<details><summary>Comment Edited Notification</summary>
+<img src="readme/comment_edited.png" >
 </details>
 
 - Confirmation is necessary to delete a comment
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+<details><summary>Comment Deletion Confirmation</summary>
+<img src="readme/comment_delete_confirmation.png" >
 </details>
 
 - A comment is successfully deleted
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+<details><summary>Comment Deleted Notification</summary>
+<img src="readme/comment_deleted.png" >
 </details>
 
 - User profile is successfully edited
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+<details><summary>Profile Updated</summary>
+<img src="readme/profile_updated.png" >
 </details>
 
-- User username is successfully edited
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+- User username is successfully updated
+<details><summary>Username Updated</summary>
+<img src="readme/username_updated.png" >
 </details>
 
-- User password is successfully edited
-<details><summary> Notification</summary>
-<img src="readme/notification_loggedout.png" >
+- User password is successfully updated
+<details><summary>Password Updated</summary>
+<img src="readme/password_updated.png" >
 </details>
+
+- Error notifications are also displayed on various scenarios:
+
+- <details><summary>Common Password</summary>
+  <img src="readme/error_notification.png" >
+  </details>
+
+- <details><summary>Sign Up Error</summary>
+  <img src="readme/error_notification1.png" >
+  </details>
+
+- <details><summary>Existing User Error</summary>
+  <img src="readme/error_notification2.png" >
+  </details>
 
 ### **CRUD**
 
