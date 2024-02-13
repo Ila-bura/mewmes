@@ -30,13 +30,13 @@
 /* For small phone screen sizes from 369px wide and down */
 @media screen and (max-width: 369px) {
     .ProfileImage {
-        height: 100px;
-        width: 100px;
+        height: 125px;
+        width: 125px;
     }
 
     .ProfileName {
         font-size: 22px;
-        text-align: centre;
+        text-align: center;
     }
 }
 
