@@ -852,6 +852,119 @@ Manual testing for this project was carried out as follows:
 
 **User story:**
 
+1: User: Navigation - _"As a user I can view a NavBar from every page so that I can navigate easily between pages."_ ✅
+
+2: User: Routing - _"As a user I can navigate through pages quickly and easily so that I can view content without page refresh."_ ✅
+
+3: User: Authentication - Sign up - _"As a user I can create a new account so that I can access all the features for signed up users."_
+✅
+
+4: User: Authentication - Sign in - _"As a user I can sign in to the app so that I can access functionality and features for logged in users."_ ✅
+
+5: User: Authentication - Logged in Status - _"As a user I can always tell if I am logged in or not so that I can log in to use features."_ ✅
+
+6: User: Authentication - Refreshing access tokens - _"As a user I can maintain my logged-in status (for 24hrs) until I choose to log out so that my user experience is not compromised."_ ✅
+
+7: User: Navigation: Conditional rendering - _"As a logged out user I can see sign in/sign up options so that I can easily sign in/sign up."_ ✅
+
+8: User: Avatar - _"As a user I can view other user's avatars so that I can easily identify users of the application."_ ✅
+
+9: User: Create memes - _"As a logged in user I can create memes so that I can share my content with my followers and the app users."_ ✅
+
+10: User: View a meme - _"As a user I can view the details of a single meme so that I can read more about it."_ ✅
+
+11: User: Save and react to a meme - _"As a logged in user I can save and react to a meme so that I can interact with the meme creators and show my preferences."_ ✅
+
+12: User: View most recent memes in order - _"As a user I can view all the most recent memes, ordered by most recently created first so that I am up to date with the most recent content."_ ✅
+
+13: User: Searchbar filter - _"As a user, I can search for memes using keywords, so that I can find the memes and user profiles that I prefer."_ ✅
+
+14: User: View saved memes - _"As a logged in user I can view the memes I saved and reacted to so that I can find the memes that I love."_ ✅
+
+15: User: View memes of followed users - _"As a logged in user I can view content filtered by users I follow so that I can keep up to date with them specifically."_ ✅
+
+16: User: Infinite scroll - _"As a user I can keep scrolling through the memes on the site, which are loaded automatically so that there is no need for a "next page/previous page" option."_ ✅
+
+17: User: Meme page - _"As a user I can view the single meme page so that I can read the comments specifically about that meme."_ ✅
+
+18: User: Edit/delete meme - _"As a meme owner I can edit/delete my meme title, description and image so that I can make corrections or update my meme after it was created."_ ✅
+
+19: User: Create a comment - _"As a logged in user I can add comments to a meme so that I can share my opinions about the meme and interact with the community."_ ✅
+
+20: User: View comment date - _"As a user I can see how long ago a comment was made so that I know how recent a comment is."_ ✅
+
+21: User: View comments - _"As a user I can read comments on memes so that I can read what other users think about the memes and reply to them accordingly."_ ✅
+
+22: User: Edit/delete a comment - _"As an owner of a comment I can edit and/or delete my comment so that I can edit/remove my comment from the application."_ ✅
+
+23: User: Like a comment - _"As a logged in user I can like or unlike a comment to show that I agree with it."_ - Future implementation. ⏸️
+
+24: User: View profile page - _"As a user I can view other user's profiles so that I can see their memes and bio and read more about them."_ ✅
+
+25: User: Most popular profiles - _"As a user I can see a list of the most followed profiles so that I can see which profiles are popular and see their memes."_ ✅
+
+26: User: User profile - view user stats - _"As a user I can view statistics about a specific user: bio, number of memes, followers and users followed so that I can read more about them."_ ✅
+
+27: User: Follow/Unfollow a user - _"As a logged in user I can follow and unfollow users so that I can see and remove memes by specific users in my memes feed."_ ✅
+
+28: User: View/filter all memes by a specific user - _"As a user I can view all the memes by a specific user by filtering so that I can catch up on their latest posts, or decide to follow them."_ ✅
+
+29: User: Edit profile - _"As a logged in user I can edit my profile so that I can change my profile picture, name and bio to keep my followers updated."_ ✅
+
+30: User: Delete profile - _"As a logged in user I can delete my profile in case I decide to leave this social media."_ - Future implementation. ⏸️
+
+31: Update username and password - _"As a logged in user I can update my username and password so that I can change my display name and keep my profile more secure."_ ✅
+
+32: Admin: Complete README documentation - _"Complete README, documenting sources, frontend and frameworks used."_ ✅
+
+33: User: remove reaction/unsave a meme - _"As a user I can remove my reaction/unsave a meme so that I can change what I see in my saved feed."_ ✅
+
+The link To GitHub KanBan Project - [here](https://github.com/users/Ila-bura/projects/22/views/1)
+
+### **Automated Testing**
+
+- This project includes automated tests to ensure the functionality of the NavBar component. The tests were written following the Code Institute Moments walkthrough, using Jest and React Testing Library.
+  To run the automated tests, the following steps were taken:
+
+Install dependencies: npm install
+Run tests: npm test
+
+**Test Cases**
+
+- Test 1: Renders NavBar
+  Description: This test checks if the NavBar component renders correctly.
+  Steps:
+  Render the NavBar component within a Router component.
+  Find the "Sign In" link in the NavBar.
+  Expected Outcome: The "Sign In" link should be present in the rendered NavBar.
+
+<details><summary>Test 1</summary>
+<img src="readme/test1.png" >
+</details>
+
+- Test 2: Renders links to the user profile for logged-in users
+  Description: This test verifies that links to the user profile are rendered when a user is logged in.
+  Steps:
+  Render the NavBar component within a Router and CurrentUserProvider component.
+  Find the user profile avatar.
+  Expected Outcome: The user profile avatar should be present in the NavBar.
+
+<details><summary>Test 2</summary>
+<img src="readme/test2.png" >
+</details>
+
+- Test 3: Renders "Sign In" and "Sign Up" buttons on log out
+  Description: This test ensures that the "Sign In" and "Sign Up" buttons are rendered when a user logs out.
+  Steps:
+  Render the NavBar component within a Router and CurrentUserProvider component.
+  Find the "Log out" link and simulate a click event.
+  Find the "Sign In" and "Sign Up" links.
+  Expected Outcome: The "Sign In" and "Sign Up" links should be present in the NavBar after logging out.
+
+<details><summary>Test 3</summary>
+<img src="readme/test3.png" >
+</details>
+
 ## **Bugs**
 
 ### **Fixed bugs and solutions**
