@@ -70,13 +70,13 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 
 - To build an online community around a common interest of cat memes.
 - To allow community members to share their favourite memes and interact with each other using the reactions and comment features.
-- To allow commnunity members to follow other users whose content is interesting to them.
-- To allow users to save meme that are funny to them.
+- To allow community members to follow other users whose content is interesting to them.
+- To allow users to save their favourite memes.
 
 ### **Future Goals**
 
 - Add the functionality to like user's comments.
-- Allow profile's owners to delete their profile.
+- Allow profile's owners to delete their own profile.
 
 [Back to top](#contents)
 
@@ -85,14 +85,14 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 #### **GitHub Project Board**
 
 This project was designed using agile methodologies.
-User stories are recorded on the [Project Board](https://github.com/users/Ila-bura/projects/22/views/1).
+User stories are recorded on the GitHub [Project Board](https://github.com/users/Ila-bura/projects/22/views/1).
 
 [Back to top](#contents)
 
 #### **Wireframes**
 
 - The plan for this project is loosely based on the Code Institute Moments walkthrough project.
-- Most of the UI is based on the same kind of features and functionality but customised for the specific purposes of MewMes.
+- Most of the UI is based on similar features and functionality but customised for the specific purposes of MewMes - a cat meme sharing platform.
 
 #### **List of Wireframe pages**
 
@@ -198,7 +198,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 #### **Images**
 
-- The images used for the profile avatar and the one that shows when no results are found, were taken from the Code Institute Moments walkthrough.
+The images used for the profile avatar and the one that shows when no results are found, were sourced from the Code Institute Moments walkthrough.
 
 <details><summary>Avatar</summary>
 <img src="readme/avatar.png" >
@@ -208,13 +208,13 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 <img src="src/assets/noresults.png" >
 </details>
 
-- The images used for the user profiles as well as the memes were all sourced from [Google Images](https://images.google.com/).
+The images used for the user profiles as well as the memes were all sourced from [Google Images](https://images.google.com/).
 
-- The favicons were created on [Favicon.io](https://favicon.io/).
+The favicons were created on [Favicon.io](https://favicon.io/).
 
 #### **Colour Scheme**
 
-- The colour palette was generated with Canva, to match the colours of the logo.
+The colour palette was generated with Canva, to match the colours of the logo.
 
 <details><summary>Colour Scheme</summary>
 <img src="readme/colour_palette.png" >
@@ -222,7 +222,7 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 #### **Typography**
 
-- The two main font families used were obtained from the Google Fonts library:
+The two font families used were obtained from the Google Fonts library:
 
 1. Comfortaa
 2. Outfit
@@ -235,8 +235,8 @@ User stories are recorded on the [Project Board](https://github.com/users/Ila-bu
 
 ### **Logo**
 
-- The logo was designed with [Canva](https://www.canva.com/) and customised to add the site name.
-- The logo was used as the favicon for the webpage as well as the navbar logo home link.
+The logo was designed with [Canva](https://www.canva.com/) and customised to add the site name.
+The logo was also used as the favicon for the webpage as well as the navbar logo home link.
 
 <details><summary>Logo</summary>
 <img src="src/assets/logo.png" >
@@ -266,18 +266,22 @@ The landing page, with the "Most viral profiles" sidebar.
 
 ### **Meme Page**
 
-- When clicking on a single meme, user is directed to that meme's page, which still features the most viral profiles sidebar.
-- Under the meme, the first three icons represent the action a user can take.
+When clicking on a single meme, user is directed to that meme's page, which still features the most viral profiles sidebar.
+Under the meme, the first three icons represent the action a user can take:
+
 - The pin icon is for saving the meme, which can be viewed in the "Saved" section from the NavBar. You need to be logged in to save a meme. When you save a meme, this will be indicated by the "pinned" icon, which turns to a solid shade once it's clicked and if clicked again, this will undo the action of saving the meme.
 - The laughing and crying icons are for reacting to the meme. Each icon turns to a solid shade, once a user has clicked on it and will also undo the action if clicked on again. The number next to the icon indicates how many users added their reaction.
 - The comment icon displays the number of comments for that meme.
-- Underneath the meme, the comment section shows all the comments users left for any given meme.
+
+Underneath the meme, the comment section shows all the comments users left for any given meme.
 
 **Single meme page, when the user is not logged in**
 
-When a logged out user hovers on the pin icon, an overlay message is displayed encouraging logging in to be able to save memes.
-When a logged out user hovers on the laughing or crying icons, an overlay message is displayed encouraging logging in to be able to react to memes.
-When a logged out user hovers on the comment icon, an overlay message is displayed encouraging logging in to be able to comment on memes. If they click on any of the icons, they are redirected to the Sign In page.
+- When a logged out user hovers on the pin icon, an overlay message is displayed encouraging logging in to be able to save memes.
+- When a logged out user hovers on the laughing or crying icons, an overlay message is displayed encouraging logging in to be able to react to memes.
+- When a logged out user hovers on the comment icon, an overlay message is displayed encouraging logging in to be able to comment on memes.
+
+If they click on any of the icons, they are redirected to the Sign In page.
 Logged out user do not have the opportunity to leave a comment.
 
 <details><summary>Logged Out Meme Page</summary>
@@ -290,10 +294,10 @@ Logged out user do not have the opportunity to leave a comment.
 <img src="readme/meme_page.png" >
 </details>
 
-- In the comment section logged in users have the opportunity to publish a comment.
-  After having published a comment, three vertical dots are displayed on the side of their comment: when clicked, users can edit or delete their own comments.
+In the comment section logged in users have the opportunity to publish a comment.
+After having published a comment, three vertical dots are displayed on the side of their comment: when clicked, users can edit or delete their own comments.
 
-<details><summary>Logged In Comment Creator</summary>
+<details><summary>Logged In Comment Delete</summary>
 <img src="readme/owner_comment.png" >
 </details>
 
@@ -303,7 +307,7 @@ Logged out user do not have the opportunity to leave a comment.
 
 **Single meme page, when the user is logged in and the owner of the meme**
 
-- If a user is the owner of the meme, three vertical dots are displayed on the side of the meme image: when clicked, users can edit or delete their meme.
+If a user is the owner of the meme, three vertical dots are displayed on the side of the meme image: when clicked, users can edit or delete their meme.
 
 <details><summary>Logged In Owner Meme Page</summary>
 <img src="readme/owner_meme_page.png" >
@@ -323,7 +327,7 @@ Here you will find a few engaging lines to describe MewMes to the uninitiated. T
 
 ### **Add Meme**
 
-This is where logged in users can upload an image of their meme and complete the Title and Content section, before clicking on the "Create" button to post their meme.
+This is where logged in users can upload an image of their meme and complete the Title and Content sections, before clicking on the "Create" button to post their meme.
 
 <details><summary>Add Meme</summary>
 <img src="readme/add_meme.png" >
@@ -331,8 +335,8 @@ This is where logged in users can upload an image of their meme and complete the
 
 ### **Feed**
 
-- The Feed consists of memes created by users that you follow.
-- If the logged in user is not following anyone, the no results found message is displayed, encouraging them to start following someone.
+The Feed consists of memes created by users that you follow.
+If the logged in user is not following anyone, the no results found message is displayed, encouraging them to start following someone.
 
 <details><summary>Feed Page</summary>
 <img src="readme/feed.png" >
@@ -344,8 +348,8 @@ This is where logged in users can upload an image of their meme and complete the
 
 ### **Saved**
 
-- The Saved page consists of memes the user has saved by clicking on the pin icon.
-- If the logged in user hasn't saved any memes yet, the no results found message is displayed, encouraging them to save a meme.
+The Saved page consists of memes the user has saved by clicking on the pin icon.
+If the logged in user hasn't saved any memes yet, the no results found message is displayed, encouraging them to save a meme.
 
 <details><summary>Saved Page</summary>
 <img src="readme/saved.png" >
@@ -357,10 +361,12 @@ This is where logged in users can upload an image of their meme and complete the
 
 ### **Profile Page**
 
-- The profile page shows the profile owner's avatar or image, the stats reporting the number of posted memes, the number of followed and following profiles. There is also a bio section, under which all the memes the owner of that given profile has added.
-- On the left-hand side, the section displaying the most viral profiles is visibie.
-- If the user is logged in, the button "Follow/Unfollow me" is displayed at the top of the profile section.
-- If the logged in user is also the owner of that given profile, the three bar icon is displayed on the top right corner. By clicking on it, the profile owner is able to edit or delete their profile.
+The profile page shows the profile owner's avatar or image, the stats reporting the number of posted memes, the number of followed and following profiles. There is also a bio section, under which all the memes the owner of that given profile has added.
+
+On the left-hand side, the section displaying the most viral profiles is visibie.
+If the user is logged in, the button "Follow/Unfollow me" is displayed at the top of the profile section.
+
+If the logged in user is also the owner of that given profile, the three bar icon is displayed on the top right corner. By clicking on it, the profile owner is able to edit or delete their profile.
 
 <details><summary>Logged Out Profile Page</summary>
 <img src="readme/loggedout_profile_page.png" >
@@ -392,9 +398,9 @@ Sign up page with a link to sign in if the user already has an account.
 
 ### **No results found**
 
-- The "No results image" is displayed in these scenarios:
+The "No results image" is displayed in these scenarios:
 
-* The keyword entered in the search bar does not exist:
+- The keyword entered in the search bar does not exist:
 
 <details><summary>No Result Search Bar</summary>
 <img src="readme/noresult_keyword.png" >
@@ -412,7 +418,7 @@ Sign up page with a link to sign in if the user already has an account.
 <img src="readme/noresult_feed.png" >
 </details>
 
-- On the user's profile page, if memes have been added yet:
+- On the user's profile page, if no memes have been added yet:
 
 <details><summary>No Result Profile</summary>
 <img src="readme/noresult_profile.png" >
@@ -420,7 +426,7 @@ Sign up page with a link to sign in if the user already has an account.
 
 ### **Custom 404 page**
 
-- The 404 page lets users know they are still connected to the site but on a non-existent page.
+The 404 page lets users know they are still connected to the site but on a non-existent page.
 
 The image used for the 404 Not Found page was created using [Canva](https://www.canva.com/)
 
@@ -430,74 +436,88 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 
 ### **Real Time Notification**
 
-The user is notified in real time with a range of pop up message appearing on the top right corner of the screen. These notifications inform users of a change of their content or when user's action is required.
+The user is notified in real time with a range of pop up messages appearing on the top right corner of the screen. These notifications inform users of a change of their content or when user's action is required.
 
-- After signing up, the user is encouraged to sign in.
+After signing up, the user is encouraged to sign in.
+
 <details><summary>Signed Up Notification</summary>
 <img src="readme/info_notification.png" >
 </details>
 
-- The user is successfully logged in.
+The user is successfully logged in.
+
 <details><summary>Logged In Notification</summary>
 <img src="readme/notification_loggedin.png" >
 </details>
 
-- The user is successfully logged out.
+The user is successfully logged out.
+
 <details><summary>Logged Out Notification</summary>
 <img src="readme/notification_loggedout.png" >
 </details>
 
-- A meme is successfully created.
+A meme is successfully created.
+
 <details><summary>Meme Created Notification</summary>
 <img src="readme/meme_created.png" >
 </details>
 
-- A meme is successfully edited.
+A meme is successfully edited.
+
 <details><summary>Meme Edited Notification</summary>
 <img src="readme/meme_edit_confirmation.png" >
 </details>
 
-- Confirmation is necessary to delete a meme.
+Confirmation is necessary to delete a meme.
+
 <details><summary>Meme Deletion Confirmation</summary>
 <img src="readme/meme_delete_confirmation.png" >
 </details>
 
-- A meme is successfully deleted
+A meme is successfully deleted.
+
 <details><summary>Meme Deleted Notification</summary>
 <img src="readme/meme_delete_success.png" >
 </details>
 
-- A comment is successfully published
+A comment is successfully published.
+
 <details><summary>Comment Published Notification</summary>
 <img src="readme/comment_published.png" >
 </details>
 
-- A comment is successfully edited
+A comment is successfully edited.
+
 <details><summary>Comment Edited Notification</summary>
 <img src="readme/comment_edited.png" >
 </details>
 
-- Confirmation is necessary to delete a comment
+Confirmation is necessary to delete a comment.
+
 <details><summary>Comment Deletion Confirmation</summary>
 <img src="readme/comment_delete_confirmation.png" >
 </details>
 
-- A comment is successfully deleted
+A comment is successfully deleted.
+
 <details><summary>Comment Deleted Notification</summary>
 <img src="readme/comment_deleted.png" >
 </details>
 
-- User profile is successfully edited
+User profile is successfully edited.
+
 <details><summary>Profile Updated</summary>
 <img src="readme/profile_updated.png" >
 </details>
 
-- User username is successfully updated
+User username is successfully updated.
+
 <details><summary>Username Updated</summary>
 <img src="readme/username_updated.png" >
 </details>
 
-- User password is successfully updated
+User password is successfully updated.
+
 <details><summary>Password Updated</summary>
 <img src="readme/password_updated.png" >
 </details>
@@ -506,11 +526,11 @@ The user is notified in real time with a range of pop up message appearing on th
 
 ### **CRUD**
 
-The CRUD functionalities in this project are the following:
+The CRUD functionalities implemented in this project are the following:
 
 - Once signed up to an account, the user can update their profile with a profile picture and a bio. They can also update their username and password from the profile page.
 - Once a meme has been created, the owner of the meme can update or delete their meme. The three dots on the right of the post's image will either delete the post (and bring you back to the home page once this is done) or edit the meme, bringing the user to an edit meme form.
-- Once a comment to a meme is created, the comment creator can delete or edit their comments. If user chooses to edit their comment, an edit form lets the user modify their comment and either save or cancel the edit.
+- Once a comment to a meme is created, the comment creator can delete or edit their comment. If user chooses to edit their comment, an edit form lets the user modify their comment and either save or cancel the edit.
 - Users can positively or negatively react to memes as well as save memes. These actions can always be undone, should the user change their mind at a later stage.
 - Users can also follow and unfollow other users.
 
@@ -518,31 +538,31 @@ The CRUD functionalities in this project are the following:
 
 ### **Defensive Design**
 
-- When creating a new account, the following error message will appear if any of the inputs are left blank:
+When creating a new account, the following error message will appear if any of the inputs are left blank:
 
 <details><summary>Blank Input Error</summary>
 <img src="readme/blank_input_error.png" >
 </details>
 
-- Login attempts with the wrong credentials will trigger the following error message:
+Login attempts with the wrong credentials will trigger the following error message:
 
 <details><summary>Sign Up Error</summary>
 <img src="readme/error_notification1.png" >
 </details>
 
-- Sign up attempts with a common password will trigger the following error message:
+Sign up attempts with a common password will trigger the following error message:
 
 <details><summary>Common Password</summary>
 <img src="readme/error_notification.png" >
 </details>
 
-- Sign up attempts using existing credentials will trigger the following error message:
+Sign up attempts using existing credentials will trigger the following error message:
 
 <details><summary>Existing User Error</summary>
 <img src="readme/error_notification2.png" >
 </details>
 
-- Attempts to save or react to one's own memes will show the following messages, when hovering on the relevant icons:
+Attempts to save or react to one's own memes will show the following messages, when hovering on the relevant icons:
 
 <details><summary>Overlay Message Save</summary>
 <img src="readme/overlay_trigger1.png" >
@@ -556,13 +576,13 @@ The CRUD functionalities in this project are the following:
 <img src="readme/overlay_trigger3.png" >
 </details>
 
-- In the "Add meme" page, leaving the title input blank will trigger the following error message:
+In the "Add meme" page, leaving the title input blank will trigger the following error message:
 
 <details><summary>Blank Title</summary>
 <img src="readme/blank_title.png" >
 </details>
 
-- In the "Add meme" page, failing to add an image will trigger the following error message:
+In the "Add meme" page, failing to add an image will trigger the following error message:
 
 <details><summary>Blank Image</summary>
 <img src="readme/blank_image.png" >
@@ -594,11 +614,11 @@ The CRUD functionalities in this project are the following:
 ### **Cloud storage and deployment services**
 
 - [Cloudinary](https://cloudinary.com/)
-  - Used to store media files and images.
+  Used to store media files and images.
 - [Heroku](https://www.heroku.com/)
-  - Used to host the deployed site.
+  Used to host the deployed site.
 - [ElephantSQL](https://www.elephantsql.com/)
-  - Used to host and operate the PostgresSQL database.
+  Used to host and operate the PostgresSQL database.
 
 [Back to top](#contents)
 
@@ -684,7 +704,7 @@ This project has been continuously tested throughout the development stages usin
 
 ## HTML Validation
 
-- All HTML files passed through the HTML checker with no errors.
+All HTML files passed through the HTML checker with no errors.
 
 <details><summary>HTML</summary>
 <img src="readme/validation_HTML.png" >
@@ -692,38 +712,38 @@ This project has been continuously tested throughout the development stages usin
 
 ## CSS Validation
 
-- CSS files passed through the Jigsaw validator with one error. This was easily fixed by restoring the correct transform value.
+CSS files passed through the Jigsaw validator with one error. This was easily fixed by restoring the correct transform value.
 
 <details><summary>CSS error</summary>
 <img src="readme/css_error.png" >
 </details>
 
-- Once this error was fixed, I found some warnings:
+Once this error was fixed, some warnings were displayed:
 
 <details><summary>CSS warnings</summary>
 <img src="readme/css_warnings.png" >
 </details>
 
-- The vendor extension warning can be ignored as it is simply an extension not supported by w3c standard css and can be ignored as it is not a code error: [source](https://stackoverflow.com/questions/21889767/warnings-from-w3c-validation-for-css-cant-find-the-warning-message-for-vendor).
+The vendor extension warning can be ignored as it is simply an extension not supported by w3c standard css and can be ignored as it is not a code error: [source](https://stackoverflow.com/questions/21889767/warnings-from-w3c-validation-for-css-cant-find-the-warning-message-for-vendor).
 
 ### JSX Validation
 
-- All JSX code was validated and corrected throughout the development of the project.
-- Most of the code validation was done through the CodeAnywhere IDE problems tab and with the help of the prettier code formatting extension.
+All JSX code was validated and corrected throughout the development of the project.
+Most of the code validation was done through the CodeAnywhere IDE problems tab and with the help of the Prettier code formatting extension.
 
 <details><summary>Successfully Compiled message</summary>
 <img src="readme/compiled.png" >
 </details>
 
-- For good measure, I ran the JSX files through this [eslint](https://eslint.org/play/).
-- These are the settings I used for this validator so as not to get unrelated javascript errors as a result of the html tags in JSX.
+For good measure, I ran the JSX files through this [eslint](https://eslint.org/play/).
+These are the settings used for this validator in order not to get unrelated JavaScript errors as a result of the html tags in JSX.
 
 <details><summary>Settings</summary>
 <img src="readme/eslint_settings.png" >
 </details>
 
-- It was not an ideal way to validate due to the fact that it is bound to throw unused variable/undefined variable errors because of the nature of importing/exporting components and variables between the different files.
-- The below error types were ignored and no syntax errors were found.
+This was not an ideal way to validate due to the fact that it is bound to throw unused variable and undefined variable errors because of the nature of importing and exporting components and variables between the different files.
+The below error types were ignored and no syntax errors were found.
 
 <details><summary>ESLint errors</summary>
 <img src="readme/jsx_errors.png" >
@@ -731,19 +751,19 @@ This project has been continuously tested throughout the development stages usin
 
 #### **LightHouse testing**
 
-- **For Desktop:**
+**For Desktop:**
 
-  | Section   | Performance | Accessibility | Best Practices | SEO |
-  | --------- | ----------- | ------------- | -------------- | --- |
-  | Home      | 89          | 94            | 95             | 100 |
-  | Meme Page | 95          | 94            | 95             | 100 |
-  | Feed      | 95          | 94            | 100            | 100 |
-  | Saved     | 95          | 94            | 100            | 100 |
-  | Sign Up   | 98          | 94            | 91             | 100 |
-  | Sign in   | 98          | 94            | 95             | 100 |
-  | Profile   | 97          | 100           | 100            | 100 |
-  | Add Meme  | 99          | 94            | 95             | 100 |
-  | Info      | 100         | 93            | 95             | 100 |
+| Section   | Performance | Accessibility | Best Practices | SEO |
+| --------- | ----------- | ------------- | -------------- | --- |
+| Home      | 89          | 94            | 95             | 100 |
+| Meme Page | 95          | 94            | 95             | 100 |
+| Feed      | 95          | 94            | 100            | 100 |
+| Saved     | 95          | 94            | 100            | 100 |
+| Sign Up   | 98          | 94            | 91             | 100 |
+| Sign in   | 98          | 94            | 95             | 100 |
+| Profile   | 97          | 100           | 100            | 100 |
+| Add Meme  | 99          | 94            | 95             | 100 |
+| Info      | 100         | 93            | 95             | 100 |
 
 <details><summary>Home on Desktop</summary>
 <img src="readme/home_desktop.png" >
@@ -781,19 +801,19 @@ This project has been continuously tested throughout the development stages usin
 <img src="readme/info_desktop.png" >
 </details>
 
-- **For Mobile devices:**
+**For Mobile devices:**
 
-  | Section   | Performance | Accessibility | Best Practices | SEO |
-  | --------- | ----------- | ------------- | -------------- | --- |
-  | Home      | 72          | 100           | 95             | 100 |
-  | Post Page | 71          | 94            | 95             | 100 |
-  | Feed      | 75          | 100           | 100            | 100 |
-  | Saved     | 74          | 100           | 100            | 100 |
-  | Sign Up   | 85          | 94            | 91             | 100 |
-  | Sign in   | 86          | 94            | 95             | 100 |
-  | Profile   | 79          | 100           | 100            | 100 |
-  | Add Meme  | 82          | 100           | 91             | 100 |
-  | Info      | 90          | 100           | 95             | 100 |
+| Section   | Performance | Accessibility | Best Practices | SEO |
+| --------- | ----------- | ------------- | -------------- | --- |
+| Home      | 72          | 100           | 95             | 100 |
+| Meme Page | 74          | 94            | 95             | 100 |
+| Feed      | 75          | 100           | 100            | 100 |
+| Saved     | 74          | 100           | 100            | 100 |
+| Sign Up   | 85          | 94            | 91             | 100 |
+| Sign in   | 86          | 94            | 95             | 100 |
+| Profile   | 79          | 100           | 100            | 100 |
+| Add Meme  | 82          | 100           | 91             | 100 |
+| Info      | 90          | 100           | 95             | 100 |
 
 <details><summary>Home on Mobile</summary>
 <img src="readme/home_mobile.png" >
@@ -835,18 +855,18 @@ This project has been continuously tested throughout the development stages usin
 
 Manual testing for this project was carried out as follows:
 
-- Users can see sign-in, sign-up, and about pages only when not logged in.
-- Users can create a new account.
-- Users can then, sign in to their account and then be redirected to the home page.
-- Users can log out.
-- Once signed in, users can create, vote, save, and reply to posts. They can edit and delete their posts and replies.
-- Users can edit and update their profiles, which include a profile picture, bio entry, and a separate username and password edit feature.
-- All NavLinks and buttons go to their destination.
-- Clicking on the post image brings you to the post's page.
-- You can vote, downvote and save and also undo all of these actions if you change your mind.
-- Once you hover over the votes/replies/save icons, they let you know if you need to sign-in to use this feature, and once clicked on if the user is signed out, you will be redirected to the sign-in page.
-- The user is notified of what each icon represents. In each post page, if the user is the owner, the three dots to the right side of the post image will bring up the edit and delete feature, both icons have an overlay trigger to indicate which one does what feature.
-- The site was continuously built on google chrome, and once built, it was successfully tested on firefox browser, and safari browser.
+- Users can see sign-in, sign-up, and info pages only when not logged in. ✅
+- Users can create a new account. ✅
+- Users can then, sign in to their account and then be redirected to the home page.✅
+- Users can log out. ✅
+- Once signed in, users can create, vote, save, and reply to memes. They can edit and delete their memes and replies. ✅
+- Users can edit and update their profiles, which include a profile picture, bio entry, and a separate username and password edit feature. ✅
+- All NavLinks and buttons go to their expected destination. ✅
+- Clicking on the meme image brings you to the meme's page. ✅
+- You can save and react to a meme; you can also undo all of these actions if you change your mind. ✅
+- Once you hover over the reactions and save icons, a message will let you know if you need to sign-in to use these features, and once clicked on if the user is signed out, you will be redirected to the sign-in page. ✅
+- The user is notified of what each icon represents. In each meme page, if the user is the owner, the three dots to the right side of the meme image will bring up the edit and delete features, both icons have an overlay trigger to indicate which one does what feature. ✅
+- The site was continuously built on Google Chrome, and once built, it was successfully tested on Firefox browser, and Safari browser. ✅
 
 ### **User story testing**
 
@@ -923,43 +943,46 @@ The link To GitHub KanBan Project - [here](https://github.com/users/Ila-bura/pro
 
 ### **Automated Testing**
 
-- This project includes automated tests to ensure the functionality of the NavBar component. The tests were written following the Code Institute Moments walkthrough, using Jest and React Testing Library.
-  To run the automated tests, the following steps were taken:
+This project includes automated tests to ensure the functionality of the NavBar component. The tests were written following the Code Institute Moments walkthrough, using Jest and React Testing Library.
+To run the automated tests, the following steps were taken:
 
-Install dependencies: npm install
-Run tests: npm test
+- Install dependencies: npm install
+- Run tests: npm test
 
 **Test Cases**
 
-- Test 1: Renders NavBar
-  Description: This test checks if the NavBar component renders correctly.
-  Steps:
-  Render the NavBar component within a Router component.
-  Find the "Sign In" link in the NavBar.
-  Expected Outcome: The "Sign In" link should be present in the rendered NavBar.
+**Test 1: Renders NavBar**
+Description: This test checks if the NavBar component renders correctly.
+Steps:
+
+- Render the NavBar component within a Router component.
+- Find the "Sign In" link in the NavBar.
+- Expected Outcome: The "Sign In" link should be present in the rendered NavBar.
 
 <details><summary>Test 1</summary>
 <img src="readme/test1.png" >
 </details>
 
-- Test 2: Renders links to the user profile for logged-in users
-  Description: This test verifies that links to the user profile are rendered when a user is logged in.
-  Steps:
-  Render the NavBar component within a Router and CurrentUserProvider component.
-  Find the user profile avatar.
-  Expected Outcome: The user profile avatar should be present in the NavBar.
+**Test 2: Renders links to the user profile for logged-in users**
+Description: This test verifies that links to the user profile are rendered when a user is logged in.
+Steps:
+
+- Render the NavBar component within a Router and CurrentUserProvider component.
+- Find the user profile avatar.
+- Expected Outcome: The user profile avatar should be present in the NavBar.
 
 <details><summary>Test 2</summary>
 <img src="readme/test2.png" >
 </details>
 
-- Test 3: Renders "Sign In" and "Sign Up" buttons on log out
-  Description: This test ensures that the "Sign In" and "Sign Up" buttons are rendered when a user logs out.
-  Steps:
-  Render the NavBar component within a Router and CurrentUserProvider component.
-  Find the "Log out" link and simulate a click event.
-  Find the "Sign In" and "Sign Up" links.
-  Expected Outcome: The "Sign In" and "Sign Up" links should be present in the NavBar after logging out.
+**Test 3: Renders "Sign In" and "Sign Up" buttons on log out**
+Description: This test ensures that the "Sign In" and "Sign Up" buttons are rendered when a user logs out.
+Steps:
+
+- Render the NavBar component within a Router and CurrentUserProvider component.
+- Find the "Log out" link and simulate a click event.
+- Find the "Sign In" and "Sign Up" links.
+- Expected Outcome: The "Sign In" and "Sign Up" links should be present in the NavBar after logging out.
 
 <details><summary>Test 3</summary>
 <img src="readme/test3.png" >
@@ -979,26 +1002,25 @@ Solution: Upon researching the matter using Slack, I found the issue was with th
 
 ### **Unresolved bugs**
 
-- One thing to note is when doing the Lighthouse report, best practices for the sign in and sign up page show a result of 75, the image shows up tagged as low resolution.
-- There are errors in the console of these pages, that were also brought up during the walkthrough Moments. The errors are as follows:
+- There are errors in the console of these pages, that were also mentioned in the Code Institute Moments walkthrough as expected. The errors read:
 
 _Failed to load resource: the server responded with a status of 401 (Unauthorized)_
 
-- When testing the functionalities of the app, I came across some unexpected behaviour. As a logged out user, when I open a single meme post and I hover on the icons for saving and reacting to a meme, the overlay trigger message is showed at the top left corner of the screen. This appears to happen even if the property "bottom" is correctly set in the code
-  This behaviour can be reproduced also on mobile testing. A relevant ticket was kept open in the MewMes Stories board in GitHub.
-  It is worth noting that this bug does not affect the functionality of the app in the slightest.
+- When testing the functionalities of the app, I came across some unexpected behaviour. As a logged out user, when I open a single meme post and I hover on the icons for saving and reacting to a meme, the overlay trigger message is showed at the top left corner of the screen. This appears to happen even if the property "bottom" is correctly set in the code.The same behaviour can be reproduced also on mobile testing. A relevant ticket was kept open in the MewMes Stories board in GitHub.
+
+It is worth noting that this bug does not affect the functionality of the app in the slightest.
 
 <details><summary>Overlay Trigger expected behaviour</summary>
 <img src="readme/expected.png" >
-</details
+</details>
 
 <details><summary>Overlay Trigger unexpected behaviour</summary>
 <img src="readme/unexpected.png" >
-</details
+</details>
+
+- Not a bug but worth mentioning that when running the Lighthouse reports, Performance rating for pages with multiple images scored generally on the lower side, especially on Mobile devices.
 
 [Back to top](#contents)
-
-#
 
 ### Initial Deployment
 
@@ -1008,10 +1030,6 @@ _Failed to load resource: the server responded with a status of 401 (Unauthorize
 - Click the Create app button
 - Under the "Deploy" tab, click on github for deployment method and connect the app to the [MewMes](https://github.com/Ila-bura/mewmes/tree/main) github repository.
 - Once the app is connected to the correct github repository, click "Deploy Branch" and open the app in the browser to make sure it works.
-
-### Deployment issues and bugs
-
--
 
 [Back to top](#contents)
 
@@ -1047,8 +1065,6 @@ jwt-decode
 8. Once the app is connected to the correct github repository, click "Deploy Branch" and open the app in the browser to make sure it works.
 
 [Back to top](#contents)
-
-#
 
 ### Final Deployment
 
@@ -1087,8 +1103,6 @@ web: serve -s build
 
 [Back to top](#contents)
 
-#
-
 ### Cloning
 
 Here are the steps to clone the repository:
@@ -1112,8 +1126,6 @@ Run Application:
 
 [Back to top](#contents)
 
-#
-
 ### Forking
 
 Here are the steps to fork the repository:
@@ -1131,7 +1143,7 @@ Here are the steps to fork the repository:
 ### Code Institute
 
 This project is largely based on the [Code Institute Moments](https://github.com/Code-Institute-Solutions/moments) walkthrough project.
-It contains some of the styles and logic from that project which have bee modified and customised for the purpose of MewMes project.
+It contains some of the styles and logic from that project which have been modified and customised for the purpose of the MewMes project.
 
 ### Sources
 
@@ -1143,7 +1155,7 @@ It contains some of the styles and logic from that project which have bee modifi
 
 ### **Media**
 
-The media sourced for this website were mostly found on Google and Google Images. These are more websites pictures were souced from:
+The majority of the images used to populate the content of this website was sourced on Google and Google Images. Some more pictures were also souced from:
 
 - [boredpanda](https://www.boredpanda.com/)
 - [Friends of the Animal Village](https://www.friendsoftheanimalvillage.org/)
@@ -1154,4 +1166,4 @@ The media sourced for this website were mostly found on Google and Google Images
 ## **Acknowledgements**
 
 - My mentor at Code Institute - Martina Terlevic.
-- To say that using CodeAnywhere as my IDE has been challenging is an understatement. I struggled multiple times with infinite long loading times, which greatly slowed down my project progress. A big thank you to Bruno from CodeAnywhere support who provided assistance, when he could.
+- Using CodeAnywhere as my IDE during the development of this project has been incredibily challenging: on several occasions infinite long loading times greatly slowed down my project progress. A big token of appreciation to Bruno from CodeAnywhere support who provided assistance, whenever he could.
