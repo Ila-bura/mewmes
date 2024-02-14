@@ -1,13 +1,13 @@
 # MewMes
 
-MewMes is a social media platform for cat lovers and meme enthusiasts alike. It was created using React and Django Rest Framework. The purpose of the site is to allow users to share cat memes and interact with memes posted by other users.
+MewMes is a social media platform for cat lovers and meme enthusiasts alike. The purpose of the site is to allow users to share cat memes and interact with memes posted by other users. MewMes was created using React and Django Rest Framework.
 
 #
 
 ![amiresponsive](readme/amiresponsive.png)
 
-- [Deployed Front-End page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
-- [Deployed Back-End page](https://mewmes-dc42376a8874.herokuapp.com/)
+- [MewMes Deployed Front-End Page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
+- [MewMes Deployed Back-End Page](https://mewmes-dc42376a8874.herokuapp.com/)
 - [Back-End repository](https://github.com/Ila-bura/MewMes_API)
 
 ## **Contents**
@@ -16,9 +16,9 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
   - [Project Goals](#project-goals)
   - [Site Goals](#site-goals)
   - [Future Goals](#future-goals)
-    - [GitHub Project Board](#github-project-board)
-    - [Github Issues](#github-issues)
-    - [Wireframes](#wireframes)
+  - [GitHub Project Board](#github-project-board)
+  - [Github Issues](#github-issues)
+  - [Wireframes](#wireframes)
     - [List of Wireframe pages](#list-of-wireframe-pages)
   - [User Stories](#user-stories)
     - [Authentication](#authentication)
@@ -33,7 +33,21 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Logo](#logo)
+  - [NavBar](#navbar)
+  - [Home Page](#homepage)
+  - [Meme Page](#memepage)
+  - [Info Page](#infopage)
+  - [Add Meme](#addmeme)
+  - [Feed](#feed)
+  - [Saved](#saved)
+  - [Profile Page](#profilepage)
+  - [Sign In](#signin)
+  - [Sign Up](#signup)
+  - [No Results Found](#no-result-found)
   - [Custom 404 page](#custom-404-page)
+  - [Real Time Notification](#realtime-notification)
+  - [CRUD](#crud)
+  - [Defensive Design](#defensive-design)
   - [Future Features](#future-features)
 - [Technologies](#technologies)
   - [Languages used](#languages-used)
@@ -45,22 +59,29 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. It 
   - [Installed packages, libraries and components](#installed-packages-libraries-and-components)
 - [Components](#components)
 - [Testing](#testing)
-  - [Manual Testing](#manual-testing)
-  - [Test cases](#test-cases)
-  - [Integration Testing](#integration-testing)
-  - [Code Validation](#code-validation)
+  - [Introduction](#introduction)
+- [Validator Testing](#validator-testing)
+  - [HTML Validation](#html-validation)
+  - [CSS Validation](#css-validation)
+  - [JSX Validation](#jsx-validation)
+- [Lighthouse Testing](#lighthouse-testing)
+- [Manual Testing](#manual-testing)
+  - [User Story Testing](#user-story-testing)
+- [Automated Testing](#automated-testing)
 - [Bugs](#bugs)
-  - [Bugs encountered during development](#bugs-encountered-during-development)
-  - [Bugs and issues encountered during testing](#bugs-and-issues-encountered-during-testing)
+  - [Fixed Bugs](#fixed-bugs)
   - [Unresolved bugs](#unresolved-bugs)
-- [Gitpod set up and deployment](#gitpod-set-up-and-deployment)
-  - [Set-up](#set-up-in-gitpod)
+- [Deployment](#deployment)
   - [Initial Deployment](#initial-deployment)
-  - [Deployment issues and bugs](#deployment-issues-and-bugs)
+  - [Deployment Steps](#deployment-steps)
   - [Final Deployment](#final-deployment)
   - [Cloning](#cloning)
   - [Forking](#forking)
 - [Credits](#credits)
+  - [Code Institute](#code-institute)
+  - [Sources](#sources)
+  - [Media](#media)
+- [Acknowledgments](#acknowledgments)
 
 ## **Planning and Project Conception**
 
@@ -749,7 +770,7 @@ The below error types were ignored and no syntax errors were found.
 <img src="readme/jsx_errors.png" >
 </details>
 
-#### **LightHouse testing**
+#### **Lighthouse Testing**
 
 **For Desktop:**
 
@@ -1022,6 +1043,8 @@ It is worth noting that this bug does not affect the functionality of the app in
 
 [Back to top](#contents)
 
+## Deployment
+
 ### Initial Deployment
 
 - Navigate to Heroku for initial deployment
@@ -1033,7 +1056,7 @@ It is worth noting that this bug does not affect the functionality of the app in
 
 [Back to top](#contents)
 
-## Deployment
+### Deployment Steps
 
 The site was deployed to Heroku. The steps to deploy are as follows:
 
