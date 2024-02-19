@@ -45,7 +45,7 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. The
   - [Sign Up](#signup)
   - [No Results Found](#no-result-found)
   - [Custom 404 page](#custom-404-page)
-  - [Real Time Notification](#realtime-notification)
+  - [Real Time Notifications](#realtime-notifications)
   - [CRUD](#crud)
   - [Defensive Design](#defensive-design)
   - [Future Features](#future-features)
@@ -348,7 +348,8 @@ Here you will find a few engaging lines to describe MewMes to the uninitiated. T
 
 ### **Add Meme**
 
-This is where logged in users can upload an image of their meme and complete the Title and Content sections, before clicking on the "Create" button to post their meme.
+This is where logged in users can upload an image of their meme and complete the Title and Content sections, before clicking on the "Create" button to post their meme. 
+Once the meme is created, owners are then able to edit or delete their meme. In case they want to delete it, a pop-up message shows up in the upper right corner of the screen, instructing users to click on the pop-up message to confirm they intend to delete the meme. For more info, see the section Real-Time Notifications.
 
 <details><summary>Add Meme</summary>
 <img src="readme/add_meme.png" >
@@ -455,9 +456,9 @@ The image used for the 404 Not Found page was created using [Canva](https://www.
 <img src="src/assets/notfound.png" >
 </details>
 
-### **Real Time Notification**
+### **Real Time Notifications**
 
-The user is notified in real time with a range of pop up messages appearing on the top right corner of the screen. These notifications inform users of a change of their content or when user's action is required.
+The user is notified in real time with a range of pop-up messages appearing on the top right corner of the screen. These notifications inform users of the successful update of their content or when user's action is required.
 
 After signing up, the user is encouraged to sign in.
 
@@ -489,7 +490,7 @@ A meme is successfully edited.
 <img src="readme/meme_edit_confirmation.png" >
 </details>
 
-Confirmation is necessary to delete a meme.
+Confirmation is necessary to delete a meme. The pop-up message invites the user to click on the pop-up bubble to confirm the deletion of the meme.
 
 <details><summary>Meme Deletion Confirmation</summary>
 <img src="readme/meme_delete_confirmation.png" >
@@ -513,7 +514,7 @@ A comment is successfully edited.
 <img src="readme/comment_edited.png" >
 </details>
 
-Confirmation is necessary to delete a comment.
+Confirmation is necessary to delete a comment. The pop-up message invites the user to click on the pop-up bubble to confirm the deletion of the comment.
 
 <details><summary>Comment Deletion Confirmation</summary>
 <img src="readme/comment_delete_confirmation.png" >
