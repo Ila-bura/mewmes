@@ -349,7 +349,8 @@ Here you will find a few engaging lines to describe MewMes to the uninitiated. T
 ### **Add Meme**
 
 This is where logged in users can upload an image of their meme and complete the Title and Content sections, before clicking on the "Create" button to post their meme. 
-Once the meme is created, owners are then able to edit or delete their meme. In case they want to delete it, a pop-up message shows up in the upper right corner of the screen, instructing users to click on the pop-up message to confirm they intend to delete the meme. For more info, see the section Real-Time Notifications.
+
+Once the meme is created, owners are then able to edit or delete their meme. In case they want to delete it, a pop-up message shows up in the upper right corner of the screen, instructing users to click on the pop-up message to confirm they intend to delete the meme. For more info, see the section [Real-Time Notifications](https://github.com/Ila-bura/mewmes/tree/main?tab=readme-ov-file#real-time-notifications).
 
 <details><summary>Add Meme</summary>
 <img src="readme/add_meme.png" >
