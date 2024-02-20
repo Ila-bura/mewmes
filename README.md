@@ -107,6 +107,10 @@ MewMes is a social media platform for cat lovers and meme enthusiasts alike. The
 
 This project was designed using agile methodologies.
 User stories are recorded on the GitHub [Project Board](https://github.com/users/Ila-bura/projects/22/views/1).
+The project board contains users stories covering both the front-end and back-end projects, with different labels.
+
+- [Front-end User Stories](https://github.com/Ila-bura/MewMes_API/issues?q=repo%3AIla-bura%2FMewMes_API%20state%3Aopen%20label%3A%22front-end%22)
+- [Back-end User Stories](https://github.com/Ila-bura/MewMes_API/issues?q=label%3Aback-end+)
 
 [Back to top](#contents)
 
