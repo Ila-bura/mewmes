@@ -639,7 +639,7 @@ In the "Add meme" page, failing to add an image will trigger the following error
 - [Cloudinary](https://cloudinary.com/)
   Used to store media files and images.
 - [Heroku](https://www.heroku.com/)
-  Used to host the deployed site.
+  Used to deploy and store for final deployment.
 - [ElephantSQL](https://www.elephantsql.com/)
   Used to host and operate the PostgresSQL database.
 
@@ -689,8 +689,6 @@ In the "Add meme" page, failing to add an image will trigger the following error
 - [Balsamiq](https://balsamiq.com/): used to create mockups/wireframes of the project prior to starting.
 - [Google Fonts](https://fonts.google.com/): a computer font and web font service owned by Google. This includes free and open source font families.
 - [GitHub](https://github.com/): an Internet hosting service for software development and version control using Git.
-- [Heroku](https://heroku.com/): a cloud platform as a service (PaaS) supporting several programming languages. Used to
-  deploy and store for final deployment.
 - Google Developer Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
 - [TinyPNG](https://tinypng.com/) - To compress images.
 
